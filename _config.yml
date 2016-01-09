@@ -1,0 +1,21 @@
+# Site settings
+title: "drew.lanen.ga"
+email: drew@lanen.ga
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "https://drew.lanen.ga" # the base hostname & protocol for your site
+twitter_username: drewlanenga
+github_username:  drewlanenga
+
+# Build settings
+markdown: kramdown
+permalink: ":title/"
+#highlighter: pygments
+
+# Pagination
+paginate: 10
+paginate_path: "blog/page/:num/"
+gems: [jekyll-paginate]
+
+# Minification
+sass:
+  style: compressed
