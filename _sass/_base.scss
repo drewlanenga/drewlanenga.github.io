@@ -272,3 +272,12 @@ pre {
         }
     }
 }
+
+/**
+ * Media Queries
+ */
+.hide-palm {
+    @include media-query($on-palm) {
+        display: none !important;
+    }
+}

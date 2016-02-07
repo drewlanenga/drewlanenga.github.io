@@ -82,7 +82,7 @@
     max-width: 1024px;
     display: inline-block;
     vertical-align: middle;
-    margin-left: 6px;
+    //margin-left: 6px;
 }
 
 .site-header a.site-title {
@@ -92,10 +92,9 @@
 
 .site-title {
     position: relative;
-    padding: 1em 0;
+    margin: 19px $spacing-unit*0.5;
     display: block;
     font-weight: 600;
-    left: 60px;
 
     &,
     &:visited, &:hover {
@@ -121,7 +120,7 @@ a .site-title {
 nav.site-nav {
     float: right;
     height: 100%;
-    margin: 19px 15px;
+    margin: 19px $spacing-unit*0.5;
 
     .page-link {
         color: #fff;

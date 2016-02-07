@@ -5,10 +5,10 @@
     <div class="trigger">
       {% for page in site.pages %}
         {% if page.title %}
-        <a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
+        <a class="page-link hide-palm" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
         {% endif %}
       {% endfor %}
-      <a class="rss page-link" href="{{ "/feed.xml" | prepend: site.baseurl }}"><span class="icon-rss"></span></a>
+      <a class="rss page-link hide-palm" href="{{ "/feed.xml" | prepend: site.baseurl }}"><span class="icon-rss"></span></a>
       <a class="twitter page-link" href="https://twitter.com/{{ site.twitter_username }}"><span class="icon-twitter"></span></a>
       <a class="facebook page-link" href="https://www.github.com/{{ site.github_username }}"><span class="icon-github"></span></a>
     </div>
