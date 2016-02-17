@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width initial-scale=1">
+
+  <title>Hillary's Damn Emails</title>
+  <meta name="description" content="  The American people are sick and tired about hearing about [Hillary Clinton&#8217;s] damn emails.  &ndash; Sen. Bernie Sanders">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="https://drew.lanen.ga/hillary-emails/">
+  <link rel="alternate" type="application/atom+xml" title="drew.lanen.ga" href="https://drew.lanen.ga/feed.xml" />
+  <link rel="apple-touch-icon" href="https://drew.lanen.ga/apple-touch-icon.png" />
+  <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png"" />
+</head>
+
+  <body>
+    
+<div class="header-container" id="header-container">
+
+  <nav class="site-nav">
+    <div class="trigger">
+      
+        
+        <a class="page-link hide-palm" href="/about/">About</a>
+        
+      
+        
+      
+        
+      
+        
+      
+      <a class="rss page-link hide-palm" href="/feed.xml"><span class="icon-rss"></span></a>
+      <a class="twitter page-link" href="https://twitter.com/drewlanenga"><span class="icon-twitter"></span></a>
+      <a class="facebook page-link" href="https://www.github.com/drewlanenga"><span class="icon-github"></span></a>
+    </div>
+  </nav>
+
+  <header class="site-header">
+    <a class="site-title" href="/">drew.lanen.ga</a>
+  </header>
+
+</div>
+
+      <div class="wrapper">
+        <div class="page-content">
+          <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Hillary's Damn Emails</h1>
+    <p class="post-meta">February 19, 2016</p>
+  </header>
+
+  <article class="post-content">
+    <blockquote>
+  <p>The American people are sick and tired about hearing about [Hillary Clinton’s] damn emails.</p>
+
+  <p>– Sen. Bernie Sanders</p>
+</blockquote>
+
+<p>By now the dust has more than settled on <a href="https://en.wikipedia.org/wiki/Hillary_Clinton_email_controversy">Hillary Clinton’s email controversy</a>.</p>
+
+<p>I’m not interested in bringing the topic back from the dead to debate the concerns about the security of potentially confidential information, but more in the network it identifies, which is interesting for two reasons.  First, it could be a nice, toy-ish data set to run analysis and benchmarks against, like the <a href="https://www.cs.cmu.edu/~./enron/">Enron corpus</a>.  Second, it could potentially help identify the type of leadership style and kind of organization that Hillary Clinton runs, which is obviously relevant seeing as how she might end up being <a href="http://projects.fivethirtyeight.com/election-2016/national-primary-polls/democratic/">the next American president</a>.</p>
+
+<p>But first, the data…</p>
+
+<h2 id="foia">FOIA</h2>
+
+<p>First off, the data aren’t great.  I got mine from <a href="https://www.kaggle.com/kaggle/hillary-clinton-emails">Kaggle</a>, which had some helpful additions/modifications.</p>
+
+<p>The problem is that the data, which came from a FOIA request, consist of some semi-structured output from computer vision over a bunch of <em>PDFs</em> of <em>scanned</em> copies of <em>printed</em> emails.  So needless to say, there are some inconsistencies in what was extracted <sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup>. Some fuzzy matching helped a little, but I still spent a while manually resolving funky naming variations.</p>
+
+<p>The email contacts are the most important part of the data for me — they identify the structure of the network I care about, and I can now create a matrix that identifies how individuals are engaging with every other individual in the network.  If I had been interested in sentiment analysis or topic modeling I probably wouldn’t have cared.</p>
+
+<h2 id="the-network">The Network</h2>
+
+<p><img src="/assets/images/hillary-network-full.png" alt="Hillary's State Department Network" /></p>
+
+<p>Sometimes I wish I were a network scientist.  There are a lot of <a href="https://en.wikipedia.org/wiki/Centrality">interesting ways</a> to think about how important an individual is to a network of people.  I tend to gravitate to <a href="https://en.wikipedia.org/wiki/Betweenness_centrality">betweenness</a>, and the gist of it is this — I need to talk to Alice, and the only way for me to contact Alice is through our mutual connection, Bob.  Therefore, Bob is important to that network.</p>
+
+<p><strong>In an unstable network, betweenness is distributed among a few key individuals.</strong>  If someone leaves the network, the results in terms of connectivity and information flow are catastrophic.  <strong>In a stable network, betweenness is distributed more evenly among its members.</strong></p>
+
+<p>In Hillary’s case, we can look at the <em>betweenness centrality</em> of everyone in her network to identify who key individuals are.</p>
+
+<p><img src="/assets/images/hillary-betweenness-full.png" alt="Hillary's State Department Betweenness" /></p>
+
+<p>Here we see that <strong>Secretary Clinton’s State Department is supported by three key people</strong>: <a href="https://en.wikipedia.org/wiki/Jake_Sullivan">Jacob Sullivan</a>, <a href="https://en.wikipedia.org/wiki/Cheryl_Mills">Cheryl Mills</a> and <a href="https://en.wikipedia.org/wiki/Huma_Abedin">Huma Abedin</a>.  It seems very reasonable that Secretary Clinton’s three most influential staffers would be her Deputy Chief of Staff, Chief of Staff, and semi-Deputy Chief of Staff, respectively.</p>
+
+<p>Are those staffers over-leveraged, creating instability in the network?  Maybe.</p>
+
+<p>Looking at network similarity — how similarly each individual engages with every other individual in the network, measured by <a href="https://en.wikipedia.org/wiki/Cosine_similarity">cosine similarity</a> — we see a bit of interesting asymmetry.  In terms of <strong>incoming similarity</strong> — how similarly they receive email from people in the network — <strong>they’re not very similar</strong>, with similarites around 0.6 or below.  But in terms of <strong>outgoing similarity</strong> — how similarly they send email in the network — <strong>they’re much more similar</strong>, reaching similarities as high as 0.85.</p>
+
+<p><img src="/assets/images/hillary-cosine-vip.png" alt="Hillary's State Department VIP Similarity" /></p>
+
+<h2 id="takeaway">Takeaway</h2>
+
+<p>What does it all mean?  Secretary Clinton employed a Chief of Staff and Deputy Chiefs of Staff who were able to connect the majority of her State Department.  They received correspondence from a wide set of individuals, and then (likely) corresponded and executed among a smaller, more shared set of individuals.</p>
+
+<h2 id="future-work">Future Work</h2>
+
+<p>This is a data set I’d love to spend more time with.  If you’d like to use my resolved aliases, it’s available on <a href="">GitHub</a>.  If I were to explore any of this further, I might examine:</p>
+
+<ol>
+  <li><strong>How this changes over time</strong>.  Are there individuals whose importance increase or decrease over time, and how was the network affected by it?</li>
+  <li><strong>Clique analysis</strong>.  I might dive deeper on cliques/neighborhoods/clusters to see who was working with whom, which groups worked well together (or didn’t), and what differences might exist in terms of topics discussed and actions taken.</li>
+  <li><strong>Backchanneling</strong>.  Is there any evidence in the data? With whom?  (How would we detect it?)  What the implications be?</li>
+  <li><strong>Succession</strong>.  Would there be any catastrophic changes to network connectivity if certain individuals were to leave? What would that mean to the work of the State Department?  What kind of strategies could we surmise to mitigate against it?</li>
+</ol>
+
+<p>At this point I’m just rambling, but I’m sure I’ll have more ideas I might want to address later.</p>
+
+<h3 id="footnotes">Footnotes</h3>
+
+<div class="footnotes">
+  <ol>
+    <li id="fn:1">
+      <p>For example, <a href="https://en.wikipedia.org/wiki/Jake_Sullivan">Jake Sullivan</a>, who served as Secretary Clinton’s Deputy Chief of Staff, appears in over 2,500 email threads with over 40 variations of spelling — “Sullivan, Jacob J”, “sullivanjj@state.gov”, “Sullivan, Jacob J <a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#083;&#117;&#108;&#108;&#105;&#118;&#097;&#110;&#105;&#108;&#064;&#115;&#116;&#097;&#116;&#101;&#046;&#103;&#111;&#118;">&#083;&#117;&#108;&#108;&#105;&#118;&#097;&#110;&#105;&#108;&#064;&#115;&#116;&#097;&#116;&#101;&#046;&#103;&#111;&#118;</a>”, “isullivanjj@state.govi <a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#115;&#117;&#108;&#108;&#105;&#118;&#097;&#110;&#106;&#106;&#064;&#115;&#116;&#097;&#116;&#101;&#046;&#103;&#111;&#118;">&#115;&#117;&#108;&#108;&#105;&#118;&#097;&#110;&#106;&#106;&#064;&#115;&#116;&#097;&#116;&#101;&#046;&#103;&#111;&#118;</a>”, my personal favorite “lake.sullivar”, and more! <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+
+  </article>
+
+  <hr>
+
+  <div class="related">
+    <h2>Related</h2>
+    
+      <li><a href="/bash-in-R/" title="bash in R">bash in R
+       &nbsp; <span class="post-meta">February 01, 2016</span></a>
+    
+  </div>
+
+</div>
+
+        </div>
+        <footer class="site-footer">
+<p class="small">drew lanenga &copy; 2016</p>
+</footer>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-72365655-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+    </div>
+
+    <script src="//cdn.jsdelivr.net/headroomjs/0.5.0/headroom.min.js"></script>
+    <script type="text/javascript">
+      var el = document.querySelector(".header-container");
+      var headroom  = new Headroom(el, {
+        "offset": 205,
+        "tolerance": {
+          down: 10,
+          up: 20
+        }
+      });
+
+      headroom.init();
+    </script>
+  </body>
+</html>

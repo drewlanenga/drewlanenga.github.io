@@ -5,9 +5,87 @@
     <description></description>
     <link>https://drew.lanen.ga/</link>
     <atom:link href="https://drew.lanen.ga/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 06 Feb 2016 22:57:25 -0800</pubDate>
-    <lastBuildDate>Sat, 06 Feb 2016 22:57:25 -0800</lastBuildDate>
+    <pubDate>Wed, 17 Feb 2016 01:03:09 -0800</pubDate>
+    <lastBuildDate>Wed, 17 Feb 2016 01:03:09 -0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Hillary's Damn Emails</title>
+        <description>&lt;blockquote&gt;
+  &lt;p&gt;The American people are sick and tired about hearing about [Hillary Clinton’s] damn emails.&lt;/p&gt;
+
+  &lt;p&gt;– Sen. Bernie Sanders&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;By now the dust has more than settled on &lt;a href=&quot;https://en.wikipedia.org/wiki/Hillary_Clinton_email_controversy&quot;&gt;Hillary Clinton’s email controversy&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;I’m not interested in bringing the topic back from the dead to debate the concerns about the security of potentially confidential information, but more in the network it identifies, which is interesting for two reasons.  First, it could be a nice, toy-ish data set to run analysis and benchmarks against, like the &lt;a href=&quot;https://www.cs.cmu.edu/~./enron/&quot;&gt;Enron corpus&lt;/a&gt;.  Second, it could potentially help identify the type of leadership style and kind of organization that Hillary Clinton runs, which is obviously relevant seeing as how she might end up being &lt;a href=&quot;http://projects.fivethirtyeight.com/election-2016/national-primary-polls/democratic/&quot;&gt;the next American president&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;But first, the data…&lt;/p&gt;
+
+&lt;h2 id=&quot;foia&quot;&gt;FOIA&lt;/h2&gt;
+
+&lt;p&gt;First off, the data aren’t great.  I got mine from &lt;a href=&quot;https://www.kaggle.com/kaggle/hillary-clinton-emails&quot;&gt;Kaggle&lt;/a&gt;, which had some helpful additions/modifications.&lt;/p&gt;
+
+&lt;p&gt;The problem is that the data, which came from a FOIA request, consist of some semi-structured output from computer vision over a bunch of &lt;em&gt;PDFs&lt;/em&gt; of &lt;em&gt;scanned&lt;/em&gt; copies of &lt;em&gt;printed&lt;/em&gt; emails.  So needless to say, there are some inconsistencies in what was extracted &lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;. Some fuzzy matching helped a little, but I still spent a while manually resolving funky naming variations.&lt;/p&gt;
+
+&lt;p&gt;The email contacts are the most important part of the data for me — they identify the structure of the network I care about, and I can now create a matrix that identifies how individuals are engaging with every other individual in the network.  If I had been interested in sentiment analysis or topic modeling I probably wouldn’t have cared.&lt;/p&gt;
+
+&lt;h2 id=&quot;the-network&quot;&gt;The Network&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/hillary-network-full.png&quot; alt=&quot;Hillary's State Department Network&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Sometimes I wish I were a network scientist.  There are a lot of &lt;a href=&quot;https://en.wikipedia.org/wiki/Centrality&quot;&gt;interesting ways&lt;/a&gt; to think about how important an individual is to a network of people.  I tend to gravitate to &lt;a href=&quot;https://en.wikipedia.org/wiki/Betweenness_centrality&quot;&gt;betweenness&lt;/a&gt;, and the gist of it is this — I need to talk to Alice, and the only way for me to contact Alice is through our mutual connection, Bob.  Therefore, Bob is important to that network.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;In an unstable network, betweenness is distributed among a few key individuals.&lt;/strong&gt;  If someone leaves the network, the results in terms of connectivity and information flow are catastrophic.  &lt;strong&gt;In a stable network, betweenness is distributed more evenly among its members.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;In Hillary’s case, we can look at the &lt;em&gt;betweenness centrality&lt;/em&gt; of everyone in her network to identify who key individuals are.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/hillary-betweenness-full.png&quot; alt=&quot;Hillary's State Department Betweenness&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Here we see that &lt;strong&gt;Secretary Clinton’s State Department is supported by three key people&lt;/strong&gt;: &lt;a href=&quot;https://en.wikipedia.org/wiki/Jake_Sullivan&quot;&gt;Jacob Sullivan&lt;/a&gt;, &lt;a href=&quot;https://en.wikipedia.org/wiki/Cheryl_Mills&quot;&gt;Cheryl Mills&lt;/a&gt; and &lt;a href=&quot;https://en.wikipedia.org/wiki/Huma_Abedin&quot;&gt;Huma Abedin&lt;/a&gt;.  It seems very reasonable that Secretary Clinton’s three most influential staffers would be her Deputy Chief of Staff, Chief of Staff, and semi-Deputy Chief of Staff, respectively.&lt;/p&gt;
+
+&lt;p&gt;Are those staffers over-leveraged, creating instability in the network?  Maybe.&lt;/p&gt;
+
+&lt;p&gt;Looking at network similarity — how similarly each individual engages with every other individual in the network, measured by &lt;a href=&quot;https://en.wikipedia.org/wiki/Cosine_similarity&quot;&gt;cosine similarity&lt;/a&gt; — we see a bit of interesting asymmetry.  In terms of &lt;strong&gt;incoming similarity&lt;/strong&gt; — how similarly they receive email from people in the network — &lt;strong&gt;they’re not very similar&lt;/strong&gt;, with similarites around 0.6 or below.  But in terms of &lt;strong&gt;outgoing similarity&lt;/strong&gt; — how similarly they send email in the network — &lt;strong&gt;they’re much more similar&lt;/strong&gt;, reaching similarities as high as 0.85.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/hillary-cosine-vip.png&quot; alt=&quot;Hillary's State Department VIP Similarity&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;takeaway&quot;&gt;Takeaway&lt;/h2&gt;
+
+&lt;p&gt;What does it all mean?  Secretary Clinton employed a Chief of Staff and Deputy Chiefs of Staff who were able to connect the majority of her State Department.  They received correspondence from a wide set of individuals, and then (likely) corresponded and executed among a smaller, more shared set of individuals.&lt;/p&gt;
+
+&lt;h2 id=&quot;future-work&quot;&gt;Future Work&lt;/h2&gt;
+
+&lt;p&gt;This is a data set I’d love to spend more time with.  If you’d like to use my resolved aliases, it’s available on &lt;a href=&quot;&quot;&gt;GitHub&lt;/a&gt;.  If I were to explore any of this further, I might examine:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;strong&gt;How this changes over time&lt;/strong&gt;.  Are there individuals whose importance increase or decrease over time, and how was the network affected by it?&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Clique analysis&lt;/strong&gt;.  I might dive deeper on cliques/neighborhoods/clusters to see who was working with whom, which groups worked well together (or didn’t), and what differences might exist in terms of topics discussed and actions taken.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Backchanneling&lt;/strong&gt;.  Is there any evidence in the data? With whom?  (How would we detect it?)  What the implications be?&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Succession&lt;/strong&gt;.  Would there be any catastrophic changes to network connectivity if certain individuals were to leave? What would that mean to the work of the State Department?  What kind of strategies could we surmise to mitigate against it?&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;At this point I’m just rambling, but I’m sure I’ll have more ideas I might want to address later.&lt;/p&gt;
+
+&lt;h3 id=&quot;footnotes&quot;&gt;Footnotes&lt;/h3&gt;
+
+&lt;div class=&quot;footnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:1&quot;&gt;
+      &lt;p&gt;For example, &lt;a href=&quot;https://en.wikipedia.org/wiki/Jake_Sullivan&quot;&gt;Jake Sullivan&lt;/a&gt;, who served as Secretary Clinton’s Deputy Chief of Staff, appears in over 2,500 email threads with over 40 variations of spelling — “Sullivan, Jacob J”, “sullivanjj@state.gov”, “Sullivan, Jacob J &lt;a href=&quot;&amp;#109;&amp;#097;&amp;#105;&amp;#108;&amp;#116;&amp;#111;:&amp;#083;&amp;#117;&amp;#108;&amp;#108;&amp;#105;&amp;#118;&amp;#097;&amp;#110;&amp;#105;&amp;#108;&amp;#064;&amp;#115;&amp;#116;&amp;#097;&amp;#116;&amp;#101;&amp;#046;&amp;#103;&amp;#111;&amp;#118;&quot;&gt;&amp;#083;&amp;#117;&amp;#108;&amp;#108;&amp;#105;&amp;#118;&amp;#097;&amp;#110;&amp;#105;&amp;#108;&amp;#064;&amp;#115;&amp;#116;&amp;#097;&amp;#116;&amp;#101;&amp;#046;&amp;#103;&amp;#111;&amp;#118;&lt;/a&gt;”, “isullivanjj@state.govi &lt;a href=&quot;&amp;#109;&amp;#097;&amp;#105;&amp;#108;&amp;#116;&amp;#111;:&amp;#115;&amp;#117;&amp;#108;&amp;#108;&amp;#105;&amp;#118;&amp;#097;&amp;#110;&amp;#106;&amp;#106;&amp;#064;&amp;#115;&amp;#116;&amp;#097;&amp;#116;&amp;#101;&amp;#046;&amp;#103;&amp;#111;&amp;#118;&quot;&gt;&amp;#115;&amp;#117;&amp;#108;&amp;#108;&amp;#105;&amp;#118;&amp;#097;&amp;#110;&amp;#106;&amp;#106;&amp;#064;&amp;#115;&amp;#116;&amp;#097;&amp;#116;&amp;#101;&amp;#046;&amp;#103;&amp;#111;&amp;#118;&lt;/a&gt;”, my personal favorite “lake.sullivar”, and more! &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+</description>
+        <pubDate>Fri, 19 Feb 2016 00:00:00 -0800</pubDate>
+        <link>https://drew.lanen.ga/hillary-emails/</link>
+        <guid isPermaLink="true">https://drew.lanen.ga/hillary-emails/</guid>
+        
+        
+        <category>general</category>
+        
+      </item>
     
       <item>
         <title>bash in R</title>
