@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Hillary's Damn Emails"
-date:   2016-02-19
+date:   2016-02-17
 description: "A glimpse of what we can learn about Hillary's emails."
 categories: general
 ---
