@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width initial-scale=1">
+
+  <title>Network Science</title>
+  <meta name="description" content="NB: This is a long post. It&#8217;ll probably evolve as more technical context is necessary for subsequent posts.  Happy reading :)">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="https://drew.lanen.ga/network-science/">
+  <link rel="alternate" type="application/atom+xml" title="drew.lanen.ga" href="https://drew.lanen.ga/feed.xml" />
+  <link rel="apple-touch-icon" href="https://drew.lanen.ga/apple-touch-icon.png" />
+  <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png" />
+  <link rel="icon" type="image/x-icon" href="/assets/images/d.ico" />
+</head>
+
+  <body>
+    
+<div class="header-container" id="header-container">
+
+  <nav class="site-nav">
+    <div class="trigger">
+      
+        
+        <a class="page-link hide-palm" href="/about/">About</a>
+        
+      
+        
+      
+        
+      
+        
+      
+      <a class="rss page-link hide-palm" href="/feed.xml"><span class="icon-rss"></span></a>
+      <a class="twitter page-link" href="https://twitter.com/drewlanenga"><span class="icon-twitter"></span></a>
+      <a class="facebook page-link" href="https://www.github.com/drewlanenga"><span class="icon-github"></span></a>
+    </div>
+  </nav>
+
+  <header class="site-header">
+    <a class="site-title" href="/">drew.lanen.ga</a>
+  </header>
+
+</div>
+
+      <div class="wrapper">
+        <div class="page-content">
+          <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Network Science</h1>
+    <p class="post-meta">February 20, 2016</p>
+  </header>
+
+  <article class="post-content">
+    <p><strong>NB: This is a long post. It’ll probably evolve as more technical context is necessary for subsequent posts.  Happy reading :)</strong></p>
+
+<p>A couple of jobs ago, I was lucky enough to get to work with some very smart network scientists.</p>
+
+<p>We were building a product together that performed network analysis on large corporate organizational networks.  The idea was that many large organizations suffer from teams that worked in isolation, some were bottlenecks.  Some individuals were well connected and facilitated the flow of a lot of information, while others were having a negative impact on network connectivity.</p>
+
+<p>As I’ve continued to work in smaller startups, I’ve realized that this problem isn’t confined to large groups of people.  <strong>Even companies of 30 people can suffer from the same problems as a company of 300 or 3,000.</strong>  The biggest difference is that in smaller networks they often slip by undetected.</p>
+
+<p>Consequently, I think it’s useful enough for everyone to know at least a little bit about terms and concepts in network science <strong>to be able to identify them in our own networks</strong>.</p>
+
+<p>So this isn’t meant to serve as a comprehensive introduction into network science.  Just a jump start so we can have more meaningful discussions about how to diagnose and improve our own networks.  Here we go.</p>
+
+<h2 id="modeling-relationships">Modeling Relationships</h2>
+
+<p>Meet three friends: Alice, Bob and Charlie.  Alice and Bob are good friends.  Bob and Charlie are not.  Bob talks to Charlie, but Charlie never reciprocates.  He’s grumpy.  That’s why him and Alice aren’t friends.</p>
+
+<p>If we wanted to represent this structure mathematically, we’d make a matrix — every person gets a row and a column.  Then we put a value in every person in a row talks to each person’s column.  Ours would look something like this:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th>Alice</th>
+      <th>Bob</th>
+      <th>Charlie</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Alice</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>Bob</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>Charlie</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Expressing a network as a matrix allows us to do a lot of math behind the scenes.</p>
+
+<h3 id="connectivity">Connectivity</h3>
+
+<p>Some colleagues of the network scientists I worked with wrote a <a href="http://www.amazon.com/Connected-Surprising-Networks-Friends-Everything/dp/0316036137">book</a> on the power of network connectivity.  They note some particularly <a href="https://www.cis.upenn.edu/~mkearns/papers/behvoting.pdf">interesting work</a> that highlights the importance of a network’s structure in its ability to reach concensus.</p>
+
+<h3 id="consensus">Consensus</h3>
+
+<p>Let me illustrate: imagine you’re the CEO at a venture-backed company that’s still struggling to find <a href="http://www.stanford.edu/class/ee204/ProductMarketFit.html">product-market fit</a>.  You’re at about 30 employees, and you’re confident that the team you built can execute on any business model.  After a lot of research/advice/guts you decide to <a href="https://en.wikipedia.org/wiki/Lean_startup#Pivot">pivot</a>. Everyone seems to be on board, except your Director of Engineering and VP of Sales.</p>
+
+<p>Eventually, and unfortunately, it doesn’t pan out.  There were a lot of misaligned expectations, miscommunication, and missed deadlines.  It turns out, the two people who didn’t agree with you were the two most <a href="#centrality">central</a> people at your company.  We’ll get to centrality in a minute, but it means that those two individuals are the most strategically connected everyone else at your company.</p>
+
+<p>Why is that so fatal? <a href="https://www.cis.upenn.edu/~mkearns/papers/KearnsJuddVorobeychik.pdf">Michael Kearns argues</a> that <strong>a network whose core actors are not in consensus will never arrive at a consensus.</strong>  If you’re trying to rally around Business Plan B, you need your company to rally with you.  Doubt and negative energy are contagious, and <strong>a team that doesn’t have the same vision won’t build the same thing</strong>.</p>
+
+<p>If you don’t know who your core actors are, you need to.</p>
+
+<h3 id="centrality">Centrality</h3>
+
+<p>There are a couple of different ways to determine how important (or central) an actor is in a given network.  The idea is called <strong><a href="https://en.wikipedia.org/wiki/Centrality">centrality</a></strong>, and there are a couple of ways to calculate it.</p>
+
+<p>My favorite centrality metric is called <strong>betweenness</strong>.  To calculate it, first you have to look at the shortest paths between every pair of actors in the network.  If two individuals are connected, their path is of length 1.  If we look at Alice and Charlie from the first example, we see that theirs is of length 2: Alice → Bob → Charlie.  Since Bob is connecting everyone in his network (albeit two people), he is a very important guy.</p>
+
+<h3 id="cliques">Cliques</h3>
+
+<p>Cliques exist in every social context.  Sometimes birds of a feather really do <a href="https://en.wikipedia.org/wiki/Assortativity">flock together</a>.</p>
+
+<p>This gets pretty interesting when cliques don’t align with some pre-existing or hierarchical structuring.</p>
+
+<p>If they don’t align, does it mean that sub-groups form because the existing org chart failed? Or that they’re collaborating well with other groups?  If they do align, does it mean that teams are well-defined, or are they working in isolation?</p>
+
+<p>The answers aren’t always clear, but asking them can help ensure we’re aware of the network structure that’s forming.</p>
+
+<h3 id="brokerage-roles">Brokerage Roles</h3>
+
+<p>In every network, cliques will exist and silos will exist.  Just like it would be inefficient if no one worked together on anything, it would also be inefficient if everyone worked together on everything.</p>
+
+<p>Hence, collaboration.</p>
+
+<p><a href="https://www.insna.org/PDF/Connections/v26/2004_I-1-6.pdf">Brokerage roles</a> let us explain how someone facilitates collaboration.  We look at how actors from some groups <em>broker</em> relationship with actors from other groups.</p>
+
+<p>We start by breaking up a network into all of its <strong>triads</strong>. The Alice → Bob → Charlie relationship is a triad — A is connected to B, and B to C, but A is not connected to C.  We’d say that Bob is a <em>broker</em> in that relationship.</p>
+
+<p>For every triad, we classify the relationship according to the following:</p>
+
+<ul>
+  <li><strong>Coordinator</strong>: The broker mediates contact between two individuals in the same group: <strong>A → A → A</strong></li>
+  <li><strong>Consultant</strong>: The broker mediates contact between two individuals in the same group, who are not member of the broker’s group: <strong>A → B → A</strong></li>
+  <li><strong>Representative</strong>: The broker mediates an incoming contact from an out-group member to an in-group member: <strong>A → B → B</strong></li>
+  <li><strong>Gatekeeper</strong>: The broker mediates an outgoing contact from an in-group member to an out-group member: <strong>A → A → B</strong></li>
+  <li><strong>Liaison</strong>: The broker mediates contact between two individuals from different groups: <strong>A → B → C</strong></li>
+</ul>
+
+<p>After we classify all of their triads, we’d say an actor’s brokerage role is whatever role they find themselves in most frequently.</p>
+
+
+  </article>
+
+  <hr>
+
+  <div class="related">
+    <h2>Related</h2>
+    
+      
+      <li><a href="/hillary-emails/" title="Hillary's Damn Emails">Hillary's Damn Emails
+       &nbsp; <span class="post-meta">February 17, 2016</span></a>
+      
+    
+      
+      <li><a href="/bash-in-R/" title="bash in R">bash in R
+       &nbsp; <span class="post-meta">February 01, 2016</span></a>
+      
+    
+  </div>
+
+</div>
+
+        </div>
+        <footer class="site-footer">
+<p class="small">drew lanenga &copy; 2016</p>
+</footer>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-72365655-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+    </div>
+
+    <script src="//cdn.jsdelivr.net/headroomjs/0.5.0/headroom.min.js"></script>
+    <script type="text/javascript">
+      var el = document.querySelector(".header-container");
+      var headroom  = new Headroom(el, {
+        "offset": 205,
+        "tolerance": {
+          down: 10,
+          up: 20
+        }
+      });
+
+      headroom.init();
+    </script>
+  </body>
+</html>

@@ -158,14 +158,38 @@ a {
  */
 blockquote {
     color: $grey-color;
-    border-left: 4px solid $grey-color-light;
+    border-left: 4px solid $brand-color;
     padding-left: $spacing-unit / 2;
-    font-size: 22px;
-    letter-spacing: -1px;
-    font-style: italic;
+    font-size: 18px;
+    /*letter-spacing: -1px;*/
+    margin: $spacing-unit * 1.5 0;
 
     > :last-child {
         margin-bottom: 0;
+    }
+}
+
+/**
+ * Footnotes
+ */
+
+sup {
+    top: -0.5em;
+    font-size: 75%;
+    position: relative;
+}
+
+#footnotes {
+    margin-top: $spacing-unit;
+}
+.footnotes {
+    font-size: 18px;
+
+    ol {
+        font-weight: bold;
+    }
+    li p {
+        font-weight: normal;
     }
 }
 

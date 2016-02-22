@@ -63,7 +63,7 @@
 
 <p>By now the dust has more than settled on <a href="https://en.wikipedia.org/wiki/Hillary_Clinton_email_controversy">Hillary Clinton’s email controversy</a>.</p>
 
-<p>I’m not interested in bringing the topic back from the dead to debate the concerns about the security of potentially confidential information, but more in the network it identifies, which is interesting for two reasons.  First, it could be a nice, toy-ish data set to run analysis and benchmarks against, like the <a href="https://www.cs.cmu.edu/~./enron/">Enron corpus</a>.  Second, it could potentially help identify the type of leadership style and kind of organization that Hillary Clinton runs, which is obviously relevant seeing as how she might end up being <a href="http://projects.fivethirtyeight.com/election-2016/national-primary-polls/democratic/">the next American president</a>.</p>
+<p>I’m not interested in bringing the topic back from the dead to debate the concerns about the security of potentially confidential information, but more in the network it identifies, which is interesting for two reasons.  First, it could be a nice, toy-ish data set to run analysis and benchmarks against, like the <a href="https://www.cs.cmu.edu/~./enron/">Enron corpus</a>.  Second, it could potentially help identify the type of leadership style and kind of organization that Hillary Clinton runs, which is naturally relevant seeing as how she might end up being <a href="http://projects.fivethirtyeight.com/election-2016/national-primary-polls/democratic/">the next American president</a>.</p>
 
 <p>But first, the data…</p>
 
@@ -71,15 +71,19 @@
 
 <p>First off, the data aren’t great.  I got mine from <a href="https://www.kaggle.com/kaggle/hillary-clinton-emails">Kaggle</a>, which had some helpful additions/modifications.</p>
 
-<p>The problem is that the data, which came from a FOIA request, consist of some semi-structured output from computer vision over a bunch of <em>PDFs</em> of <em>scanned</em> copies of <em>printed</em> emails.  So needless to say, there are some inconsistencies in what was extracted <sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup>. Some fuzzy matching helped a little, but I still spent a while manually resolving funky naming variations.</p>
+<p>The problem is that the data, which came from a FOIA request, consist of some semi-structured output from computer vision over a bunch of <em>PDFs</em> of <em>scanned</em> copies of <em>printed</em> emails.  So needless to say, there are some inconsistencies in what was extracted<sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup>. Some fuzzy matching helped a little, but I still spent a while manually resolving funky naming variations.</p>
 
 <p>The email contacts are the most important part of the data for me — they identify the structure of the network I care about, and I can now create a matrix that identifies how individuals are engaging with every other individual in the network.  If I had been interested in sentiment analysis or topic modeling I probably wouldn’t have cared.</p>
+
+<p><strong>Caveat</strong>: The data are an incomplete record of the emails sent at the State Department during Secretary Clinton’s tenure.  Since only emails sent from her private email server were the subject of the FOIA request, the data represents more of an egocentric network.  But it can still be used to explore some interesting ideas.</p>
 
 <h2 id="the-network">The Network</h2>
 
 <p><img src="/assets/images/hillary-network-full.png" alt="Hillary's State Department Network" /></p>
 
-<p>Sometimes I wish I were a network scientist.  There are a lot of <a href="https://en.wikipedia.org/wiki/Centrality">interesting ways</a> to think about how important an individual is to a network of people.  I tend to gravitate to <a href="https://en.wikipedia.org/wiki/Betweenness_centrality">betweenness</a>, and the gist of it is this — I need to talk to Alice, and the only way for me to contact Alice is through our mutual connection, Bob.  Therefore, Bob is important to that network.</p>
+<p>That represents Secretary Clinton’s State Department email network.  Isn’t that beautiful?  Sometimes I wish I were a network scientist<sup id="fnref:2"><a href="#fn:2" class="footnote">2</a></sup>.</p>
+
+<p>There are a lot of <a href="https://en.wikipedia.org/wiki/Centrality">interesting ways</a> to think about how important an individual is to a network of people.  I tend to gravitate to <a href="https://en.wikipedia.org/wiki/Betweenness_centrality">betweenness</a>, and the gist of it is this — I need to talk to Alice, and the only way for me to contact Alice is through our mutual connection, Bob.  Therefore, Bob is important to that network.</p>
 
 <p><strong>In an unstable network, betweenness is distributed among a few key individuals.</strong>  If someone leaves the network, the results in terms of connectivity and information flow are catastrophic.  <strong>In a stable network, betweenness is distributed more evenly among its members.</strong></p>
 
@@ -89,7 +93,7 @@
 
 <p>Here we see that <strong>Secretary Clinton’s State Department is supported by three key people</strong>: <a href="https://en.wikipedia.org/wiki/Jake_Sullivan">Jacob Sullivan</a>, <a href="https://en.wikipedia.org/wiki/Cheryl_Mills">Cheryl Mills</a> and <a href="https://en.wikipedia.org/wiki/Huma_Abedin">Huma Abedin</a>.  It seems very reasonable that Secretary Clinton’s three most influential staffers would be her Deputy Chief of Staff, Chief of Staff, and semi-Deputy Chief of Staff, respectively.</p>
 
-<p>Are those staffers over-leveraged, creating instability in the network?  Maybe.</p>
+<p>Are those staffers over-leveraged, creating instability in the network?  Probably.</p>
 
 <p>Looking at network similarity — how similarly each individual engages with every other individual in the network, measured by <a href="https://en.wikipedia.org/wiki/Cosine_similarity">cosine similarity</a> — we see a bit of interesting asymmetry.  In terms of <strong>incoming similarity</strong> — how similarly they receive email from people in the network — <strong>they’re not very similar</strong>, with similarites around 0.6 or below.  But in terms of <strong>outgoing similarity</strong> — how similarly they send email in the network — <strong>they’re much more similar</strong>, reaching similarities as high as 0.85.</p>
 
@@ -97,17 +101,19 @@
 
 <h2 id="takeaway">Takeaway</h2>
 
-<p>What does it all mean?  Secretary Clinton employed a Chief of Staff and Deputy Chiefs of Staff who were able to connect the majority of her State Department.  They received correspondence from a wide set of individuals, and then (likely) corresponded and executed among a smaller, more shared set of individuals.</p>
+<p>What does it all mean?  Secretary Clinton worked primarily with her Chief of Staff and Deputy Chiefs of Staff.  They were extremely central to the network, and acted as gatekeepers for a lot of other email senders.</p>
+
+<p>Is there any way to de-leverage her Chief of Staff?  Probably not, as it’s pretty much the role of a <a href="https://en.wikipedia.org/wiki/Chief_of_staff">Chief of Staff</a> to broker communication between an executive and its supporting staff and relations.  But it does tend to cause a lot of shakeup when it they leave.</p>
 
 <h2 id="future-work">Future Work</h2>
 
-<p>This is a data set I’d love to spend more time with.  If you’d like to use my resolved aliases, it’s available on <a href="">GitHub</a>.  If I were to explore any of this further, I might examine:</p>
+<p>This is a data set I’d love to spend more time with.  If you’d like to use my modified data, it’s available on <a href="https://github.com/drewlanenga/clintonemails">GitHub</a>.  If I were to explore any of this further, I might examine:</p>
 
 <ol>
   <li><strong>How this changes over time</strong>.  Are there individuals whose importance increase or decrease over time, and how was the network affected by it?</li>
   <li><strong>Clique analysis</strong>.  I might dive deeper on cliques/neighborhoods/clusters to see who was working with whom, which groups worked well together (or didn’t), and what differences might exist in terms of topics discussed and actions taken.</li>
   <li><strong>Backchanneling</strong>.  Is there any evidence in the data? With whom?  (How would we detect it?)  What the implications be?</li>
-  <li><strong>Succession</strong>.  Would there be any catastrophic changes to network connectivity if certain individuals were to leave? What would that mean to the work of the State Department?  What kind of strategies could we surmise to mitigate against it?</li>
+  <li><strong>Succession</strong>.  Would there be any catastrophic changes to network connectivity if certain individuals were to leave?  What about a changeup with the Chief of Staff?  What would that mean to the work of the State Department?  What kind of strategies could we surmise to mitigate against it?</li>
 </ol>
 
 <p>At this point I’m just rambling, but I’m sure I’ll have more ideas I might want to address later.</p>
@@ -119,6 +125,9 @@
     <li id="fn:1">
       <p>For example, <a href="https://en.wikipedia.org/wiki/Jake_Sullivan">Jake Sullivan</a>, who served as Secretary Clinton’s Deputy Chief of Staff, appears in over 2,500 email threads with over 40 variations of spelling — “Sullivan, Jacob J”, “sullivanjj@state.gov”, “Sullivan, Jacob J <a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#083;&#117;&#108;&#108;&#105;&#118;&#097;&#110;&#105;&#108;&#064;&#115;&#116;&#097;&#116;&#101;&#046;&#103;&#111;&#118;">&#083;&#117;&#108;&#108;&#105;&#118;&#097;&#110;&#105;&#108;&#064;&#115;&#116;&#097;&#116;&#101;&#046;&#103;&#111;&#118;</a>”, “isullivanjj@state.govi <a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#115;&#117;&#108;&#108;&#105;&#118;&#097;&#110;&#106;&#106;&#064;&#115;&#116;&#097;&#116;&#101;&#046;&#103;&#111;&#118;">&#115;&#117;&#108;&#108;&#105;&#118;&#097;&#110;&#106;&#106;&#064;&#115;&#116;&#097;&#116;&#101;&#046;&#103;&#111;&#118;</a>”, my personal favorite “lake.sullivar”, and more! <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
     </li>
+    <li id="fn:2">
+      <p>If you’re unfamiliar with network science and haven’t read my <a href="/network-science/">post on it</a>, you probably should. <a href="#fnref:2" class="reversefootnote">&#8617;</a></p>
+    </li>
   </ol>
 </div>
 
@@ -129,8 +138,12 @@
   <div class="related">
     <h2>Related</h2>
     
+      
+    
+      
       <li><a href="/bash-in-R/" title="bash in R">bash in R
        &nbsp; <span class="post-meta">February 01, 2016</span></a>
+      
     
   </div>
 

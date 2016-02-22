@@ -5,9 +5,124 @@
     <description></description>
     <link>https://drew.lanen.ga/</link>
     <atom:link href="https://drew.lanen.ga/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 17 Feb 2016 19:46:27 -0800</pubDate>
-    <lastBuildDate>Wed, 17 Feb 2016 19:46:27 -0800</lastBuildDate>
+    <pubDate>Sun, 21 Feb 2016 23:15:09 -0800</pubDate>
+    <lastBuildDate>Sun, 21 Feb 2016 23:15:09 -0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Network Science</title>
+        <description>&lt;p&gt;&lt;strong&gt;NB: This is a long post. It’ll probably evolve as more technical context is necessary for subsequent posts.  Happy reading :)&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;A couple of jobs ago, I was lucky enough to get to work with some very smart network scientists.&lt;/p&gt;
+
+&lt;p&gt;We were building a product together that performed network analysis on large corporate organizational networks.  The idea was that many large organizations suffer from teams that worked in isolation, some were bottlenecks.  Some individuals were well connected and facilitated the flow of a lot of information, while others were having a negative impact on network connectivity.&lt;/p&gt;
+
+&lt;p&gt;As I’ve continued to work in smaller startups, I’ve realized that this problem isn’t confined to large groups of people.  &lt;strong&gt;Even companies of 30 people can suffer from the same problems as a company of 300 or 3,000.&lt;/strong&gt;  The biggest difference is that in smaller networks they often slip by undetected.&lt;/p&gt;
+
+&lt;p&gt;Consequently, I think it’s useful enough for everyone to know at least a little bit about terms and concepts in network science &lt;strong&gt;to be able to identify them in our own networks&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;So this isn’t meant to serve as a comprehensive introduction into network science.  Just a jump start so we can have more meaningful discussions about how to diagnose and improve our own networks.  Here we go.&lt;/p&gt;
+
+&lt;h2 id=&quot;modeling-relationships&quot;&gt;Modeling Relationships&lt;/h2&gt;
+
+&lt;p&gt;Meet three friends: Alice, Bob and Charlie.  Alice and Bob are good friends.  Bob and Charlie are not.  Bob talks to Charlie, but Charlie never reciprocates.  He’s grumpy.  That’s why him and Alice aren’t friends.&lt;/p&gt;
+
+&lt;p&gt;If we wanted to represent this structure mathematically, we’d make a matrix — every person gets a row and a column.  Then we put a value in every person in a row talks to each person’s column.  Ours would look something like this:&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt; &lt;/th&gt;
+      &lt;th&gt;Alice&lt;/th&gt;
+      &lt;th&gt;Bob&lt;/th&gt;
+      &lt;th&gt;Charlie&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Alice&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Bob&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Charlie&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Expressing a network as a matrix allows us to do a lot of math behind the scenes.&lt;/p&gt;
+
+&lt;h3 id=&quot;connectivity&quot;&gt;Connectivity&lt;/h3&gt;
+
+&lt;p&gt;Some colleagues of the network scientists I worked with wrote a &lt;a href=&quot;http://www.amazon.com/Connected-Surprising-Networks-Friends-Everything/dp/0316036137&quot;&gt;book&lt;/a&gt; on the power of network connectivity.  They note some particularly &lt;a href=&quot;https://www.cis.upenn.edu/~mkearns/papers/behvoting.pdf&quot;&gt;interesting work&lt;/a&gt; that highlights the importance of a network’s structure in its ability to reach concensus.&lt;/p&gt;
+
+&lt;h3 id=&quot;consensus&quot;&gt;Consensus&lt;/h3&gt;
+
+&lt;p&gt;Let me illustrate: imagine you’re the CEO at a venture-backed company that’s still struggling to find &lt;a href=&quot;http://www.stanford.edu/class/ee204/ProductMarketFit.html&quot;&gt;product-market fit&lt;/a&gt;.  You’re at about 30 employees, and you’re confident that the team you built can execute on any business model.  After a lot of research/advice/guts you decide to &lt;a href=&quot;https://en.wikipedia.org/wiki/Lean_startup#Pivot&quot;&gt;pivot&lt;/a&gt;. Everyone seems to be on board, except your Director of Engineering and VP of Sales.&lt;/p&gt;
+
+&lt;p&gt;Eventually, and unfortunately, it doesn’t pan out.  There were a lot of misaligned expectations, miscommunication, and missed deadlines.  It turns out, the two people who didn’t agree with you were the two most &lt;a href=&quot;#centrality&quot;&gt;central&lt;/a&gt; people at your company.  We’ll get to centrality in a minute, but it means that those two individuals are the most strategically connected everyone else at your company.&lt;/p&gt;
+
+&lt;p&gt;Why is that so fatal? &lt;a href=&quot;https://www.cis.upenn.edu/~mkearns/papers/KearnsJuddVorobeychik.pdf&quot;&gt;Michael Kearns argues&lt;/a&gt; that &lt;strong&gt;a network whose core actors are not in consensus will never arrive at a consensus.&lt;/strong&gt;  If you’re trying to rally around Business Plan B, you need your company to rally with you.  Doubt and negative energy are contagious, and &lt;strong&gt;a team that doesn’t have the same vision won’t build the same thing&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;If you don’t know who your core actors are, you need to.&lt;/p&gt;
+
+&lt;h3 id=&quot;centrality&quot;&gt;Centrality&lt;/h3&gt;
+
+&lt;p&gt;There are a couple of different ways to determine how important (or central) an actor is in a given network.  The idea is called &lt;strong&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Centrality&quot;&gt;centrality&lt;/a&gt;&lt;/strong&gt;, and there are a couple of ways to calculate it.&lt;/p&gt;
+
+&lt;p&gt;My favorite centrality metric is called &lt;strong&gt;betweenness&lt;/strong&gt;.  To calculate it, first you have to look at the shortest paths between every pair of actors in the network.  If two individuals are connected, their path is of length 1.  If we look at Alice and Charlie from the first example, we see that theirs is of length 2: Alice → Bob → Charlie.  Since Bob is connecting everyone in his network (albeit two people), he is a very important guy.&lt;/p&gt;
+
+&lt;h3 id=&quot;cliques&quot;&gt;Cliques&lt;/h3&gt;
+
+&lt;p&gt;Cliques exist in every social context.  Sometimes birds of a feather really do &lt;a href=&quot;https://en.wikipedia.org/wiki/Assortativity&quot;&gt;flock together&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;This gets pretty interesting when cliques don’t align with some pre-existing or hierarchical structuring.&lt;/p&gt;
+
+&lt;p&gt;If they don’t align, does it mean that sub-groups form because the existing org chart failed? Or that they’re collaborating well with other groups?  If they do align, does it mean that teams are well-defined, or are they working in isolation?&lt;/p&gt;
+
+&lt;p&gt;The answers aren’t always clear, but asking them can help ensure we’re aware of the network structure that’s forming.&lt;/p&gt;
+
+&lt;h3 id=&quot;brokerage-roles&quot;&gt;Brokerage Roles&lt;/h3&gt;
+
+&lt;p&gt;In every network, cliques will exist and silos will exist.  Just like it would be inefficient if no one worked together on anything, it would also be inefficient if everyone worked together on everything.&lt;/p&gt;
+
+&lt;p&gt;Hence, collaboration.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.insna.org/PDF/Connections/v26/2004_I-1-6.pdf&quot;&gt;Brokerage roles&lt;/a&gt; let us explain how someone facilitates collaboration.  We look at how actors from some groups &lt;em&gt;broker&lt;/em&gt; relationship with actors from other groups.&lt;/p&gt;
+
+&lt;p&gt;We start by breaking up a network into all of its &lt;strong&gt;triads&lt;/strong&gt;. The Alice → Bob → Charlie relationship is a triad — A is connected to B, and B to C, but A is not connected to C.  We’d say that Bob is a &lt;em&gt;broker&lt;/em&gt; in that relationship.&lt;/p&gt;
+
+&lt;p&gt;For every triad, we classify the relationship according to the following:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Coordinator&lt;/strong&gt;: The broker mediates contact between two individuals in the same group: &lt;strong&gt;A → A → A&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Consultant&lt;/strong&gt;: The broker mediates contact between two individuals in the same group, who are not member of the broker’s group: &lt;strong&gt;A → B → A&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Representative&lt;/strong&gt;: The broker mediates an incoming contact from an out-group member to an in-group member: &lt;strong&gt;A → B → B&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Gatekeeper&lt;/strong&gt;: The broker mediates an outgoing contact from an in-group member to an out-group member: &lt;strong&gt;A → A → B&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Liaison&lt;/strong&gt;: The broker mediates contact between two individuals from different groups: &lt;strong&gt;A → B → C&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;After we classify all of their triads, we’d say an actor’s brokerage role is whatever role they find themselves in most frequently.&lt;/p&gt;
+
+</description>
+        <pubDate>Sat, 20 Feb 2016 00:00:00 -0800</pubDate>
+        <link>https://drew.lanen.ga/network-science/</link>
+        <guid isPermaLink="true">https://drew.lanen.ga/network-science/</guid>
+        
+        
+        <category>general</category>
+        
+      </item>
     
       <item>
         <title>Hillary's Damn Emails</title>
@@ -19,7 +134,7 @@
 
 &lt;p&gt;By now the dust has more than settled on &lt;a href=&quot;https://en.wikipedia.org/wiki/Hillary_Clinton_email_controversy&quot;&gt;Hillary Clinton’s email controversy&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;I’m not interested in bringing the topic back from the dead to debate the concerns about the security of potentially confidential information, but more in the network it identifies, which is interesting for two reasons.  First, it could be a nice, toy-ish data set to run analysis and benchmarks against, like the &lt;a href=&quot;https://www.cs.cmu.edu/~./enron/&quot;&gt;Enron corpus&lt;/a&gt;.  Second, it could potentially help identify the type of leadership style and kind of organization that Hillary Clinton runs, which is obviously relevant seeing as how she might end up being &lt;a href=&quot;http://projects.fivethirtyeight.com/election-2016/national-primary-polls/democratic/&quot;&gt;the next American president&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;I’m not interested in bringing the topic back from the dead to debate the concerns about the security of potentially confidential information, but more in the network it identifies, which is interesting for two reasons.  First, it could be a nice, toy-ish data set to run analysis and benchmarks against, like the &lt;a href=&quot;https://www.cs.cmu.edu/~./enron/&quot;&gt;Enron corpus&lt;/a&gt;.  Second, it could potentially help identify the type of leadership style and kind of organization that Hillary Clinton runs, which is naturally relevant seeing as how she might end up being &lt;a href=&quot;http://projects.fivethirtyeight.com/election-2016/national-primary-polls/democratic/&quot;&gt;the next American president&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;But first, the data…&lt;/p&gt;
 
@@ -27,15 +142,19 @@
 
 &lt;p&gt;First off, the data aren’t great.  I got mine from &lt;a href=&quot;https://www.kaggle.com/kaggle/hillary-clinton-emails&quot;&gt;Kaggle&lt;/a&gt;, which had some helpful additions/modifications.&lt;/p&gt;
 
-&lt;p&gt;The problem is that the data, which came from a FOIA request, consist of some semi-structured output from computer vision over a bunch of &lt;em&gt;PDFs&lt;/em&gt; of &lt;em&gt;scanned&lt;/em&gt; copies of &lt;em&gt;printed&lt;/em&gt; emails.  So needless to say, there are some inconsistencies in what was extracted &lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;. Some fuzzy matching helped a little, but I still spent a while manually resolving funky naming variations.&lt;/p&gt;
+&lt;p&gt;The problem is that the data, which came from a FOIA request, consist of some semi-structured output from computer vision over a bunch of &lt;em&gt;PDFs&lt;/em&gt; of &lt;em&gt;scanned&lt;/em&gt; copies of &lt;em&gt;printed&lt;/em&gt; emails.  So needless to say, there are some inconsistencies in what was extracted&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;. Some fuzzy matching helped a little, but I still spent a while manually resolving funky naming variations.&lt;/p&gt;
 
 &lt;p&gt;The email contacts are the most important part of the data for me — they identify the structure of the network I care about, and I can now create a matrix that identifies how individuals are engaging with every other individual in the network.  If I had been interested in sentiment analysis or topic modeling I probably wouldn’t have cared.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Caveat&lt;/strong&gt;: The data are an incomplete record of the emails sent at the State Department during Secretary Clinton’s tenure.  Since only emails sent from her private email server were the subject of the FOIA request, the data represents more of an egocentric network.  But it can still be used to explore some interesting ideas.&lt;/p&gt;
 
 &lt;h2 id=&quot;the-network&quot;&gt;The Network&lt;/h2&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/hillary-network-full.png&quot; alt=&quot;Hillary's State Department Network&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Sometimes I wish I were a network scientist.  There are a lot of &lt;a href=&quot;https://en.wikipedia.org/wiki/Centrality&quot;&gt;interesting ways&lt;/a&gt; to think about how important an individual is to a network of people.  I tend to gravitate to &lt;a href=&quot;https://en.wikipedia.org/wiki/Betweenness_centrality&quot;&gt;betweenness&lt;/a&gt;, and the gist of it is this — I need to talk to Alice, and the only way for me to contact Alice is through our mutual connection, Bob.  Therefore, Bob is important to that network.&lt;/p&gt;
+&lt;p&gt;That represents Secretary Clinton’s State Department email network.  Isn’t that beautiful?  Sometimes I wish I were a network scientist&lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+
+&lt;p&gt;There are a lot of &lt;a href=&quot;https://en.wikipedia.org/wiki/Centrality&quot;&gt;interesting ways&lt;/a&gt; to think about how important an individual is to a network of people.  I tend to gravitate to &lt;a href=&quot;https://en.wikipedia.org/wiki/Betweenness_centrality&quot;&gt;betweenness&lt;/a&gt;, and the gist of it is this — I need to talk to Alice, and the only way for me to contact Alice is through our mutual connection, Bob.  Therefore, Bob is important to that network.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;In an unstable network, betweenness is distributed among a few key individuals.&lt;/strong&gt;  If someone leaves the network, the results in terms of connectivity and information flow are catastrophic.  &lt;strong&gt;In a stable network, betweenness is distributed more evenly among its members.&lt;/strong&gt;&lt;/p&gt;
 
@@ -45,7 +164,7 @@
 
 &lt;p&gt;Here we see that &lt;strong&gt;Secretary Clinton’s State Department is supported by three key people&lt;/strong&gt;: &lt;a href=&quot;https://en.wikipedia.org/wiki/Jake_Sullivan&quot;&gt;Jacob Sullivan&lt;/a&gt;, &lt;a href=&quot;https://en.wikipedia.org/wiki/Cheryl_Mills&quot;&gt;Cheryl Mills&lt;/a&gt; and &lt;a href=&quot;https://en.wikipedia.org/wiki/Huma_Abedin&quot;&gt;Huma Abedin&lt;/a&gt;.  It seems very reasonable that Secretary Clinton’s three most influential staffers would be her Deputy Chief of Staff, Chief of Staff, and semi-Deputy Chief of Staff, respectively.&lt;/p&gt;
 
-&lt;p&gt;Are those staffers over-leveraged, creating instability in the network?  Maybe.&lt;/p&gt;
+&lt;p&gt;Are those staffers over-leveraged, creating instability in the network?  Probably.&lt;/p&gt;
 
 &lt;p&gt;Looking at network similarity — how similarly each individual engages with every other individual in the network, measured by &lt;a href=&quot;https://en.wikipedia.org/wiki/Cosine_similarity&quot;&gt;cosine similarity&lt;/a&gt; — we see a bit of interesting asymmetry.  In terms of &lt;strong&gt;incoming similarity&lt;/strong&gt; — how similarly they receive email from people in the network — &lt;strong&gt;they’re not very similar&lt;/strong&gt;, with similarites around 0.6 or below.  But in terms of &lt;strong&gt;outgoing similarity&lt;/strong&gt; — how similarly they send email in the network — &lt;strong&gt;they’re much more similar&lt;/strong&gt;, reaching similarities as high as 0.85.&lt;/p&gt;
 
@@ -53,17 +172,19 @@
 
 &lt;h2 id=&quot;takeaway&quot;&gt;Takeaway&lt;/h2&gt;
 
-&lt;p&gt;What does it all mean?  Secretary Clinton employed a Chief of Staff and Deputy Chiefs of Staff who were able to connect the majority of her State Department.  They received correspondence from a wide set of individuals, and then (likely) corresponded and executed among a smaller, more shared set of individuals.&lt;/p&gt;
+&lt;p&gt;What does it all mean?  Secretary Clinton worked primarily with her Chief of Staff and Deputy Chiefs of Staff.  They were extremely central to the network, and acted as gatekeepers for a lot of other email senders.&lt;/p&gt;
+
+&lt;p&gt;Is there any way to de-leverage her Chief of Staff?  Probably not, as it’s pretty much the role of a &lt;a href=&quot;https://en.wikipedia.org/wiki/Chief_of_staff&quot;&gt;Chief of Staff&lt;/a&gt; to broker communication between an executive and its supporting staff and relations.  But it does tend to cause a lot of shakeup when it they leave.&lt;/p&gt;
 
 &lt;h2 id=&quot;future-work&quot;&gt;Future Work&lt;/h2&gt;
 
-&lt;p&gt;This is a data set I’d love to spend more time with.  If you’d like to use my resolved aliases, it’s available on &lt;a href=&quot;&quot;&gt;GitHub&lt;/a&gt;.  If I were to explore any of this further, I might examine:&lt;/p&gt;
+&lt;p&gt;This is a data set I’d love to spend more time with.  If you’d like to use my modified data, it’s available on &lt;a href=&quot;https://github.com/drewlanenga/clintonemails&quot;&gt;GitHub&lt;/a&gt;.  If I were to explore any of this further, I might examine:&lt;/p&gt;
 
 &lt;ol&gt;
   &lt;li&gt;&lt;strong&gt;How this changes over time&lt;/strong&gt;.  Are there individuals whose importance increase or decrease over time, and how was the network affected by it?&lt;/li&gt;
   &lt;li&gt;&lt;strong&gt;Clique analysis&lt;/strong&gt;.  I might dive deeper on cliques/neighborhoods/clusters to see who was working with whom, which groups worked well together (or didn’t), and what differences might exist in terms of topics discussed and actions taken.&lt;/li&gt;
   &lt;li&gt;&lt;strong&gt;Backchanneling&lt;/strong&gt;.  Is there any evidence in the data? With whom?  (How would we detect it?)  What the implications be?&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Succession&lt;/strong&gt;.  Would there be any catastrophic changes to network connectivity if certain individuals were to leave? What would that mean to the work of the State Department?  What kind of strategies could we surmise to mitigate against it?&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Succession&lt;/strong&gt;.  Would there be any catastrophic changes to network connectivity if certain individuals were to leave?  What about a changeup with the Chief of Staff?  What would that mean to the work of the State Department?  What kind of strategies could we surmise to mitigate against it?&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;p&gt;At this point I’m just rambling, but I’m sure I’ll have more ideas I might want to address later.&lt;/p&gt;
@@ -74,6 +195,9 @@
   &lt;ol&gt;
     &lt;li id=&quot;fn:1&quot;&gt;
       &lt;p&gt;For example, &lt;a href=&quot;https://en.wikipedia.org/wiki/Jake_Sullivan&quot;&gt;Jake Sullivan&lt;/a&gt;, who served as Secretary Clinton’s Deputy Chief of Staff, appears in over 2,500 email threads with over 40 variations of spelling — “Sullivan, Jacob J”, “sullivanjj@state.gov”, “Sullivan, Jacob J &lt;a href=&quot;&amp;#109;&amp;#097;&amp;#105;&amp;#108;&amp;#116;&amp;#111;:&amp;#083;&amp;#117;&amp;#108;&amp;#108;&amp;#105;&amp;#118;&amp;#097;&amp;#110;&amp;#105;&amp;#108;&amp;#064;&amp;#115;&amp;#116;&amp;#097;&amp;#116;&amp;#101;&amp;#046;&amp;#103;&amp;#111;&amp;#118;&quot;&gt;&amp;#083;&amp;#117;&amp;#108;&amp;#108;&amp;#105;&amp;#118;&amp;#097;&amp;#110;&amp;#105;&amp;#108;&amp;#064;&amp;#115;&amp;#116;&amp;#097;&amp;#116;&amp;#101;&amp;#046;&amp;#103;&amp;#111;&amp;#118;&lt;/a&gt;”, “isullivanjj@state.govi &lt;a href=&quot;&amp;#109;&amp;#097;&amp;#105;&amp;#108;&amp;#116;&amp;#111;:&amp;#115;&amp;#117;&amp;#108;&amp;#108;&amp;#105;&amp;#118;&amp;#097;&amp;#110;&amp;#106;&amp;#106;&amp;#064;&amp;#115;&amp;#116;&amp;#097;&amp;#116;&amp;#101;&amp;#046;&amp;#103;&amp;#111;&amp;#118;&quot;&gt;&amp;#115;&amp;#117;&amp;#108;&amp;#108;&amp;#105;&amp;#118;&amp;#097;&amp;#110;&amp;#106;&amp;#106;&amp;#064;&amp;#115;&amp;#116;&amp;#097;&amp;#116;&amp;#101;&amp;#046;&amp;#103;&amp;#111;&amp;#118;&lt;/a&gt;”, my personal favorite “lake.sullivar”, and more! &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:2&quot;&gt;
+      &lt;p&gt;If you’re unfamiliar with network science and haven’t read my &lt;a href=&quot;/network-science/&quot;&gt;post on it&lt;/a&gt;, you probably should. &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
   &lt;/ol&gt;
 &lt;/div&gt;
