@@ -3,7 +3,7 @@ layout: post
 title:  "Hillary's Damn Emails"
 date:   2016-02-17
 description: "A glimpse of what we can learn about Hillary's emails."
-categories: general
+categories: general, network science
 ---
 
 > The American people are sick and tired about hearing about [Hillary Clinton's] damn emails.

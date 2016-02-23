@@ -159,7 +159,7 @@ blockquote {
     color: $grey-color;
     border-left: 4px solid $brand-color;
     padding-left: $spacing-unit / 2;
-    font-size: 18px;
+    font-size: 13.5pt;
     /*letter-spacing: -1px;*/
     margin: $spacing-unit * 1.5 0;
 
@@ -182,7 +182,7 @@ sup {
     margin-top: $spacing-unit;
 }
 .footnotes {
-    font-size: 18px;
+    font-size: 13.5pt;
 
     ol {
         font-weight: bold;
@@ -250,7 +250,7 @@ pre {
  * Wrapper
  */
 .wrapper {
-    max-width: 600px;
+    max-width: 720px;
     margin: 0 auto;
     padding: $header-room+$spacing-unit+$spacing-unit 0px;
     @extend %clearfix;

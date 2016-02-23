@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width initial-scale=1">
 
   <title>Network Science</title>
-  <meta name="description" content="NB: This is a long post. It&#8217;ll probably evolve as more technical context is necessary for subsequent posts.  Happy reading :)">
+  <meta name="description" content="A couple of jobs ago, I was lucky enough to get to work with some very smart network scientists.">
 
   <link rel="stylesheet" href="/css/main.css">
   <link rel="canonical" href="https://drew.lanen.ga/network-science/">
@@ -55,21 +55,19 @@
   </header>
 
   <article class="post-content">
-    <p><strong>NB: This is a long post. It’ll probably evolve as more technical context is necessary for subsequent posts.  Happy reading :)</strong></p>
+    <p>A couple of jobs ago, I was lucky enough to get to work with some very smart network scientists.</p>
 
-<p>A couple of jobs ago, I was lucky enough to get to work with some very smart network scientists.</p>
+<p>We were building a product together that performed organizational network analysis (ONA) in large enterprise companies.  ONA allows you to get strategic and identify how people collaborate.  You can identify overall network connectiveness, silos and cliques, key contributors, quantify synergy, etc.  We wanted to help companies identify and monitor key metrics and “actionable insights”.  People loved it.</p>
 
-<p>We were building a product together that performed network analysis on large corporate organizational networks.  The idea was that many large organizations suffer from teams that worked in isolation, some were bottlenecks.  Some individuals were well connected and facilitated the flow of a lot of information, while others were having a negative impact on network connectivity.</p>
+<p>Unfortunately, getting there can be a difficult journey.  You have to (1) realize that network science can improve the way people work together, then (2) convince leadership that it’s worthwhile because (3) $$$.  People don’t have network scientists in-house, and they are definitely scarce and expensive.</p>
 
-<p>As I’ve continued to work in smaller startups, I’ve realized that this problem isn’t confined to large groups of people.  <strong>Even companies of 30 people can suffer from the same problems as a company of 300 or 3,000.</strong>  The biggest difference is that in smaller networks they often slip by undetected.</p>
+<p>Hopefully, by the end of this post you’ll be a network science convert with some tools in your belt to start improving your own organizations.</p>
 
-<p>Consequently, I think it’s useful enough for everyone to know at least a little bit about terms and concepts in network science <strong>to be able to identify them in our own networks</strong>.</p>
-
-<p>So this isn’t meant to serve as a comprehensive introduction into network science.  Just a jump start so we can have more meaningful discussions about how to diagnose and improve our own networks.  Here we go.</p>
+<p>I’ll start with examples.  There’s a glossary at the end for all the terms I just gloss over.</p>
 
 <h2 id="modeling-relationships">Modeling Relationships</h2>
 
-<p>Meet three friends: Alice, Bob and Charlie.  Alice and Bob are good friends.  Bob and Charlie are not.  Bob talks to Charlie, but Charlie never reciprocates.  He’s grumpy.  That’s why him and Alice aren’t friends.</p>
+<p>Meet three co-workers: Alice, Bob and Charlie.  Alice and Bob are good friends.  Bob and Charlie are not.  Bob talks to Charlie, but Charlie never reciprocates.  He’s grumpy.  That’s why him and Alice aren’t friends.</p>
 
 <p>If we wanted to represent this structure mathematically, we’d make a matrix — every person gets a row and a column.  Then we put a value in every person in a row talks to each person’s column.  Ours would look something like this:</p>
 
@@ -106,47 +104,35 @@
 
 <p>Expressing a network as a matrix allows us to do a lot of math behind the scenes.</p>
 
-<h3 id="connectivity">Connectivity</h3>
+<h2 id="cliques">Cliques</h2>
 
-<p>Some colleagues of the network scientists I worked with wrote a <a href="http://www.amazon.com/Connected-Surprising-Networks-Friends-Everything/dp/0316036137">book</a> on the power of network connectivity.  They note some particularly <a href="https://www.cis.upenn.edu/~mkearns/papers/behvoting.pdf">interesting work</a> that highlights the importance of a network’s structure in its ability to reach concensus.</p>
+<p>Cliques exist in every social context.  Birds of a feather really do <a href="https://en.wikipedia.org/wiki/Assortativity">flock together</a>.  <strong>Organizations get pretty interesting when cliques don’t align with the org chart.</strong></p>
 
-<h3 id="consensus">Consensus</h3>
+<p>If they don’t align, does it mean that cliques form because the existing org chart failed? Or have they succeeding in opening up collaboration with other groups?  If they do align, does it mean that teams are focused, or are they working in isolation?  It’s always a good idea to have a core set of productivity metrics, so the answers to these questions can be validated with experimentation.</p>
 
-<p>Let me illustrate: imagine you’re the CEO at a venture-backed company that’s still struggling to find <a href="http://www.stanford.edu/class/ee204/ProductMarketFit.html">product-market fit</a>.  You’re at about 30 employees, and you’re confident that the team you built can execute on any business model.  After a lot of research/advice/guts you decide to <a href="https://en.wikipedia.org/wiki/Lean_startup#Pivot">pivot</a>. Everyone seems to be on board, except your Director of Engineering and VP of Sales.</p>
+<h2 id="key-actors">Key Actors</h2>
 
-<p>Eventually, and unfortunately, it doesn’t pan out.  There were a lot of misaligned expectations, miscommunication, and missed deadlines.  It turns out, the two people who didn’t agree with you were the two most <a href="#centrality">central</a> people at your company.  We’ll get to centrality in a minute, but it means that those two individuals are the most strategically connected everyone else at your company.</p>
+<p>Sometimes there are actors who perform strategic roles in brokering relationships between cliques or structured areas of the organization.  If there are two groups of people working very cohesively, but there’s no communication between teams, that’s usually a problem.  There needs to be at least a couple of actors brokering communication between the two groups.</p>
 
-<p>Why is that so fatal? <a href="https://www.cis.upenn.edu/~mkearns/papers/KearnsJuddVorobeychik.pdf">Michael Kearns argues</a> that <strong>a network whose core actors are not in consensus will never arrive at a consensus.</strong>  If you’re trying to rally around Business Plan B, you need your company to rally with you.  Doubt and negative energy are contagious, and <strong>a team that doesn’t have the same vision won’t build the same thing</strong>.</p>
+<p>You can see why those actors are important to the network — we’d say that those brokers lie on many <em>shortest paths</em> between the two groups.  That is, if you want to talk with someone from the other group, it’s probably through those brokers.  Finding out how many shortest paths an actor lies on is a metric called <strong>betweenness</strong>.</p>
 
-<p>If you don’t know who your core actors are, you need to.</p>
+<p>Betweenness is one of a couple metrics that can be used to determine how important — or <em>central</em> — an actor is to a network.</p>
 
 <h3 id="centrality">Centrality</h3>
 
-<p>There are a couple of different ways to determine how important (or central) an actor is in a given network.  The idea is called <strong><a href="https://en.wikipedia.org/wiki/Centrality">centrality</a></strong>, and there are a couple of ways to calculate it.</p>
+<p>Centrality scores are an effort by network scientists to determine how important different actors are.  The idea is that more important members have higher scores of centrality.</p>
 
-<p>My favorite centrality metric is called <strong>betweenness</strong>.  To calculate it, first you have to look at the shortest paths between every pair of actors in the network.  If two individuals are connected, their path is of length 1.  If we look at Alice and Charlie from the first example, we see that theirs is of length 2: Alice → Bob → Charlie.  Since Bob is connecting everyone in his network (albeit two people), he is a very important guy.</p>
+<p>Actor centrality can give insights into how stable an organization is.  <strong>A stable network will have pretty similar centrality scores among most of its members.</strong>  That is, each individual is equally important, so if anyone leaves the network, those connections can be easily absorbed by others in the network.</p>
 
-<h3 id="cliques">Cliques</h3>
+<p><strong>An unstable network will have most of the centrality in a network carried by a few strategic actors.</strong>  If a highly central actor were to leave the network, it would leave a disproportionately high number of relationships unbrokered.</p>
 
-<p>Cliques exist in every social context.  Sometimes birds of a feather really do <a href="https://en.wikipedia.org/wiki/Assortativity">flock together</a>.</p>
+<h3 id="brokerage">Brokerage</h3>
 
-<p>This gets pretty interesting when cliques don’t align with some pre-existing or hierarchical structuring.</p>
-
-<p>If they don’t align, does it mean that sub-groups form because the existing org chart failed? Or that they’re collaborating well with other groups?  If they do align, does it mean that teams are well-defined, or are they working in isolation?</p>
-
-<p>The answers aren’t always clear, but asking them can help ensure we’re aware of the network structure that’s forming.</p>
-
-<h3 id="brokerage-roles">Brokerage Roles</h3>
-
-<p>In every network, cliques will exist and silos will exist.  Just like it would be inefficient if no one worked together on anything, it would also be inefficient if everyone worked together on everything.</p>
-
-<p>Hence, collaboration.</p>
+<p>When considering an actor’s position in a network, we can also consider their functional role in collaboration.</p>
 
 <p><a href="https://www.insna.org/PDF/Connections/v26/2004_I-1-6.pdf">Brokerage roles</a> let us explain how someone facilitates collaboration.  We look at how actors from some groups <em>broker</em> relationship with actors from other groups.</p>
 
-<p>We start by breaking up a network into all of its <strong>triads</strong>. The Alice → Bob → Charlie relationship is a triad — A is connected to B, and B to C, but A is not connected to C.  We’d say that Bob is a <em>broker</em> in that relationship.</p>
-
-<p>For every triad, we classify the relationship according to the following:</p>
+<p>We start by breaking up a network into all of its <strong>triads</strong>.  (Triads are formally defined in the glossary.)  For every triad, we classify the relationship according to the following:</p>
 
 <ul>
   <li><strong>Coordinator</strong>: The broker mediates contact between two individuals in the same group: <strong>A → A → A</strong></li>
@@ -157,6 +143,52 @@
 </ul>
 
 <p>After we classify all of their triads, we’d say an actor’s brokerage role is whatever role they find themselves in most frequently.</p>
+
+<p><strong>When used in conjunction with centrality scores, brokerage roles can be used to identify actors who are important in terms of both centrality and function.</strong>  For example, for succession planning, you might want to identify individuals who have high centrality and fall into a representative role to fill vacant leadership positions on their team.</p>
+
+<h3 id="consensus">Consensus</h3>
+
+<p>Some colleagues of the network scientists I worked with wrote a <a href="http://www.amazon.com/Connected-Surprising-Networks-Friends-Everything/dp/0316036137">book</a> on the power of network connectivity.  They note some particularly <a href="https://www.cis.upenn.edu/~mkearns/papers/behvoting.pdf">interesting work</a> that highlights the importance of a network’s structure in its ability to reach consensus.</p>
+
+<p>Consensus deals with the homogeneity of a network’s state.  If everyone in the network were painted red, it would be in consensus.  If some were blue and some were red, it would not be in consensus.</p>
+
+<p>Let me illustrate with an example we’re all to familiar with: employee attrition.  When there’s unhappiness or dissatisfaction in our network, it’s contagious.  Ideally, we’d love it if our network were painted “satisfied”, but that won’t always be the case.</p>
+
+<p>When key actors in the network — high centrality and broker strategic relationships — are dissatisfied, they have a disproportionately high influence on the consensus on the network, which can be fatal.</p>
+
+<p>Why so fatal? <a href="https://www.cis.upenn.edu/~mkearns/papers/KearnsJuddVorobeychik.pdf">Michael Kearns argues</a> that <strong>a network whose core actors are not in consensus will never arrive at a consensus.</strong>  If you’re trying to rally around Business Plan B, you need your company to rally with you.  Doubt and negative energy are contagious, and <strong>a team that doesn’t have the same vision won’t build the same thing</strong>.</p>
+
+<h2 id="glossary">Glossary</h2>
+
+<ul>
+  <li><strong>Network</strong>: A collection of things that are connected.  Here we’ve only talked about people.  Some people call it a <strong>graph</strong>, or a <a href="http://www.zdnet.com/article/facebooks-zuckerberg-uncorks-the-social-graph/">social graph</a>.</li>
+  <li><strong>Matrix</strong>: A mathematical representation of a network.  (Specifically, we’re talking about an <a href="https://en.wikipedia.org/wiki/Adjacency_matrix">adjacency matrix</a>.)</li>
+  <li><strong>Actor</strong>: A person in a network.</li>
+  <li><strong>Edge</strong>: A connection between two actors.  We typically infer edges/connections by email or chat history, or surveys.</li>
+  <li><strong>Triad</strong>: A specific type of connection between three actors.  For actors A, B, and C, a triad exists when A is connected to B and B is connected to C, but A is not connected to C (<strong>A → B → C</strong>).</li>
+  <li><strong>Shortest Path</strong>: The shortest set of edges between two actors.  You win if you can calculate these for <a href="https://en.wikipedia.org/wiki/Six_Degrees_of_Kevin_Bacon">Kevin Bacon</a>.  Mathematicians call this <a href="https://en.wikipedia.org/wiki/Distance_(graph_theory)">geodesic distance</a>.</li>
+  <li><strong>Connectedness</strong>: There are a couple of ways to evaluate connectedness, which were formulated by a guy named <a href="http://www.contrib.andrew.cmu.edu/~krack/documents/pubs/1994/1994%20Graph%20Theoretical%20Dimensions%20of%20Informal%20Organizations.pdf">Krackhardt</a>.  He proposes four dimensions, which are <strong>connectedness</strong>, <strong>hierarchy</strong>, <strong>efficiency</strong> and least upper boundedness (or <strong>lubness</strong>, for short).  Typically, you like it when your network has high connectedness and efficiency.</li>
+  <li><strong>Centrality</strong>: How <a href="https://en.wikipedia.org/wiki/Centrality">central</a>, or important, an actor is to a network. Popular ways to calculate it are <strong>betweenness</strong>, <strong>closeness</strong>, using <strong>eigenvectors</strong>, or using <strong>PageRank</strong>.  You can get a lot of mileage from looking at centrality in different ways — comparing among actors, looking at averages across teams, <a href="https://en.wikipedia.org/wiki/Pareto_chart">Pareto charts</a>, etc.</li>
+  <li><strong>Brokerage Role</strong>: The way an actor typically brokers relationships .  Some actors are <strong>gatekeepers</strong>, <strong>liaisons</strong>, <strong>representatives</strong>, <strong>coordinator</strong>, or <strong>consultant</strong>.</li>
+</ul>
+
+<!-- styling for the adjacency matrix table -->
+<style>
+table {
+	margin: 30px auto;
+	text-align: center;
+}
+table thead tr th, table tbody tr td {
+	padding: 4px 8px;
+	border: 1px solid #CCC;
+}
+table thead tr th, table tbody tr td:first-child {
+	font-weight: bold;
+}
+table tbody tr td:first-child {
+	text-align: right;
+}
+</style>
 
 
   </article>
