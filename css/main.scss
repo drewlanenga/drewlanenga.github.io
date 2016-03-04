@@ -27,9 +27,17 @@
   text-transform: none;
   line-height: 1em;
 }
+/*
 .icon-twitter:before { content: '\e800'; }
 .icon-github:before { content: '\e801'; }
 .icon-rss:before { content: '\e802'; }
+*/
+.icon-twitter:before { content: '\e800'; } /* '' */
+.icon-linkedin:before { content: '\e801'; } /* '' */
+.icon-github:before { content: '\e802'; } /* '' */
+.icon-slack:before { content: '\e803'; } /* '' */
+.icon-stackoverflow:before { content: '\e804'; } /* '' */
+.icon-rss:before { content: '\e805'; } /* '' */
 
 
 @font-face {
@@ -79,6 +87,8 @@ $brand-color:      #26A65B;
 $grey-color:       #828282;
 $grey-color-light: lighten($grey-color, 40%);
 $grey-color-dark:  darken($grey-color, 25%);
+
+$darkgrey-color: #232627;
 
 // Width of the content area
 $content-width:    700px;

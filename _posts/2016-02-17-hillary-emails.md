@@ -6,6 +6,8 @@ description: "A glimpse of what we can learn about Hillary's emails."
 categories: general, network science
 ---
 
+[**UPDATE**: (March 3, 2016) Since I wrote this, there's been a [revival of interest](http://www.nytimes.com/2016/03/03/us/politics/as-presidential-campaign-unfolds-so-do-inquiries-into-hillary-clintons-emails.html) &mdash; from the FBI &mdash; in the Clinton email spectacle.  Who knows what it will mean for her, but maybe it means we'll get more data!]
+
 > The American people are sick and tired about hearing about [Hillary Clinton's] damn emails.
 >
 > &ndash; Sen. Bernie Sanders

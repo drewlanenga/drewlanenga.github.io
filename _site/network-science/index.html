@@ -24,7 +24,7 @@
     <div class="trigger">
       
         
-        <a class="page-link hide-palm" href="/about/">About</a>
+        <a class="page-link hide-palm" href="/about/">ABOUT</a>
         
       
         
@@ -35,7 +35,8 @@
       
       <a class="rss page-link hide-palm" href="/feed.xml"><span class="icon-rss"></span></a>
       <a class="twitter page-link" href="https://twitter.com/drewlanenga"><span class="icon-twitter"></span></a>
-      <a class="facebook page-link" href="https://www.github.com/drewlanenga"><span class="icon-github"></span></a>
+      <a class="linkedin page-link" href="https://www.linkedin.com/in/drewlanenga"><span class="icon-linkedin"></span></a>
+      <a class="github page-link" href="https://www.github.com/drewlanenga"><span class="icon-github"></span></a>
     </div>
   </nav>
 
@@ -45,9 +46,9 @@
 
 </div>
 
-      <div class="wrapper">
-        <div class="page-content">
-          <div class="post">
+    <div class="wrapper">
+      <div class="page-content">
+        <div class="post">
 
   <header class="post-header">
     <h1 class="post-title">Network Science</h1>
@@ -212,8 +213,8 @@ table tbody tr td:first-child {
 
 </div>
 
-        </div>
-        <footer class="site-footer">
+      </div>
+      <footer class="site-footer">
 <p class="small">drew lanenga &copy; 2016</p>
 </footer>
 
@@ -227,20 +228,20 @@ table tbody tr td:first-child {
   ga('send', 'pageview');
 </script>
 
+<script src="//cdn.jsdelivr.net/headroomjs/0.5.0/headroom.min.js"></script>
+<script type="text/javascript">
+  var el = document.querySelector(".header-container");
+  var headroom  = new Headroom(el, {
+    "offset": 205,
+    "tolerance": {
+      down: 10,
+      up: 20
+    }
+  });
+
+  headroom.init();
+</script>
+
     </div>
-
-    <script src="//cdn.jsdelivr.net/headroomjs/0.5.0/headroom.min.js"></script>
-    <script type="text/javascript">
-      var el = document.querySelector(".header-container");
-      var headroom  = new Headroom(el, {
-        "offset": 205,
-        "tolerance": {
-          down: 10,
-          up: 20
-        }
-      });
-
-      headroom.init();
-    </script>
   </body>
 </html>

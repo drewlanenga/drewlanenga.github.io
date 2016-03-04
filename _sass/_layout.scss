@@ -274,6 +274,8 @@ Post List
 .post-title {
     letter-spacing: -1px;
     line-height: 1;
+    text-align: center;
+    font-size: 42px;
 
     @include media-query($on-laptop) {
         font-size: 36px;
@@ -341,4 +343,36 @@ span.arrow {
     position: relative;
     top: 0;
     font-size: 17px;
+}
+
+/* About Stuff */
+
+.headshot-container {
+    /*background-color: $darkgrey-color;*/
+    background-color: #3C4546;
+    padding: 130px 0 0;
+    text-align: center;
+
+    .headshot {
+        background-color: #FFF;
+        max-width: 25%;
+        margin: auto;
+        img {
+            padding: 0.5em;
+        }
+
+        @include media-query($on-laptop) {
+            max-width: 75%;
+        }
+    }
+    .headshot-caption {
+        color: white;
+        padding: 15px 0 30px;
+        .caption {
+            margin-bottom: 0px;
+        }
+        .subcaption {
+            font-weight: 200;
+        }
+    }
 }

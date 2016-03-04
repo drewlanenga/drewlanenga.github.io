@@ -24,7 +24,7 @@
     <div class="trigger">
       
         
-        <a class="page-link hide-palm" href="/about/">About</a>
+        <a class="page-link hide-palm" href="/about/">ABOUT</a>
         
       
         
@@ -35,7 +35,8 @@
       
       <a class="rss page-link hide-palm" href="/feed.xml"><span class="icon-rss"></span></a>
       <a class="twitter page-link" href="https://twitter.com/drewlanenga"><span class="icon-twitter"></span></a>
-      <a class="facebook page-link" href="https://www.github.com/drewlanenga"><span class="icon-github"></span></a>
+      <a class="linkedin page-link" href="https://www.linkedin.com/in/drewlanenga"><span class="icon-linkedin"></span></a>
+      <a class="github page-link" href="https://www.github.com/drewlanenga"><span class="icon-github"></span></a>
     </div>
   </nav>
 
@@ -45,22 +46,26 @@
 
 </div>
 
-      <div class="wrapper">
-        <div class="page-content">
-          <!-- Brief intro -->
-<div class="header-intro">
-  <!--h2>I'm Drew Lanenga.</h2-->
-  <p>
-    I'm Drew Lanenga, a data scientist at <strong><a href="https://www.getlytics.com">Lytics</a></strong>.
-  </p>
-</div>
-<hr />
-<!-- End intro -->
+    <div class="wrapper">
+      <div class="page-content">
+        <div class="home">
 
-<div class="home">
+  <header class="post-header">
+    <h1 class="post-title">POSTS</h1>
+  </header>
 
   <ul id="post-list">
     
+      
+      <li>
+        <a href="/network-science/">
+        <aside class="dates">Feb 20</aside>
+        </a>
+        <a href="/network-science/">Network Science<h2>An introduction to Network Science for teams between 30 and 300 people.</h2></a>
+        <!-- <p>
+        <p>A couple of jobs ago, I was lucky enough to get to work with some very smart network scientists.</p> <p>We were building a product together that performed organizational network analysis (ONA) in large enterprise companies. ONA allows you to get strategic and identify how people collaborate. You can identify overall...
+        </p> -->
+      </li>
       
     
       
@@ -70,7 +75,7 @@
         </a>
         <a href="/hillary-emails/">Hillary's Damn Emails<h2>A glimpse of what we can learn about Hillary's emails.</h2></a>
         <!-- <p>
-        <blockquote> <p>The American people are sick and tired about hearing about [Hillary Clinton’s] damn emails.</p> <p>– Sen. Bernie Sanders</p> </blockquote> <p>By now the dust has more than settled on <a href="https://en.wikipedia.org/wiki/Hillary_Clinton_email_controversy">Hillary Clinton’s email controversy</a>.</p> <p>I’m not interested in bringing the topic back from the dead to debate the concerns about...
+        <p>[<strong>UPDATE</strong>: (March 3, 2016) Since I wrote this, there’s been a <a href="http://www.nytimes.com/2016/03/03/us/politics/as-presidential-campaign-unfolds-so-do-inquiries-into-hillary-clintons-emails.html">revival of interest</a> — from the FBI — in the Clinton email spectacle. Who knows what it will mean for her, but maybe it means we’ll get more data!]</p> <blockquote> <p>The American people are sick and tired about...
         </p> -->
       </li>
       
@@ -96,8 +101,8 @@
 
 </div>
 
-        </div>
-        <footer class="site-footer">
+      </div>
+      <footer class="site-footer">
 <p class="small">drew lanenga &copy; 2016</p>
 </footer>
 
@@ -111,20 +116,20 @@
   ga('send', 'pageview');
 </script>
 
+<script src="//cdn.jsdelivr.net/headroomjs/0.5.0/headroom.min.js"></script>
+<script type="text/javascript">
+  var el = document.querySelector(".header-container");
+  var headroom  = new Headroom(el, {
+    "offset": 205,
+    "tolerance": {
+      down: 10,
+      up: 20
+    }
+  });
+
+  headroom.init();
+</script>
+
     </div>
-
-    <script src="//cdn.jsdelivr.net/headroomjs/0.5.0/headroom.min.js"></script>
-    <script type="text/javascript">
-      var el = document.querySelector(".header-container");
-      var headroom  = new Headroom(el, {
-        "offset": 205,
-        "tolerance": {
-          down: 10,
-          up: 20
-        }
-      });
-
-      headroom.init();
-    </script>
   </body>
 </html>

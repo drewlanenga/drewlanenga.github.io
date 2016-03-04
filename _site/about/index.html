@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
-  <head>
+	<head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width initial-scale=1">
 
-  <title>About</title>
+  <title>ABOUT</title>
   <meta name="description" content="">
 
   <link rel="stylesheet" href="/css/main.css">
@@ -16,15 +16,15 @@
   <link rel="icon" type="image/x-icon" href="/assets/images/d.ico" />
 </head>
 
-  <body>
-    
+	<body>
+		
 <div class="header-container" id="header-container">
 
   <nav class="site-nav">
     <div class="trigger">
       
         
-        <a class="page-link hide-palm" href="/about/">About</a>
+        <a class="page-link hide-palm" href="/about/">ABOUT</a>
         
       
         
@@ -35,7 +35,8 @@
       
       <a class="rss page-link hide-palm" href="/feed.xml"><span class="icon-rss"></span></a>
       <a class="twitter page-link" href="https://twitter.com/drewlanenga"><span class="icon-twitter"></span></a>
-      <a class="facebook page-link" href="https://www.github.com/drewlanenga"><span class="icon-github"></span></a>
+      <a class="linkedin page-link" href="https://www.linkedin.com/in/drewlanenga"><span class="icon-linkedin"></span></a>
+      <a class="github page-link" href="https://www.github.com/drewlanenga"><span class="icon-github"></span></a>
     </div>
   </nav>
 
@@ -45,27 +46,82 @@
 
 </div>
 
-      <div class="wrapper">
-        <div class="page-content">
-          <div class="post">
+		<div class="headshot-container">
+			<div class="headshot">
+				<img src="/assets/images/drew-2050.jpg" />
+			</div>
+			<div class="headshot-caption">
+				<h2 class="caption">Drew Lanenga</h2>
+				<h4 class="subcaption">Data Scientist</h4>
+			</div>
+		</div>
+		<div class="wrapper" style="padding:20px;">
+			<div class="page-content">
+				<div class="post">
+					<header class="post-header">
+						<!--h1 class="post-title">ABOUT</h1-->
+					</header>
+					<article class="post-content">
+						<!--div class="headshot-container">
+	<div class="headshot">
+		<img src="/assets/images/drew-2050.jpg" />
+	</div>
+</div-->
 
-  <header class="post-header">
-    <h1 class="post-title">About</h1>
-  </header>
+<h3 id="professional">PROFESSIONAL</h3>
 
-  <article class="post-content">
-    <p>I’m Drew Lanenga.</p>
+<ul>
+  <li>Data Scientist @ <strong><a href="http://getlytics.com">Lytics</a></strong>
+    <ul>
+      <li>December 2013 – Present</li>
+    </ul>
+  </li>
+  <li>Chief Scientist @ <strong><a href="https://angel.co/highfive">HighFive</a></strong>
+    <ul>
+      <li>June 2013 – December 2013</li>
+    </ul>
+  </li>
+  <li>Hacker In Residence @ <strong><a href="http://techstars.com">Techstars/Nike+</a></strong>
+    <ul>
+      <li>March 2013 – June 2013</li>
+    </ul>
+  </li>
+  <li>Data Scientist @ <strong><a href="https://www.qualtrics.com">Qualtrics</a></strong>
+    <ul>
+      <li>July 2009 – September 2012</li>
+    </ul>
+  </li>
+  <li>Pollster @ <strong>UCEP</strong>
+    <ul>
+      <li>August 2008 – April 2009</li>
+    </ul>
+  </li>
+</ul>
 
-<p>I’ve been a statistician, a consultant, and a software engineer.  I hear that makes me a data scientist.</p>
+<h3 id="personal">PERSONAL</h3>
 
-<p>You won’t find any comment forms here.  If you want to talk about something here, or just talk, you can find me at <a href="https://twitter.com/drewlanenga">@drewlanenga</a> or <a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#100;&#114;&#101;&#119;&#064;&#108;&#097;&#110;&#101;&#110;&#046;&#103;&#097;">&#100;&#114;&#101;&#119;&#064;&#108;&#097;&#110;&#101;&#110;&#046;&#103;&#097;</a>.</p>
+<p>My <a href="https://www.instagram.com/alilanenga/">wife</a> is a <a href="https://www.alilanenga.com">photographer</a>.  We have two daughters, both of whome are named after characters in films we like.  We live in Portland, OR.</p>
 
-  </article>
+<p>You won’t find any comment forms here.  If you want to talk about something here, you can find me at <strong><a href="https://twitter.com/drewlanenga">@drewlanenga</a></strong> or <strong><a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#100;&#114;&#101;&#119;&#064;&#108;&#097;&#110;&#101;&#110;&#046;&#103;&#097;">&#100;&#114;&#101;&#119;&#064;&#108;&#097;&#110;&#101;&#110;&#046;&#103;&#097;</a></strong>.</p>
 
-</div>
+<style>
+ul li {
+	list-style-type: none;
+	font-size: 1.1em;
+}
 
-        </div>
-        <footer class="site-footer">
+ul li ul li {
+	color: #828282;
+	font-size: 0.8em;
+	padding-bottom: 1em;
+}
+</style>
+
+
+					</article>
+				</div>
+			</div>
+			<footer class="site-footer">
 <p class="small">drew lanenga &copy; 2016</p>
 </footer>
 
@@ -79,20 +135,20 @@
   ga('send', 'pageview');
 </script>
 
-    </div>
+<script src="//cdn.jsdelivr.net/headroomjs/0.5.0/headroom.min.js"></script>
+<script type="text/javascript">
+  var el = document.querySelector(".header-container");
+  var headroom  = new Headroom(el, {
+    "offset": 205,
+    "tolerance": {
+      down: 10,
+      up: 20
+    }
+  });
 
-    <script src="//cdn.jsdelivr.net/headroomjs/0.5.0/headroom.min.js"></script>
-    <script type="text/javascript">
-      var el = document.querySelector(".header-container");
-      var headroom  = new Headroom(el, {
-        "offset": 205,
-        "tolerance": {
-          down: 10,
-          up: 20
-        }
-      });
+  headroom.init();
+</script>
 
-      headroom.init();
-    </script>
-  </body>
+		</div>
+	</body>
 </html>

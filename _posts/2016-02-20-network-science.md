@@ -4,7 +4,7 @@ title:  "Network Science"
 date:   2016-02-20
 description: "An introduction to Network Science for teams between 30 and 300 people."
 categories: general, network science
-draft: true
+draft: false
 ---
 
 
