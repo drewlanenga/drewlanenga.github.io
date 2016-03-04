@@ -27,7 +27,7 @@ img: /assets/images/drew-2050.jpg
 
 ### PERSONAL
 
-My [wife](https://www.instagram.com/alilanenga/) is a [photographer](https://www.alilanenga.com).  We have two daughters, both of whome are named after characters in films we like.  We live in Portland, OR.
+My [wife](https://www.instagram.com/alilanenga/) is a [photographer](https://www.alilanenga.com).  We have two daughters, both of whom are named after [movie](http://www.imdb.com/character/ch0160833/?ref_=tt_cl_t4) [characters](http://www.imdb.com/character/ch0099995/?ref_=tt_cl_t1).  We live in Portland, OR.
 
 You won't find any comment forms here.  If you want to talk about something here, you can find me at **[@drewlanenga](https://twitter.com/drewlanenga)** or **[drew@lanen.ga](mailto:drew@lanen.ga)**.
 
