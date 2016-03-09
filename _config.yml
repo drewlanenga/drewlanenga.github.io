@@ -2,7 +2,7 @@
 title: "drew.lanen.ga"
 email: drew@lanen.ga
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "https://drew.lanen.ga" # the base hostname & protocol for your site
+url: "http://drew.lanen.ga" # the base hostname & protocol for your site
 twitter_username: drewlanenga
 github_username:  drewlanenga
 linkedin_username:  drewlanenga

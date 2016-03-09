@@ -3,10 +3,10 @@
   <channel>
     <title>drew.lanen.ga</title>
     <description></description>
-    <link>https://drew.lanen.ga/</link>
-    <atom:link href="https://drew.lanen.ga/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 08 Mar 2016 22:05:57 -0800</pubDate>
-    <lastBuildDate>Tue, 08 Mar 2016 22:05:57 -0800</lastBuildDate>
+    <link>http://drew.lanen.ga/</link>
+    <atom:link href="http://drew.lanen.ga/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Tue, 08 Mar 2016 22:08:05 -0800</pubDate>
+    <lastBuildDate>Tue, 08 Mar 2016 22:08:05 -0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -394,8 +394,8 @@ election.legend({
 
 </description>
         <pubDate>Tue, 08 Mar 2016 00:00:00 -0800</pubDate>
-        <link>https://drew.lanen.ga/electoral-primary/</link>
-        <guid isPermaLink="true">https://drew.lanen.ga/electoral-primary/</guid>
+        <link>http://drew.lanen.ga/electoral-primary/</link>
+        <guid isPermaLink="true">http://drew.lanen.ga/electoral-primary/</guid>
         
         
         <category>general,</category>
@@ -543,8 +543,8 @@ table tbody tr td:first-child {
 
 </description>
         <pubDate>Sat, 20 Feb 2016 00:00:00 -0800</pubDate>
-        <link>https://drew.lanen.ga/network-science/</link>
-        <guid isPermaLink="true">https://drew.lanen.ga/network-science/</guid>
+        <link>http://drew.lanen.ga/network-science/</link>
+        <guid isPermaLink="true">http://drew.lanen.ga/network-science/</guid>
         
         
         <category>general,</category>
@@ -636,8 +636,8 @@ table tbody tr td:first-child {
 &lt;/div&gt;
 </description>
         <pubDate>Wed, 17 Feb 2016 00:00:00 -0800</pubDate>
-        <link>https://drew.lanen.ga/hillary-emails/</link>
-        <guid isPermaLink="true">https://drew.lanen.ga/hillary-emails/</guid>
+        <link>http://drew.lanen.ga/hillary-emails/</link>
+        <guid isPermaLink="true">http://drew.lanen.ga/hillary-emails/</guid>
         
         
         <category>general,</category>
@@ -664,8 +664,8 @@ table tbody tr td:first-child {
 
 </description>
         <pubDate>Mon, 01 Feb 2016 00:00:00 -0800</pubDate>
-        <link>https://drew.lanen.ga/bash-in-R/</link>
-        <guid isPermaLink="true">https://drew.lanen.ga/bash-in-R/</guid>
+        <link>http://drew.lanen.ga/bash-in-R/</link>
+        <guid isPermaLink="true">http://drew.lanen.ga/bash-in-R/</guid>
         
         
         <category>general,</category>
