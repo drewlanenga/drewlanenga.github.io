@@ -5,9 +5,404 @@
     <description></description>
     <link>https://drew.lanen.ga/</link>
     <atom:link href="https://drew.lanen.ga/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 03 Mar 2016 23:11:50 -0800</pubDate>
-    <lastBuildDate>Thu, 03 Mar 2016 23:11:50 -0800</lastBuildDate>
+    <pubDate>Tue, 08 Mar 2016 21:51:36 -0800</pubDate>
+    <lastBuildDate>Tue, 08 Mar 2016 21:51:36 -0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Electoral Primary Votes</title>
+        <description>&lt;p&gt;Lately, most political commentary treats Secretary Clinton as the de facto nominee for the Democratic Party.  Clinton is leading in the delegate count, and has a staggering number of superdelegates already “pledged”.&lt;/p&gt;
+
+&lt;p&gt;However, people don’t elect presidents in the United States — the &lt;a href=&quot;https://en.wikipedia.org/wiki/Electoral_College_(United_States)&quot;&gt;Electoral College&lt;/a&gt; does.&lt;/p&gt;
+
+&lt;p&gt;What does that mean for Secretary Clinton?  &lt;strong&gt;Most of the states that she is winning are likely to vote Republican anyway.&lt;/strong&gt;  So, in effect, her wins wouldn’t put her in office.  However, Senator Sanders’ wins would.&lt;/p&gt;
+
+&lt;p&gt;If you consider current primary results in terms of the 2012 Electoral College, as of March 8th, &lt;strong&gt;Secretary Clinton would have 36&lt;/strong&gt; electoral votes, and &lt;strong&gt;Senator Sanders would have 43&lt;/strong&gt; electoral votes.&lt;/p&gt;
+
+&lt;script src=&quot;//cdnjs.cloudflare.com/ajax/libs/d3/3.5.3/d3.min.js&quot;&gt;&lt;/script&gt;
+
+&lt;script src=&quot;//cdnjs.cloudflare.com/ajax/libs/topojson/1.6.9/topojson.min.js&quot;&gt;&lt;/script&gt;
+
+&lt;script src=&quot;/assets/js/datamaps.all.min.js&quot;&gt;&lt;/script&gt;
+
+&lt;div id=&quot;container&quot; style=&quot;position: relative; width: 700px; height: 360px;&quot;&gt;&lt;/div&gt;
+
+&lt;style&gt;
+.hoverinfo table tr td {
+  line-height: 1.1em;
+  padding: 4px 2px;
+}
+&lt;/style&gt;
+
+&lt;script&gt;
+var election = new Datamap({
+  scope: &quot;usa&quot;,
+  element: document.getElementById(&quot;container&quot;),
+  geographyConfig: {
+    highlightBorderColor: &quot;#323534&quot;,
+    popupTemplate: function(geography, data) {
+      winner2012 = &quot;Democrat&quot;
+      if(data.winner_2012 == &quot;R&quot;) {
+        winner2012 = &quot;Republican&quot;
+      }
+
+      winner2016 = &quot;TBD&quot;
+      if(data.winner_2016 == &quot;H&quot;) {
+        winner2016 = &quot;Hillary&quot;
+      } else if(data.winner_2016 == &quot;B&quot;) {
+        winner2016 = &quot;Bernie&quot;
+      }
+
+      tableRows = []
+      tableRows.push(&quot;&lt;tr&gt; &lt;td&gt; Electoral Votes: &lt;/td&gt; &lt;td&gt; &quot; + data.electoral_votes + &quot; &lt;/td&gt; &lt;/tr&gt;&quot;)
+      tableRows.push(&quot;&lt;tr&gt; &lt;td&gt; 2012 General: &lt;br /&gt; Outcome &lt;/td&gt; &lt;td&gt; &quot; + winner2012 + &quot; &lt;/td&gt; &lt;/tr&gt;&quot;)
+      tableRows.push(&quot;&lt;tr&gt; &lt;td&gt; 2016 Primary: &lt;br /&gt; Outcome &lt;/td&gt; &lt;td&gt; &quot; + winner2016 + &quot; &lt;/td&gt; &lt;/tr&gt;&quot;)
+
+      return &quot;&lt;div class='hoverinfo'&gt; &lt;strong&gt;&quot; + geography.properties.name + &quot;&lt;/strong&gt;&lt;br /&gt; &lt;table&gt;&lt;tbody&gt; &quot; + tableRows.join(&quot; &quot;) +  &quot; &lt;/tbody&gt;&lt;/table&gt; &lt;/div&gt;&quot;
+    },
+    highlightOnHover: false,
+    highlightBorderWidth: 1
+  },
+  legendTitle: &quot;Outcomes&quot;,
+  defaultFillName: &quot;TBD&quot;,
+  fills: {
+  &quot;H1&quot;: &quot;#267291&quot;,
+  &quot;H0&quot;: &quot;#A7C7D4&quot;,
+  &quot;B1&quot;: &quot;#26A65B&quot;,
+  &quot;B0&quot;: &quot;#A6DCBC&quot;,
+  &quot;defaultFill&quot;: &quot;#EEE&quot;
+},
+data:{
+ &quot;AL&quot;: {
+ &quot;electoral_votes&quot;: 9,
+&quot;winner_2012&quot;: &quot;R&quot;,
+&quot;winner_2016&quot;: &quot;H&quot;,
+&quot;fillKey&quot;: &quot;H0&quot; 
+},
+&quot;AK&quot;: {
+ &quot;electoral_votes&quot;: 3,
+&quot;winner_2012&quot;: &quot;R&quot;,
+&quot;winner_2016&quot;: &quot;&quot;,
+&quot;fillKey&quot;: &quot;NONE&quot; 
+},
+&quot;AZ&quot;: {
+ &quot;electoral_votes&quot;: 11,
+&quot;winner_2012&quot;: &quot;R&quot;,
+&quot;winner_2016&quot;: &quot;&quot;,
+&quot;fillKey&quot;: &quot;NONE&quot; 
+},
+&quot;AR&quot;: {
+ &quot;electoral_votes&quot;: 6,
+&quot;winner_2012&quot;: &quot;R&quot;,
+&quot;winner_2016&quot;: &quot;H&quot;,
+&quot;fillKey&quot;: &quot;H0&quot; 
+},
+&quot;CA&quot;: {
+ &quot;electoral_votes&quot;: 55,
+&quot;winner_2012&quot;: &quot;D&quot;,
+&quot;winner_2016&quot;: &quot;&quot;,
+&quot;fillKey&quot;: &quot;NONE&quot; 
+},
+&quot;CO&quot;: {
+ &quot;electoral_votes&quot;: 9,
+&quot;winner_2012&quot;: &quot;D&quot;,
+&quot;winner_2016&quot;: &quot;B&quot;,
+&quot;fillKey&quot;: &quot;B1&quot; 
+},
+&quot;CT&quot;: {
+ &quot;electoral_votes&quot;: 7,
+&quot;winner_2012&quot;: &quot;D&quot;,
+&quot;winner_2016&quot;: &quot;&quot;,
+&quot;fillKey&quot;: &quot;NONE&quot; 
+},
+&quot;DC&quot;: {
+ &quot;electoral_votes&quot;: 3,
+&quot;winner_2012&quot;: &quot;D&quot;,
+&quot;winner_2016&quot;: &quot;&quot;,
+&quot;fillKey&quot;: &quot;NONE&quot; 
+},
+&quot;DE&quot;: {
+ &quot;electoral_votes&quot;: 3,
+&quot;winner_2012&quot;: &quot;D&quot;,
+&quot;winner_2016&quot;: &quot;&quot;,
+&quot;fillKey&quot;: &quot;NONE&quot; 
+},
+&quot;FL&quot;: {
+ &quot;electoral_votes&quot;: 29,
+&quot;winner_2012&quot;: &quot;D&quot;,
+&quot;winner_2016&quot;: &quot;&quot;,
+&quot;fillKey&quot;: &quot;NONE&quot; 
+},
+&quot;GA&quot;: {
+ &quot;electoral_votes&quot;: 16,
+&quot;winner_2012&quot;: &quot;R&quot;,
+&quot;winner_2016&quot;: &quot;H&quot;,
+&quot;fillKey&quot;: &quot;H0&quot; 
+},
+&quot;HI&quot;: {
+ &quot;electoral_votes&quot;: 4,
+&quot;winner_2012&quot;: &quot;D&quot;,
+&quot;winner_2016&quot;: &quot;&quot;,
+&quot;fillKey&quot;: &quot;NONE&quot; 
+},
+&quot;ID&quot;: {
+ &quot;electoral_votes&quot;: 4,
+&quot;winner_2012&quot;: &quot;R&quot;,
+&quot;winner_2016&quot;: &quot;&quot;,
+&quot;fillKey&quot;: &quot;NONE&quot; 
+},
+&quot;IL&quot;: {
+ &quot;electoral_votes&quot;: 20,
+&quot;winner_2012&quot;: &quot;D&quot;,
+&quot;winner_2016&quot;: &quot;&quot;,
+&quot;fillKey&quot;: &quot;NONE&quot; 
+},
+&quot;IN&quot;: {
+ &quot;electoral_votes&quot;: 11,
+&quot;winner_2012&quot;: &quot;R&quot;,
+&quot;winner_2016&quot;: &quot;&quot;,
+&quot;fillKey&quot;: &quot;NONE&quot; 
+},
+&quot;IA&quot;: {
+ &quot;electoral_votes&quot;: 6,
+&quot;winner_2012&quot;: &quot;D&quot;,
+&quot;winner_2016&quot;: &quot;H&quot;,
+&quot;fillKey&quot;: &quot;H1&quot; 
+},
+&quot;KS&quot;: {
+ &quot;electoral_votes&quot;: 6,
+&quot;winner_2012&quot;: &quot;R&quot;,
+&quot;winner_2016&quot;: &quot;B&quot;,
+&quot;fillKey&quot;: &quot;B0&quot; 
+},
+&quot;KY&quot;: {
+ &quot;electoral_votes&quot;: 8,
+&quot;winner_2012&quot;: &quot;R&quot;,
+&quot;winner_2016&quot;: &quot;&quot;,
+&quot;fillKey&quot;: &quot;NONE&quot; 
+},
+&quot;LA&quot;: {
+ &quot;electoral_votes&quot;: 8,
+&quot;winner_2012&quot;: &quot;R&quot;,
+&quot;winner_2016&quot;: &quot;H&quot;,
+&quot;fillKey&quot;: &quot;H0&quot; 
+},
+&quot;ME&quot;: {
+ &quot;electoral_votes&quot;: 4,
+&quot;winner_2012&quot;: &quot;D&quot;,
+&quot;winner_2016&quot;: &quot;B&quot;,
+&quot;fillKey&quot;: &quot;B1&quot; 
+},
+&quot;MD&quot;: {
+ &quot;electoral_votes&quot;: 10,
+&quot;winner_2012&quot;: &quot;D&quot;,
+&quot;winner_2016&quot;: &quot;&quot;,
+&quot;fillKey&quot;: &quot;NONE&quot; 
+},
+&quot;MA&quot;: {
+ &quot;electoral_votes&quot;: 11,
+&quot;winner_2012&quot;: &quot;D&quot;,
+&quot;winner_2016&quot;: &quot;H&quot;,
+&quot;fillKey&quot;: &quot;H1&quot; 
+},
+&quot;MI&quot;: {
+ &quot;electoral_votes&quot;: 16,
+&quot;winner_2012&quot;: &quot;D&quot;,
+&quot;winner_2016&quot;: &quot;B&quot;,
+&quot;fillKey&quot;: &quot;B1&quot; 
+},
+&quot;MN&quot;: {
+ &quot;electoral_votes&quot;: 10,
+&quot;winner_2012&quot;: &quot;D&quot;,
+&quot;winner_2016&quot;: &quot;B&quot;,
+&quot;fillKey&quot;: &quot;B1&quot; 
+},
+&quot;MS&quot;: {
+ &quot;electoral_votes&quot;: 6,
+&quot;winner_2012&quot;: &quot;R&quot;,
+&quot;winner_2016&quot;: &quot;H&quot;,
+&quot;fillKey&quot;: &quot;H0&quot; 
+},
+&quot;MO&quot;: {
+ &quot;electoral_votes&quot;: 10,
+&quot;winner_2012&quot;: &quot;R&quot;,
+&quot;winner_2016&quot;: &quot;&quot;,
+&quot;fillKey&quot;: &quot;NONE&quot; 
+},
+&quot;MT&quot;: {
+ &quot;electoral_votes&quot;: 3,
+&quot;winner_2012&quot;: &quot;R&quot;,
+&quot;winner_2016&quot;: &quot;&quot;,
+&quot;fillKey&quot;: &quot;NONE&quot; 
+},
+&quot;NE&quot;: {
+ &quot;electoral_votes&quot;: 5,
+&quot;winner_2012&quot;: &quot;R&quot;,
+&quot;winner_2016&quot;: &quot;B&quot;,
+&quot;fillKey&quot;: &quot;B0&quot; 
+},
+&quot;NV&quot;: {
+ &quot;electoral_votes&quot;: 6,
+&quot;winner_2012&quot;: &quot;D&quot;,
+&quot;winner_2016&quot;: &quot;H&quot;,
+&quot;fillKey&quot;: &quot;H1&quot; 
+},
+&quot;NH&quot;: {
+ &quot;electoral_votes&quot;: 4,
+&quot;winner_2012&quot;: &quot;D&quot;,
+&quot;winner_2016&quot;: &quot;B&quot;,
+&quot;fillKey&quot;: &quot;B1&quot; 
+},
+&quot;NJ&quot;: {
+ &quot;electoral_votes&quot;: 14,
+&quot;winner_2012&quot;: &quot;D&quot;,
+&quot;winner_2016&quot;: &quot;&quot;,
+&quot;fillKey&quot;: &quot;NONE&quot; 
+},
+&quot;NM&quot;: {
+ &quot;electoral_votes&quot;: 5,
+&quot;winner_2012&quot;: &quot;D&quot;,
+&quot;winner_2016&quot;: &quot;&quot;,
+&quot;fillKey&quot;: &quot;NONE&quot; 
+},
+&quot;NY&quot;: {
+ &quot;electoral_votes&quot;: 29,
+&quot;winner_2012&quot;: &quot;D&quot;,
+&quot;winner_2016&quot;: &quot;&quot;,
+&quot;fillKey&quot;: &quot;NONE&quot; 
+},
+&quot;NC&quot;: {
+ &quot;electoral_votes&quot;: 15,
+&quot;winner_2012&quot;: &quot;R&quot;,
+&quot;winner_2016&quot;: &quot;&quot;,
+&quot;fillKey&quot;: &quot;NONE&quot; 
+},
+&quot;ND&quot;: {
+ &quot;electoral_votes&quot;: 3,
+&quot;winner_2012&quot;: &quot;R&quot;,
+&quot;winner_2016&quot;: &quot;&quot;,
+&quot;fillKey&quot;: &quot;NONE&quot; 
+},
+&quot;OH&quot;: {
+ &quot;electoral_votes&quot;: 18,
+&quot;winner_2012&quot;: &quot;D&quot;,
+&quot;winner_2016&quot;: &quot;&quot;,
+&quot;fillKey&quot;: &quot;NONE&quot; 
+},
+&quot;OK&quot;: {
+ &quot;electoral_votes&quot;: 7,
+&quot;winner_2012&quot;: &quot;R&quot;,
+&quot;winner_2016&quot;: &quot;B&quot;,
+&quot;fillKey&quot;: &quot;B0&quot; 
+},
+&quot;OR&quot;: {
+ &quot;electoral_votes&quot;: 7,
+&quot;winner_2012&quot;: &quot;D&quot;,
+&quot;winner_2016&quot;: &quot;&quot;,
+&quot;fillKey&quot;: &quot;NONE&quot; 
+},
+&quot;PA&quot;: {
+ &quot;electoral_votes&quot;: 20,
+&quot;winner_2012&quot;: &quot;D&quot;,
+&quot;winner_2016&quot;: &quot;&quot;,
+&quot;fillKey&quot;: &quot;NONE&quot; 
+},
+&quot;RI&quot;: {
+ &quot;electoral_votes&quot;: 4,
+&quot;winner_2012&quot;: &quot;D&quot;,
+&quot;winner_2016&quot;: &quot;&quot;,
+&quot;fillKey&quot;: &quot;NONE&quot; 
+},
+&quot;SC&quot;: {
+ &quot;electoral_votes&quot;: 9,
+&quot;winner_2012&quot;: &quot;R&quot;,
+&quot;winner_2016&quot;: &quot;H&quot;,
+&quot;fillKey&quot;: &quot;H0&quot; 
+},
+&quot;SD&quot;: {
+ &quot;electoral_votes&quot;: 3,
+&quot;winner_2012&quot;: &quot;R&quot;,
+&quot;winner_2016&quot;: &quot;&quot;,
+&quot;fillKey&quot;: &quot;NONE&quot; 
+},
+&quot;TN&quot;: {
+ &quot;electoral_votes&quot;: 11,
+&quot;winner_2012&quot;: &quot;R&quot;,
+&quot;winner_2016&quot;: &quot;H&quot;,
+&quot;fillKey&quot;: &quot;H0&quot; 
+},
+&quot;TX&quot;: {
+ &quot;electoral_votes&quot;: 38,
+&quot;winner_2012&quot;: &quot;R&quot;,
+&quot;winner_2016&quot;: &quot;H&quot;,
+&quot;fillKey&quot;: &quot;H0&quot; 
+},
+&quot;UT&quot;: {
+ &quot;electoral_votes&quot;: 6,
+&quot;winner_2012&quot;: &quot;R&quot;,
+&quot;winner_2016&quot;: &quot;&quot;,
+&quot;fillKey&quot;: &quot;NONE&quot; 
+},
+&quot;VT&quot;: {
+ &quot;electoral_votes&quot;: 3,
+&quot;winner_2012&quot;: &quot;D&quot;,
+&quot;winner_2016&quot;: &quot;D&quot;,
+&quot;fillKey&quot;: &quot;D1&quot; 
+},
+&quot;VA&quot;: {
+ &quot;electoral_votes&quot;: 13,
+&quot;winner_2012&quot;: &quot;D&quot;,
+&quot;winner_2016&quot;: &quot;H&quot;,
+&quot;fillKey&quot;: &quot;H1&quot; 
+},
+&quot;WA&quot;: {
+ &quot;electoral_votes&quot;: 12,
+&quot;winner_2012&quot;: &quot;D&quot;,
+&quot;winner_2016&quot;: &quot;&quot;,
+&quot;fillKey&quot;: &quot;NONE&quot; 
+},
+&quot;WV&quot;: {
+ &quot;electoral_votes&quot;: 5,
+&quot;winner_2012&quot;: &quot;R&quot;,
+&quot;winner_2016&quot;: &quot;&quot;,
+&quot;fillKey&quot;: &quot;NONE&quot; 
+},
+&quot;WI&quot;: {
+ &quot;electoral_votes&quot;: 10,
+&quot;winner_2012&quot;: &quot;D&quot;,
+&quot;winner_2016&quot;: &quot;&quot;,
+&quot;fillKey&quot;: &quot;NONE&quot; 
+},
+&quot;WY&quot;: {
+ &quot;electoral_votes&quot;: 3,
+&quot;winner_2012&quot;: &quot;R&quot;,
+&quot;winner_2016&quot;: &quot;&quot;,
+&quot;fillKey&quot;: &quot;NONE&quot; 
+}
+}
+});
+election.labels();
+election.legend({
+  &quot;labels&quot;: {
+    &quot;H1&quot;: &quot;Clinton:&quot;,
+    &quot;B1&quot;: &quot;Sanders:&quot;,
+    &quot;H0&quot;: &quot; &quot;,
+    &quot;B0&quot;: &quot; &quot;
+  }
+});
+&lt;/script&gt;
+
+</description>
+        <pubDate>Tue, 08 Mar 2016 00:00:00 -0800</pubDate>
+        <link>https://drew.lanen.ga/electoral-primary/</link>
+        <guid isPermaLink="true">https://drew.lanen.ga/electoral-primary/</guid>
+        
+        
+        <category>general,</category>
+        
+        <category>politics</category>
+        
+      </item>
     
       <item>
         <title>Network Science</title>
