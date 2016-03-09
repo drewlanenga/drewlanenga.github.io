@@ -17,6 +17,8 @@ What does that mean for Secretary Clinton?  **Most of the states that she is win
 
 If you consider current primary results in terms of the 2012 Electoral College, as of March 8th, **Secretary Clinton would have 36** electoral votes, and **Senator Sanders would have 43** electoral votes.
 
+And that includes Clinton's razor-thin victories in [Iowa](https://www.google.com/search?q=iowa+democratic+caucus) and [Massachusetts](https://www.google.com/search?q=massachusetts+democratic+primary).
+
 
 <script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.5.3/d3.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/topojson/1.6.9/topojson.min.js"></script>
