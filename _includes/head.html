@@ -12,4 +12,16 @@
   <link rel="apple-touch-icon" href="{{ "/apple-touch-icon.png" | prepend: site.baseurl | prepend: site.url }}" />
   <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png" />
   <link rel="icon" type="image/x-icon" href="/assets/images/d.ico" />
+
+  <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+  {% if page.description %}
+  <meta name="description" content="{{ page.description }}">
+  <meta property="og:description" content="{{ page.description }}">
+  {% endif %}
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+  <meta property="og:site_name" content="{{ site.title }}">
+  {% if page.image %}
+  <meta property="og:image" content="{{ page.image | prepend: site.url }}">
+  {% endif %}
 </head>

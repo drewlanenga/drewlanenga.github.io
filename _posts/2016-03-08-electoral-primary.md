@@ -1,10 +1,11 @@
 ---
 layout: post
-title:  "Electoral Primary Votes"
+title:  "Sanders Would Win Electoral College"
 date:   2016-03-08
-description: "primary votes"
+description: "Sanders currently beats Clinton in terms of Electoral Votes"
 categories: general, politics
 draft: true
+image: /assets/images/posts/electoral-votes/preview.png
 ---
 
 
