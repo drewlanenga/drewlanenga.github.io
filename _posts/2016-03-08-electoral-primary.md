@@ -15,20 +15,43 @@ However, people don't elect presidents in the United States &mdash; the [Elector
 
 What does that mean for Secretary Clinton?  **Most of the states that she is winning are likely to vote Republican anyway.**  So, in effect, her wins wouldn't put her in office.  However, Senator Sanders' wins would.
 
-If you consider current primary results in terms of the 2012 Electoral College, as of March 8th, **Secretary Clinton would have 36** electoral votes, and **Senator Sanders would have 43** electoral votes.
+If you consider current primary results in terms of the 2012 Electoral College, as of March 8th, **Secretary Clinton would have 36** electoral votes, and **Senator Sanders would have 46** electoral votes.
 
 And that includes Clinton's razor-thin victories in [Iowa](https://www.google.com/search?q=iowa+democratic+caucus) and [Massachusetts](https://www.google.com/search?q=massachusetts+democratic+primary).
 
+## Electoral Map
+
+<div id="container" style="position: relative; width: 700px; height: 360px;margin-bottom: 72px;"></div>
+
+
+States in <span class="caption hillary-yes">dark blue</span> indicate a win for Clinton that would give her Electoral Votes, while states in <span class="caption hillary-no">light blue</span> indicate a win that wouldn't give her Electoral Votes.
+
+States in <span class="caption bernie-yes">dark green</span> indicate a win for Sanders that would give him Electoral Votes, while states in <span class="caption bernie-no">light green</span> indicate a win that wouldn't give him Electoral Votes.
 
 <script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.5.3/d3.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/topojson/1.6.9/topojson.min.js"></script>
 <script src="/assets/js/datamaps.all.min.js"></script>
-<div id="container" style="position: relative; width: 700px; height: 360px;"></div>
+
 
 <style>
 .hoverinfo table tr td {
   line-height: 1.1em;
   padding: 4px 2px;
+}
+.caption {
+  font-weight: bold;
+}
+.hillary-yes {
+  color: #267291;
+}
+.hillary-no {
+  color: #A7C7D4;
+}
+.bernie-yes {
+  color: #26A65B;
+}
+.bernie-no {
+  color: #A6DCBC;
 }
 </style>
 <script>
@@ -60,7 +83,6 @@ var election = new Datamap({
     highlightOnHover: false,
     highlightBorderWidth: 1
   },
-  legendTitle: "Outcomes",
   defaultFillName: "TBD",
   fills: {
   "H1": "#267291",
@@ -343,8 +365,8 @@ data:{
 "VT": {
  "electoral_votes": 3,
 "winner_2012": "D",
-"winner_2016": "D",
-"fillKey": "D1" 
+"winner_2016": "B",
+"fillKey": "B1" 
 },
 "VA": {
  "electoral_votes": 13,
