@@ -1,0 +1,281 @@
+{
+ "nodes": [
+ {
+ "id": "Caretaker",
+"name": "Caretaker",
+"energy": 25.914 
+},
+{
+ "id": "Community",
+"name": "Community",
+"energy": 26.288 
+},
+{
+ "id": "Data",
+"name": "Data",
+"energy": 5.7101 
+},
+{
+ "id": "Design",
+"name": "Design",
+"energy": 8.7402 
+},
+{
+ "id": "Engineering",
+"name": "Engineering",
+"energy": 52.699 
+},
+{
+ "id": "Happiness",
+"name": "Happiness",
+"energy":    100 
+},
+{
+ "id": "Marketing",
+"name": "Marketing",
+"energy": 13.368 
+},
+{
+ "id": "People",
+"name": "People",
+"energy": 3.0786 
+},
+{
+ "id": "Product",
+"name": "Product",
+"energy": 11.399 
+},
+{
+ "id": "Research",
+"name": "Research",
+"energy": 16.338 
+} 
+],
+"edges": [
+ {
+ "from": "Community",
+"to": "Caretaker",
+"explore": 334.38 
+},
+{
+ "from": "Data",
+"to": "Caretaker",
+"explore": 131.83 
+},
+{
+ "from": "Design",
+"to": "Caretaker",
+"explore":  318.2 
+},
+{
+ "from": "Engineering",
+"to": "Caretaker",
+"explore": 429.89 
+},
+{
+ "from": "Happiness",
+"to": "Caretaker",
+"explore": 248.56 
+},
+{
+ "from": "Marketing",
+"to": "Caretaker",
+"explore": 357.89 
+},
+{
+ "from": "People",
+"to": "Caretaker",
+"explore": 104.09 
+},
+{
+ "from": "Product",
+"to": "Caretaker",
+"explore": 641.06 
+},
+{
+ "from": "Research",
+"to": "Caretaker",
+"explore":    244 
+},
+{
+ "from": "Data",
+"to": "Community",
+"explore":   81.5 
+},
+{
+ "from": "Design",
+"to": "Community",
+"explore":  89.95 
+},
+{
+ "from": "Engineering",
+"to": "Community",
+"explore":  95.62 
+},
+{
+ "from": "Happiness",
+"to": "Community",
+"explore": 273.18 
+},
+{
+ "from": "Marketing",
+"to": "Community",
+"explore": 131.21 
+},
+{
+ "from": "People",
+"to": "Community",
+"explore":   58.5 
+},
+{
+ "from": "Product",
+"to": "Community",
+"explore": 260.81 
+},
+{
+ "from": "Research",
+"to": "Community",
+"explore": 163.56 
+},
+{
+ "from": "Design",
+"to": "Data",
+"explore": 115.07 
+},
+{
+ "from": "Engineering",
+"to": "Data",
+"explore": 175.71 
+},
+{
+ "from": "Happiness",
+"to": "Data",
+"explore": 77.933 
+},
+{
+ "from": "Marketing",
+"to": "Data",
+"explore": 113.19 
+},
+{
+ "from": "People",
+"to": "Data",
+"explore": 38.125 
+},
+{
+ "from": "Product",
+"to": "Data",
+"explore": 375.83 
+},
+{
+ "from": "Research",
+"to": "Data",
+"explore": 207.83 
+},
+{
+ "from": "Engineering",
+"to": "Design",
+"explore":  139.2 
+},
+{
+ "from": "Happiness",
+"to": "Design",
+"explore":   89.1 
+},
+{
+ "from": "Marketing",
+"to": "Design",
+"explore": 98.914 
+},
+{
+ "from": "People",
+"to": "Design",
+"explore":   33.1 
+},
+{
+ "from": "Product",
+"to": "Design",
+"explore": 415.65 
+},
+{
+ "from": "Research",
+"to": "Design",
+"explore":  266.6 
+},
+{
+ "from": "Happiness",
+"to": "Engineering",
+"explore": 113.03 
+},
+{
+ "from": "Marketing",
+"to": "Engineering",
+"explore": 74.554 
+},
+{
+ "from": "People",
+"to": "Engineering",
+"explore": 40.275 
+},
+{
+ "from": "Product",
+"to": "Engineering",
+"explore": 240.04 
+},
+{
+ "from": "Research",
+"to": "Engineering",
+"explore": 142.56 
+},
+{
+ "from": "Marketing",
+"to": "Happiness",
+"explore": 115.94 
+},
+{
+ "from": "People",
+"to": "Happiness",
+"explore": 45.619 
+},
+{
+ "from": "Product",
+"to": "Happiness",
+"explore": 209.88 
+},
+{
+ "from": "Research",
+"to": "Happiness",
+"explore": 172.68 
+},
+{
+ "from": "People",
+"to": "Marketing",
+"explore": 40.018 
+},
+{
+ "from": "Product",
+"to": "Marketing",
+"explore": 214.86 
+},
+{
+ "from": "Research",
+"to": "Marketing",
+"explore": 102.86 
+},
+{
+ "from": "Product",
+"to": "People",
+"explore": 25.469 
+},
+{
+ "from": "Research",
+"to": "People",
+"explore": 39.312 
+},
+{
+ "from": "Research",
+"to": "Product",
+"explore": 428.44 
+} 
+] 
+}

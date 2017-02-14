@@ -1,0 +1,277 @@
+html {
+  /*background-color: #F8F8F8;*/ }
+
+.d3 {
+  width: 800px;
+  /*height: 450px;*/
+  display: inline-block; }
+
+.d3 svg {
+  /*background-color: #dddddd;*/ }
+
+#email {
+  width: 800px;
+  margin: 4em auto; }
+
+#report-score {
+  line-height: 2em;
+  font-size: 2em;
+  font-weight: 700;
+  text-align: center; }
+
+.legend-description {
+  font-weight: 700; }
+
+.accent {
+  color: #008CED; }
+
+.dark {
+  color: #323B43; }
+
+.important {
+  font-weight: 700; }
+
+.module {
+  padding: 0 0 5em; }
+
+.module-title {
+  font-size: 1.5em;
+  font-weight: 500;
+  text-transform: uppercase; }
+
+.module-subtitle {
+  font-size: 1.25em;
+  line-height: 1.5em;
+  font-weight: 400;
+  text-transform: uppercase;
+  padding: 1em 0; }
+
+html, text {
+  fill: #0D0A0B;
+  font-size: 12pt;
+  /*font-family: Raleway, Arial, sans-serif;*/
+  font-family: "Open Sans", Helvetica Neue, Arial, sans-serif;
+  line-height: 1.5em; }
+
+a {
+  color: #008CED;
+  text-decoration: underline; }
+
+p {
+  margin-bottom: 2em; }
+
+.chart-title {
+  font-size: 24pt;
+  font-weight: 600;
+  letter-spacing: -1px; }
+
+.chart-footer text {
+  font-size: 12pt; }
+
+circle.person, circle.agg {
+  /*stroke: #000;*/
+  /*stroke-opacity: .5;*/
+  fill: #FDE643; }
+
+.entity circle {
+  stroke: #FFFFFF;
+  stroke-width: 2;
+  fill: #323B43; }
+
+circle.bgdot {
+  fill: #CBD3D9;
+  opacity: 0.5; }
+
+circle.shadow {
+  fill: #CBD3D9;
+  opacity: 0.5;
+  stroke: #666;
+  stroke-opacity: 0.7;
+  stroke-dasharray: 5 5;
+  stroke-width: 3; }
+
+line {
+  stroke: #43871C;
+  stroke-opacity: 0.5; }
+
+rect.bg {
+  fill: #999999;
+  opacity: 0.7; }
+
+.arc-group {
+  fill: rgba(255, 255, 255, 0); }
+
+.arc-group path {
+  stroke: #008CED;
+  opacity: 0.8; }
+
+.line {
+  stroke: #323B43;
+  stroke-opacity: 0.75;
+  stroke-width: 0.3px; }
+
+.axis line {
+  stroke: #0D0A0B; }
+
+.axis-value {
+  font-weight: bold; }
+
+.radar-chart-benchmark {
+  stroke-width: 2px;
+  stroke: #323B43;
+  fill: #323B43;
+  fill-opacity: 0.8; }
+
+.radar-chart-actual {
+  stroke-width: 2px;
+  stroke: #008CED;
+  fill: #008CED;
+  fill-opacity: 0.5; }
+
+.coord {
+  stroke: blue; }
+
+.breakdown-table {
+  width: 100%; }
+
+/*
+line charts
+*/
+path.smoothline {
+  fill: none;
+  stroke: #008CED;
+  stroke-width: 5px; }
+
+path.rawline {
+  fill: none;
+  stroke: #323B43;
+  stroke-opacity: 0.2;
+  stroke-width: 2px; }
+
+.axis path, .axis line {
+  fill: none;
+  stroke: #323B43;
+  opacity: 0.4;
+  shape-rendering: crispEdges; }
+
+.axis .tick text {
+  fill: #323B43;
+  opacity: 0.9; }
+
+/* tooltip */
+.tooltip {
+  background-color: #FFFFFF;
+  opacity: 0.9;
+  padding: 0.25em; }
+
+/*  borders */
+/*
+.breakdown-table {
+	border-collapse: collapse;
+}
+.breakdown-table td {
+	border-collapse: collapse;
+	border: 1px solid red;
+}
+*/
+.breakdown-table .team {
+  width: 20%;
+  text-align: left; }
+
+.breakdown-table td {
+  text-align: center;
+  padding: 6px 0; }
+
+.breakdown-table td.neutral {
+  width: 20%;
+  /*color: #E0CC54;*/
+  font-weight: 300; }
+
+.breakdown-table td.good {
+  width: 20%;
+  /*color: #FFFFFF;*/
+  color: #008CED;
+  font-weight: 700; }
+
+.breakdown-table td.bad {
+  width: 20%;
+  /*color: #FFFFFF;*/
+  color: #912D25;
+  font-weight: 700; }
+
+.breakdown-table-cell {
+  text-align: center; }
+
+.column-label {
+  font-weight: 700; }
+
+.bar {
+  fill: #323B43;
+  /*opacity: 0.8;*/ }
+
+.bar-label {
+  alignment-baseline: mathematical;
+  text-anchor: start; }
+
+.bar-value {
+  fill: #FFFFFF;
+  text-anchor: start;
+  alignment-baseline: mathematical;
+  font-weight: 500; }
+
+.headshot {
+  /*clip-path: url(#rounded);
+  -webkit-clip-path: url(#rounded);*/ }
+
+.email-footer {
+  text-align: center;
+  color: #008CED; }
+
+/*  globe stuff  */
+.edge {
+  fill: none;
+  stroke: #444;
+  stroke-width: 0.8;
+  stroke-opacity: 1.0; }
+
+.land {
+  fill: #8A99A4;
+  fill-opacity: 0.25;
+  stroke: #8A99A4;
+  stroke-opacity: 0.5;
+  stroke-width: 1.0; }
+
+.countries path {
+  fill: #ddd;
+  fill-opacity: 0.4;
+  stroke: #444;
+  stroke-linejoin: round;
+  stroke-width: 0.4;
+  stroke-opacity: 0.2; }
+
+.labels {
+  font: 12px sans-serif;
+  fill: #444; }
+
+.city {
+  fill: #323B43;
+  stroke: #323B43;
+  stroke-width: 4;
+  stroke-opacity: 0;
+  opacity: 1; }
+
+/*
+.noclick {
+    pointer-events:none;
+}
+*/
+.arcs {
+  opacity: 0.8;
+  stroke: #008CED;
+  stroke-width: 1; }
+
+.arc {
+  stroke-linejoin: round;
+  fill: none; }
+
+/*# sourceMappingURL=charts.css.map */

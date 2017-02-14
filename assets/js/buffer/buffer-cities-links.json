@@ -1,0 +1,3167 @@
+[
+ {
+ "from": "Boston, MA, USA",
+"to": "Asuncion, Paraguay",
+"weight": 0.10231 
+},
+{
+ "from": "Cambridge, UK",
+"to": "Asuncion, Paraguay",
+"weight": 0.11171 
+},
+{
+ "from": "Grenoble, France",
+"to": "Asuncion, Paraguay",
+"weight": 0.09482 
+},
+{
+ "from": "Houston, TX, USA",
+"to": "Asuncion, Paraguay",
+"weight": 0.10426 
+},
+{
+ "from": "Knoxville, TN, USA",
+"to": "Asuncion, Paraguay",
+"weight": 0.093394 
+},
+{
+ "from": "London, UK",
+"to": "Asuncion, Paraguay",
+"weight": 0.14235 
+},
+{
+ "from": "Louisville, KY, USA",
+"to": "Asuncion, Paraguay",
+"weight": 0.13157 
+},
+{
+ "from": "Nashville, TN, USA",
+"to": "Asuncion, Paraguay",
+"weight":  0.129 
+},
+{
+ "from": "New York, NY, USA",
+"to": "Asuncion, Paraguay",
+"weight": 0.18389 
+},
+{
+ "from": "Ozark, MO, USA",
+"to": "Asuncion, Paraguay",
+"weight": 0.33674 
+},
+{
+ "from": "Padova, Italy",
+"to": "Asuncion, Paraguay",
+"weight": 0.1601 
+},
+{
+ "from": "Philadelphia, PA, USA",
+"to": "Asuncion, Paraguay",
+"weight": 0.16626 
+},
+{
+ "from": "San Francisco, CA, USA",
+"to": "Asuncion, Paraguay",
+"weight": 0.34578 
+},
+{
+ "from": "Singapore",
+"to": "Asuncion, Paraguay",
+"weight": 0.11111 
+},
+{
+ "from": "Toronto, Canada",
+"to": "Asuncion, Paraguay",
+"weight": 0.16382 
+},
+{
+ "from": "Vancouver, Canada",
+"to": "Asuncion, Paraguay",
+"weight": 0.095525 
+},
+{
+ "from": "Bath, UK",
+"to": "Barcelona, Spain",
+"weight": 0.13208 
+},
+{
+ "from": "Boston, MA, USA",
+"to": "Barcelona, Spain",
+"weight": 0.17983 
+},
+{
+ "from": "Boulder, CO, USA",
+"to": "Barcelona, Spain",
+"weight": 0.10361 
+},
+{
+ "from": "Cambridge, UK",
+"to": "Barcelona, Spain",
+"weight": 0.30495 
+},
+{
+ "from": "Cape Town, SA",
+"to": "Barcelona, Spain",
+"weight": 0.18607 
+},
+{
+ "from": "Grenoble, France",
+"to": "Barcelona, Spain",
+"weight": 0.18643 
+},
+{
+ "from": "Houston, TX, USA",
+"to": "Barcelona, Spain",
+"weight": 0.14653 
+},
+{
+ "from": "London, UK",
+"to": "Barcelona, Spain",
+"weight": 0.25274 
+},
+{
+ "from": "Los Angeles, CA, USA",
+"to": "Barcelona, Spain",
+"weight": 0.10032 
+},
+{
+ "from": "Louisville, KY, USA",
+"to": "Barcelona, Spain",
+"weight": 0.17871 
+},
+{
+ "from": "Madrid, Spain",
+"to": "Barcelona, Spain",
+"weight": 0.13755 
+},
+{
+ "from": "Milan, Italy",
+"to": "Barcelona, Spain",
+"weight": 0.19659 
+},
+{
+ "from": "Montpellier, France",
+"to": "Barcelona, Spain",
+"weight": 0.22462 
+},
+{
+ "from": "Nashville, TN, USA",
+"to": "Barcelona, Spain",
+"weight": 0.11757 
+},
+{
+ "from": "New York, NY, USA",
+"to": "Barcelona, Spain",
+"weight": 0.28868 
+},
+{
+ "from": "Padova, Italy",
+"to": "Barcelona, Spain",
+"weight": 0.10805 
+},
+{
+ "from": "Paris, France",
+"to": "Barcelona, Spain",
+"weight": 0.10296 
+},
+{
+ "from": "Philadelphia, PA, USA",
+"to": "Barcelona, Spain",
+"weight": 0.18715 
+},
+{
+ "from": "Portland, OR, USA",
+"to": "Barcelona, Spain",
+"weight": 0.18679 
+},
+{
+ "from": "Rotterdam, Netherlands",
+"to": "Barcelona, Spain",
+"weight": 0.12205 
+},
+{
+ "from": "San Francisco, CA, USA",
+"to": "Barcelona, Spain",
+"weight": 0.18462 
+},
+{
+ "from": "Singapore",
+"to": "Barcelona, Spain",
+"weight": 0.14329 
+},
+{
+ "from": "Timperley, UK",
+"to": "Barcelona, Spain",
+"weight": 0.09482 
+},
+{
+ "from": "Toronto, Canada",
+"to": "Barcelona, Spain",
+"weight": 0.11927 
+},
+{
+ "from": "Zadar, Croatia",
+"to": "Barcelona, Spain",
+"weight": 0.15281 
+},
+{
+ "from": "Bellingham, WA, USA",
+"to": "Bath, UK",
+"weight": 0.11231 
+},
+{
+ "from": "Boise, ID, USA",
+"to": "Bath, UK",
+"weight": 0.11051 
+},
+{
+ "from": "Boston, MA, USA",
+"to": "Bath, UK",
+"weight": 0.18021 
+},
+{
+ "from": "Boulder, CO, USA",
+"to": "Bath, UK",
+"weight": 0.1414 
+},
+{
+ "from": "Bury St Edmunds, UK",
+"to": "Bath, UK",
+"weight": 0.1215 
+},
+{
+ "from": "Cambridge, UK",
+"to": "Bath, UK",
+"weight": 0.17415 
+},
+{
+ "from": "Grenoble, France",
+"to": "Bath, UK",
+"weight": 0.12039 
+},
+{
+ "from": "Houston, TX, USA",
+"to": "Bath, UK",
+"weight":  0.253 
+},
+{
+ "from": "London, UK",
+"to": "Bath, UK",
+"weight": 0.20884 
+},
+{
+ "from": "Louisville, KY, USA",
+"to": "Bath, UK",
+"weight": 0.1135 
+},
+{
+ "from": "Milan, Italy",
+"to": "Bath, UK",
+"weight": 0.10867 
+},
+{
+ "from": "Montpellier, France",
+"to": "Bath, UK",
+"weight": 0.35648 
+},
+{
+ "from": "Nashville, TN, USA",
+"to": "Bath, UK",
+"weight": 0.18206 
+},
+{
+ "from": "New York, NY, USA",
+"to": "Bath, UK",
+"weight": 0.32518 
+},
+{
+ "from": "Paris, France",
+"to": "Bath, UK",
+"weight": 0.12039 
+},
+{
+ "from": "Philadelphia, PA, USA",
+"to": "Bath, UK",
+"weight": 0.15499 
+},
+{
+ "from": "Portland, OR, USA",
+"to": "Bath, UK",
+"weight": 0.20819 
+},
+{
+ "from": "Rotterdam, Netherlands",
+"to": "Bath, UK",
+"weight": 0.15237 
+},
+{
+ "from": "Saint Catharines, Canada",
+"to": "Bath, UK",
+"weight": 0.26492 
+},
+{
+ "from": "San Francisco, CA, USA",
+"to": "Bath, UK",
+"weight": 0.1269 
+},
+{
+ "from": "Singapore",
+"to": "Bath, UK",
+"weight": 0.14235 
+},
+{
+ "from": "Southowram, UK",
+"to": "Bath, UK",
+"weight": 0.16423 
+},
+{
+ "from": "Timperley, UK",
+"to": "Bath, UK",
+"weight": 0.16986 
+},
+{
+ "from": "Zadar, Croatia",
+"to": "Bath, UK",
+"weight": 0.20722 
+},
+{
+ "from": "Boston, MA, USA",
+"to": "Beijing, China",
+"weight": 0.23197 
+},
+{
+ "from": "Cambridge, UK",
+"to": "Beijing, China",
+"weight": 0.13003 
+},
+{
+ "from": "Cape Town, SA",
+"to": "Beijing, China",
+"weight": 0.1215 
+},
+{
+ "from": "Colombo, Sri Lanka",
+"to": "Beijing, China",
+"weight": 0.32415 
+},
+{
+ "from": "London, UK",
+"to": "Beijing, China",
+"weight": 0.1414 
+},
+{
+ "from": "Montpellier, France",
+"to": "Beijing, China",
+"weight": 0.14744 
+},
+{
+ "from": "New York, NY, USA",
+"to": "Beijing, China",
+"weight": 0.20494 
+},
+{
+ "from": "Padova, Italy",
+"to": "Beijing, China",
+"weight": 0.1414 
+},
+{
+ "from": "San Francisco, CA, USA",
+"to": "Beijing, China",
+"weight": 0.11526 
+},
+{
+ "from": "Santa Cruz, CA, USA",
+"to": "Beijing, China",
+"weight": 0.21266 
+},
+{
+ "from": "Singapore",
+"to": "Beijing, China",
+"weight": 0.1135 
+},
+{
+ "from": "Sydney, Australia",
+"to": "Beijing, China",
+"weight": 0.098295 
+},
+{
+ "from": "Taipei, Taiwan",
+"to": "Beijing, China",
+"weight": 0.50494 
+},
+{
+ "from": "Boise, ID, USA",
+"to": "Bellingham, WA, USA",
+"weight": 0.11983 
+},
+{
+ "from": "Boston, MA, USA",
+"to": "Bellingham, WA, USA",
+"weight": 0.44081 
+},
+{
+ "from": "Boulder, CO, USA",
+"to": "Bellingham, WA, USA",
+"weight": 0.11699 
+},
+{
+ "from": "Brighton, UK",
+"to": "Bellingham, WA, USA",
+"weight": 0.09482 
+},
+{
+ "from": "Columbus, OH, USA",
+"to": "Bellingham, WA, USA",
+"weight": 0.096225 
+},
+{
+ "from": "Fort Collins, CO",
+"to": "Bellingham, WA, USA",
+"weight": 0.1993 
+},
+{
+ "from": "Houston, TX, USA",
+"to": "Bellingham, WA, USA",
+"weight": 0.41299 
+},
+{
+ "from": "Knoxville, TN, USA",
+"to": "Bellingham, WA, USA",
+"weight": 0.38315 
+},
+{
+ "from": "Montpellier, France",
+"to": "Bellingham, WA, USA",
+"weight": 0.39147 
+},
+{
+ "from": "Nashville, TN, USA",
+"to": "Bellingham, WA, USA",
+"weight": 0.16586 
+},
+{
+ "from": "New York, NY, USA",
+"to": "Bellingham, WA, USA",
+"weight": 0.27093 
+},
+{
+ "from": "Philadelphia, PA, USA",
+"to": "Bellingham, WA, USA",
+"weight": 0.15628 
+},
+{
+ "from": "Portland, OR, USA",
+"to": "Bellingham, WA, USA",
+"weight": 0.11757 
+},
+{
+ "from": "Rotterdam, Netherlands",
+"to": "Bellingham, WA, USA",
+"weight": 0.10805 
+},
+{
+ "from": "San Francisco, CA, USA",
+"to": "Bellingham, WA, USA",
+"weight": 0.45356 
+},
+{
+ "from": "San Luis Obispo, CA, USA",
+"to": "Bellingham, WA, USA",
+"weight": 0.14329 
+},
+{
+ "from": "Santa Cruz, CA, USA",
+"to": "Bellingham, WA, USA",
+"weight": 0.13657 
+},
+{
+ "from": "Singapore",
+"to": "Bellingham, WA, USA",
+"weight": 0.1414 
+},
+{
+ "from": "Southowram, UK",
+"to": "Bellingham, WA, USA",
+"weight": 0.098295 
+},
+{
+ "from": "Sydney, Australia",
+"to": "Bellingham, WA, USA",
+"weight": 0.18498 
+},
+{
+ "from": "Timperley, UK",
+"to": "Bellingham, WA, USA",
+"weight": 0.16135 
+},
+{
+ "from": "Vancouver, Canada",
+"to": "Bellingham, WA, USA",
+"weight": 0.15671 
+},
+{
+ "from": "Zadar, Croatia",
+"to": "Bellingham, WA, USA",
+"weight": 0.39352 
+},
+{
+ "from": "Boston, MA, USA",
+"to": "Boise, ID, USA",
+"weight": 0.20264 
+},
+{
+ "from": "Brighton, UK",
+"to": "Boise, ID, USA",
+"weight": 0.14607 
+},
+{
+ "from": "Bury St Edmunds, UK",
+"to": "Boise, ID, USA",
+"weight": 0.19488 
+},
+{
+ "from": "Cambridge, UK",
+"to": "Boise, ID, USA",
+"weight": 0.11983 
+},
+{
+ "from": "Cape Town, SA",
+"to": "Boise, ID, USA",
+"weight": 0.11757 
+},
+{
+ "from": "Detroit, MI, USA",
+"to": "Boise, ID, USA",
+"weight": 0.19556 
+},
+{
+ "from": "Fort Collins, CO",
+"to": "Boise, ID, USA",
+"weight": 0.13804 
+},
+{
+ "from": "Houston, TX, USA",
+"to": "Boise, ID, USA",
+"weight": 0.28018 
+},
+{
+ "from": "Knoxville, TN, USA",
+"to": "Boise, ID, USA",
+"weight": 0.19829 
+},
+{
+ "from": "London, UK",
+"to": "Boise, ID, USA",
+"weight": 0.21139 
+},
+{
+ "from": "Los Angeles, CA, USA",
+"to": "Boise, ID, USA",
+"weight": 0.1187 
+},
+{
+ "from": "Louisville, KY, USA",
+"to": "Boise, ID, USA",
+"weight": 0.13997 
+},
+{
+ "from": "Montpellier, France",
+"to": "Boise, ID, USA",
+"weight": 0.13707 
+},
+{
+ "from": "Nashville, TN, USA",
+"to": "Boise, ID, USA",
+"weight": 0.41687 
+},
+{
+ "from": "New York, NY, USA",
+"to": "Boise, ID, USA",
+"weight": 0.51442 
+},
+{
+ "from": "Paris, France",
+"to": "Boise, ID, USA",
+"weight": 0.17299 
+},
+{
+ "from": "Philadelphia, PA, USA",
+"to": "Boise, ID, USA",
+"weight":  0.163 
+},
+{
+ "from": "Portland, OR, USA",
+"to": "Boise, ID, USA",
+"weight": 0.18679 
+},
+{
+ "from": "Rotterdam, Netherlands",
+"to": "Boise, ID, USA",
+"weight": 0.11171 
+},
+{
+ "from": "Saint Catharines, Canada",
+"to": "Boise, ID, USA",
+"weight": 0.09411 
+},
+{
+ "from": "San Francisco, CA, USA",
+"to": "Boise, ID, USA",
+"weight": 0.35836 
+},
+{
+ "from": "San Luis Obispo, CA, USA",
+"to": "Boise, ID, USA",
+"weight": 0.14282 
+},
+{
+ "from": "Santa Cruz, CA, USA",
+"to": "Boise, ID, USA",
+"weight": 0.10231 
+},
+{
+ "from": "Southowram, UK",
+"to": "Boise, ID, USA",
+"weight": 0.093394 
+},
+{
+ "from": "Sydney, Australia",
+"to": "Boise, ID, USA",
+"weight": 0.1049 
+},
+{
+ "from": "Vancouver, Canada",
+"to": "Boise, ID, USA",
+"weight": 0.15756 
+},
+{
+ "from": "Zadar, Croatia",
+"to": "Boise, ID, USA",
+"weight": 0.12743 
+},
+{
+ "from": "Boulder, CO, USA",
+"to": "Boston, MA, USA",
+"weight": 0.15455 
+},
+{
+ "from": "Bury St Edmunds, UK",
+"to": "Boston, MA, USA",
+"weight": 0.09692 
+},
+{
+ "from": "Cambridge, UK",
+"to": "Boston, MA, USA",
+"weight": 0.43622 
+},
+{
+ "from": "Cape Town, SA",
+"to": "Boston, MA, USA",
+"weight": 0.30736 
+},
+{
+ "from": "Colombo, Sri Lanka",
+"to": "Boston, MA, USA",
+"weight": 0.10032 
+},
+{
+ "from": "Columbus, OH, USA",
+"to": "Boston, MA, USA",
+"weight": 0.09692 
+},
+{
+ "from": "Detroit, MI, USA",
+"to": "Boston, MA, USA",
+"weight": 0.29145 
+},
+{
+ "from": "Dublin, Ireland",
+"to": "Boston, MA, USA",
+"weight": 0.16707 
+},
+{
+ "from": "Fort Collins, CO",
+"to": "Boston, MA, USA",
+"weight": 0.35136 
+},
+{
+ "from": "Greenwich, CT, USA",
+"to": "Boston, MA, USA",
+"weight": 0.093394 
+},
+{
+ "from": "Grenoble, France",
+"to": "Boston, MA, USA",
+"weight": 0.25616 
+},
+{
+ "from": "Houston, TX, USA",
+"to": "Boston, MA, USA",
+"weight": 0.64974 
+},
+{
+ "from": "Knoxville, TN, USA",
+"to": "Boston, MA, USA",
+"weight": 0.26769 
+},
+{
+ "from": "London, UK",
+"to": "Boston, MA, USA",
+"weight": 0.26593 
+},
+{
+ "from": "Los Angeles, CA, USA",
+"to": "Boston, MA, USA",
+"weight": 0.17025 
+},
+{
+ "from": "Louisville, KY, USA",
+"to": "Boston, MA, USA",
+"weight": 0.29828 
+},
+{
+ "from": "Madrid, Spain",
+"to": "Boston, MA, USA",
+"weight": 0.20164 
+},
+{
+ "from": "Miami, FL, USA",
+"to": "Boston, MA, USA",
+"weight": 0.14376 
+},
+{
+ "from": "Milan, Italy",
+"to": "Boston, MA, USA",
+"weight": 0.16747 
+},
+{
+ "from": "Montpellier, France",
+"to": "Boston, MA, USA",
+"weight": 0.72389 
+},
+{
+ "from": "Nashville, TN, USA",
+"to": "Boston, MA, USA",
+"weight": 0.28751 
+},
+{
+ "from": "New York, NY, USA",
+"to": "Boston, MA, USA",
+"weight": 0.92738 
+},
+{
+ "from": "Ozark, MO, USA",
+"to": "Boston, MA, USA",
+"weight": 0.15883 
+},
+{
+ "from": "Padova, Italy",
+"to": "Boston, MA, USA",
+"weight": 0.1907 
+},
+{
+ "from": "Paris, France",
+"to": "Boston, MA, USA",
+"weight": 0.17104 
+},
+{
+ "from": "Philadelphia, PA, USA",
+"to": "Boston, MA, USA",
+"weight": 0.39556 
+},
+{
+ "from": "Portland, OR, USA",
+"to": "Boston, MA, USA",
+"weight": 0.25141 
+},
+{
+ "from": "Saint Catharines, Canada",
+"to": "Boston, MA, USA",
+"weight": 0.11927 
+},
+{
+ "from": "San Francisco, CA, USA",
+"to": "Boston, MA, USA",
+"weight": 0.59283 
+},
+{
+ "from": "San Luis Obispo, CA, USA",
+"to": "Boston, MA, USA",
+"weight": 0.15412 
+},
+{
+ "from": "Santa Cruz, CA, USA",
+"to": "Boston, MA, USA",
+"weight": 0.40561 
+},
+{
+ "from": "Singapore",
+"to": "Boston, MA, USA",
+"weight": 0.31703 
+},
+{
+ "from": "Southowram, UK",
+"to": "Boston, MA, USA",
+"weight": 0.09482 
+},
+{
+ "from": "Sydney, Australia",
+"to": "Boston, MA, USA",
+"weight": 0.17376 
+},
+{
+ "from": "Taipei, Taiwan",
+"to": "Boston, MA, USA",
+"weight": 0.38577 
+},
+{
+ "from": "Timperley, UK",
+"to": "Boston, MA, USA",
+"weight": 0.16464 
+},
+{
+ "from": "Toronto, Canada",
+"to": "Boston, MA, USA",
+"weight": 0.27994 
+},
+{
+ "from": "Vancouver, Canada",
+"to": "Boston, MA, USA",
+"weight": 0.26416 
+},
+{
+ "from": "Växjo, Sweden",
+"to": "Boston, MA, USA",
+"weight": 0.13657 
+},
+{
+ "from": "Zadar, Croatia",
+"to": "Boston, MA, USA",
+"weight": 0.54025 
+},
+{
+ "from": "Cambridge, UK",
+"to": "Boulder, CO, USA",
+"weight": 0.10426 
+},
+{
+ "from": "Grenoble, France",
+"to": "Boulder, CO, USA",
+"weight": 0.10032 
+},
+{
+ "from": "Knoxville, TN, USA",
+"to": "Boulder, CO, USA",
+"weight": 0.10554 
+},
+{
+ "from": "London, UK",
+"to": "Boulder, CO, USA",
+"weight": 0.10867 
+},
+{
+ "from": "Louisville, KY, USA",
+"to": "Boulder, CO, USA",
+"weight": 0.11171 
+},
+{
+ "from": "Montpellier, France",
+"to": "Boulder, CO, USA",
+"weight": 0.15799 
+},
+{
+ "from": "Nashville, TN, USA",
+"to": "Boulder, CO, USA",
+"weight": 0.12259 
+},
+{
+ "from": "New York, NY, USA",
+"to": "Boulder, CO, USA",
+"weight": 0.24519 
+},
+{
+ "from": "Philadelphia, PA, USA",
+"to": "Boulder, CO, USA",
+"weight": 0.12314 
+},
+{
+ "from": "Portland, OR, USA",
+"to": "Boulder, CO, USA",
+"weight": 0.18607 
+},
+{
+ "from": "Saint Catharines, Canada",
+"to": "Boulder, CO, USA",
+"weight": 0.10361 
+},
+{
+ "from": "San Francisco, CA, USA",
+"to": "Boulder, CO, USA",
+"weight": 0.15192 
+},
+{
+ "from": "Santa Cruz, CA, USA",
+"to": "Boulder, CO, USA",
+"weight": 0.20884 
+},
+{
+ "from": "Singapore",
+"to": "Boulder, CO, USA",
+"weight": 0.09692 
+},
+{
+ "from": "Vancouver, Canada",
+"to": "Boulder, CO, USA",
+"weight": 0.098975 
+},
+{
+ "from": "Cambridge, UK",
+"to": "Brighton, UK",
+"weight": 0.17492 
+},
+{
+ "from": "Colombo, Sri Lanka",
+"to": "Brighton, UK",
+"weight": 0.11927 
+},
+{
+ "from": "Detroit, MI, USA",
+"to": "Brighton, UK",
+"weight": 0.34462 
+},
+{
+ "from": "Dublin, Ireland",
+"to": "Brighton, UK",
+"weight": 0.16051 
+},
+{
+ "from": "Fort Collins, CO",
+"to": "Brighton, UK",
+"weight": 0.12423 
+},
+{
+ "from": "London, UK",
+"to": "Brighton, UK",
+"weight": 0.5952 
+},
+{
+ "from": "Milan, Italy",
+"to": "Brighton, UK",
+"weight": 0.1049 
+},
+{
+ "from": "Montpellier, France",
+"to": "Brighton, UK",
+"weight": 0.12368 
+},
+{
+ "from": "Nashville, TN, USA",
+"to": "Brighton, UK",
+"weight": 0.16051 
+},
+{
+ "from": "New York, NY, USA",
+"to": "Brighton, UK",
+"weight": 0.19384 
+},
+{
+ "from": "Paris, France",
+"to": "Brighton, UK",
+"weight": 0.16135 
+},
+{
+ "from": "Philadelphia, PA, USA",
+"to": "Brighton, UK",
+"weight": 0.10617 
+},
+{
+ "from": "San Francisco, CA, USA",
+"to": "Brighton, UK",
+"weight": 0.34247 
+},
+{
+ "from": "Singapore",
+"to": "Brighton, UK",
+"weight": 0.15713 
+},
+{
+ "from": "Timperley, UK",
+"to": "Brighton, UK",
+"weight": 0.10805 
+},
+{
+ "from": "Vancouver, Canada",
+"to": "Brighton, UK",
+"weight": 0.1601 
+},
+{
+ "from": "Fort Collins, CO",
+"to": "Brisbane, AUS",
+"weight": 0.12205 
+},
+{
+ "from": "New York, NY, USA",
+"to": "Brisbane, AUS",
+"weight": 0.12314 
+},
+{
+ "from": "San Francisco, CA, USA",
+"to": "Brisbane, AUS",
+"weight": 0.14653 
+},
+{
+ "from": "Vancouver, Canada",
+"to": "Brisbane, AUS",
+"weight": 0.09411 
+},
+{
+ "from": "Cambridge, UK",
+"to": "Bury St Edmunds, UK",
+"weight": 0.13309 
+},
+{
+ "from": "Houston, TX, USA",
+"to": "Bury St Edmunds, UK",
+"weight": 0.15324 
+},
+{
+ "from": "London, UK",
+"to": "Bury St Edmunds, UK",
+"weight": 0.19964 
+},
+{
+ "from": "Montpellier, France",
+"to": "Bury St Edmunds, UK",
+"weight": 0.1135 
+},
+{
+ "from": "Nashville, TN, USA",
+"to": "Bury St Edmunds, UK",
+"weight": 0.21454 
+},
+{
+ "from": "New York, NY, USA",
+"to": "Bury St Edmunds, UK",
+"weight": 0.24437 
+},
+{
+ "from": "Paris, France",
+"to": "Bury St Edmunds, UK",
+"weight": 0.13804 
+},
+{
+ "from": "Philadelphia, PA, USA",
+"to": "Bury St Edmunds, UK",
+"weight": 0.09482 
+},
+{
+ "from": "Rotterdam, Netherlands",
+"to": "Bury St Edmunds, UK",
+"weight": 0.10426 
+},
+{
+ "from": "San Francisco, CA, USA",
+"to": "Bury St Edmunds, UK",
+"weight": 0.11983 
+},
+{
+ "from": "Singapore",
+"to": "Bury St Edmunds, UK",
+"weight": 0.13997 
+},
+{
+ "from": "Cape Town, SA",
+"to": "Cambridge, UK",
+"weight": 0.41315 
+},
+{
+ "from": "Colombo, Sri Lanka",
+"to": "Cambridge, UK",
+"weight": 0.09411 
+},
+{
+ "from": "Columbus, OH, USA",
+"to": "Cambridge, UK",
+"weight": 0.20592 
+},
+{
+ "from": "Detroit, MI, USA",
+"to": "Cambridge, UK",
+"weight": 0.27511 
+},
+{
+ "from": "Dublin, Ireland",
+"to": "Cambridge, UK",
+"weight": 0.15542 
+},
+{
+ "from": "Fort Collins, CO",
+"to": "Cambridge, UK",
+"weight": 0.14744 
+},
+{
+ "from": "Grenoble, France",
+"to": "Cambridge, UK",
+"weight": 0.1914 
+},
+{
+ "from": "Houston, TX, USA",
+"to": "Cambridge, UK",
+"weight": 0.34109 
+},
+{
+ "from": "Knoxville, TN, USA",
+"to": "Cambridge, UK",
+"weight": 0.3258 
+},
+{
+ "from": "London, UK",
+"to": "Cambridge, UK",
+"weight": 0.54753 
+},
+{
+ "from": "Louisville, KY, USA",
+"to": "Cambridge, UK",
+"weight": 0.25799 
+},
+{
+ "from": "Madrid, Spain",
+"to": "Cambridge, UK",
+"weight": 0.22965 
+},
+{
+ "from": "Miami, FL, USA",
+"to": "Cambridge, UK",
+"weight": 0.16464 
+},
+{
+ "from": "Milan, Italy",
+"to": "Cambridge, UK",
+"weight": 0.34733 
+},
+{
+ "from": "Montpellier, France",
+"to": "Cambridge, UK",
+"weight": 0.35892 
+},
+{
+ "from": "Nashville, TN, USA",
+"to": "Cambridge, UK",
+"weight": 0.18999 
+},
+{
+ "from": "New York, NY, USA",
+"to": "Cambridge, UK",
+"weight": 0.45988 
+},
+{
+ "from": "Ozark, MO, USA",
+"to": "Cambridge, UK",
+"weight": 0.11526 
+},
+{
+ "from": "Padova, Italy",
+"to": "Cambridge, UK",
+"weight": 0.12795 
+},
+{
+ "from": "Paris, France",
+"to": "Cambridge, UK",
+"weight": 0.18462 
+},
+{
+ "from": "Philadelphia, PA, USA",
+"to": "Cambridge, UK",
+"weight": 0.27315 
+},
+{
+ "from": "Portland, OR, USA",
+"to": "Cambridge, UK",
+"weight": 0.20098 
+},
+{
+ "from": "Rotterdam, Netherlands",
+"to": "Cambridge, UK",
+"weight": 0.14653 
+},
+{
+ "from": "Saint Catharines, Canada",
+"to": "Cambridge, UK",
+"weight": 0.26618 
+},
+{
+ "from": "San Francisco, CA, USA",
+"to": "Cambridge, UK",
+"weight": 0.2797 
+},
+{
+ "from": "Santa Cruz, CA, USA",
+"to": "Cambridge, UK",
+"weight": 0.22818 
+},
+{
+ "from": "Singapore",
+"to": "Cambridge, UK",
+"weight": 0.21012 
+},
+{
+ "from": "Southowram, UK",
+"to": "Cambridge, UK",
+"weight": 0.1414 
+},
+{
+ "from": "Sydney, Australia",
+"to": "Cambridge, UK",
+"weight": 0.19693 
+},
+{
+ "from": "Taipei, Taiwan",
+"to": "Cambridge, UK",
+"weight": 0.15883 
+},
+{
+ "from": "Timperley, UK",
+"to": "Cambridge, UK",
+"weight": 0.26237 
+},
+{
+ "from": "Toronto, Canada",
+"to": "Cambridge, UK",
+"weight": 0.15104 
+},
+{
+ "from": "Vancouver, Canada",
+"to": "Cambridge, UK",
+"weight": 0.15841 
+},
+{
+ "from": "Växjo, Sweden",
+"to": "Cambridge, UK",
+"weight": 0.12423 
+},
+{
+ "from": "Zadar, Croatia",
+"to": "Cambridge, UK",
+"weight": 0.19896 
+},
+{
+ "from": "Colombo, Sri Lanka",
+"to": "Cape Town, SA",
+"weight": 0.17338 
+},
+{
+ "from": "Columbus, OH, USA",
+"to": "Cape Town, SA",
+"weight": 0.10867 
+},
+{
+ "from": "Detroit, MI, USA",
+"to": "Cape Town, SA",
+"weight": 0.1253 
+},
+{
+ "from": "Grenoble, France",
+"to": "Cape Town, SA",
+"weight": 0.11927 
+},
+{
+ "from": "Houston, TX, USA",
+"to": "Cape Town, SA",
+"weight": 0.24764 
+},
+{
+ "from": "Knoxville, TN, USA",
+"to": "Cape Town, SA",
+"weight": 0.09692 
+},
+{
+ "from": "London, UK",
+"to": "Cape Town, SA",
+"weight": 0.22877 
+},
+{
+ "from": "Louisville, KY, USA",
+"to": "Cape Town, SA",
+"weight": 0.1187 
+},
+{
+ "from": "Milan, Italy",
+"to": "Cape Town, SA",
+"weight": 0.45089 
+},
+{
+ "from": "Montpellier, France",
+"to": "Cape Town, SA",
+"weight": 0.26694 
+},
+{
+ "from": "Nashville, TN, USA",
+"to": "Cape Town, SA",
+"weight": 0.12951 
+},
+{
+ "from": "New York, NY, USA",
+"to": "Cape Town, SA",
+"weight": 0.38577 
+},
+{
+ "from": "Paris, France",
+"to": "Cape Town, SA",
+"weight": 0.12743 
+},
+{
+ "from": "Philadelphia, PA, USA",
+"to": "Cape Town, SA",
+"weight": 0.11111 
+},
+{
+ "from": "Rotterdam, Netherlands",
+"to": "Cape Town, SA",
+"weight": 0.11051 
+},
+{
+ "from": "San Francisco, CA, USA",
+"to": "Cape Town, SA",
+"weight": 0.13949 
+},
+{
+ "from": "Santa Cruz, CA, USA",
+"to": "Cape Town, SA",
+"weight": 0.2729 
+},
+{
+ "from": "Singapore",
+"to": "Cape Town, SA",
+"weight": 0.13106 
+},
+{
+ "from": "Taipei, Taiwan",
+"to": "Cape Town, SA",
+"weight": 0.17025 
+},
+{
+ "from": "Timperley, UK",
+"to": "Cape Town, SA",
+"weight": 0.2033 
+},
+{
+ "from": "Vancouver, Canada",
+"to": "Cape Town, SA",
+"weight": 0.10231 
+},
+{
+ "from": "Zadar, Croatia",
+"to": "Cape Town, SA",
+"weight": 0.13157 
+},
+{
+ "from": "Dublin, Ireland",
+"to": "Colombo, Sri Lanka",
+"weight": 0.17182 
+},
+{
+ "from": "Grenoble, France",
+"to": "Colombo, Sri Lanka",
+"weight": 0.12743 
+},
+{
+ "from": "London, UK",
+"to": "Colombo, Sri Lanka",
+"weight": 0.16667 
+},
+{
+ "from": "Milan, Italy",
+"to": "Colombo, Sri Lanka",
+"weight": 0.11291 
+},
+{
+ "from": "Montpellier, France",
+"to": "Colombo, Sri Lanka",
+"weight": 0.18206 
+},
+{
+ "from": "New York, NY, USA",
+"to": "Colombo, Sri Lanka",
+"weight": 0.17064 
+},
+{
+ "from": "Padova, Italy",
+"to": "Colombo, Sri Lanka",
+"weight": 0.10032 
+},
+{
+ "from": "Paris, France",
+"to": "Colombo, Sri Lanka",
+"weight": 0.11699 
+},
+{
+ "from": "San Francisco, CA, USA",
+"to": "Colombo, Sri Lanka",
+"weight": 0.12314 
+},
+{
+ "from": "Singapore",
+"to": "Colombo, Sri Lanka",
+"weight": 0.25616 
+},
+{
+ "from": "Sydney, Australia",
+"to": "Colombo, Sri Lanka",
+"weight":  0.129 
+},
+{
+ "from": "Taipei, Taiwan",
+"to": "Colombo, Sri Lanka",
+"weight": 0.3696 
+},
+{
+ "from": "Timperley, UK",
+"to": "Colombo, Sri Lanka",
+"weight": 0.093394 
+},
+{
+ "from": "Växjo, Sweden",
+"to": "Colombo, Sri Lanka",
+"weight": 0.096225 
+},
+{
+ "from": "Houston, TX, USA",
+"to": "Columbus, OH, USA",
+"weight": 0.1928 
+},
+{
+ "from": "London, UK",
+"to": "Columbus, OH, USA",
+"weight": 0.11231 
+},
+{
+ "from": "Milan, Italy",
+"to": "Columbus, OH, USA",
+"weight": 0.2136 
+},
+{
+ "from": "Montpellier, France",
+"to": "Columbus, OH, USA",
+"weight": 0.18679 
+},
+{
+ "from": "Nashville, TN, USA",
+"to": "Columbus, OH, USA",
+"weight": 0.13509 
+},
+{
+ "from": "New York, NY, USA",
+"to": "Columbus, OH, USA",
+"weight": 0.12847 
+},
+{
+ "from": "Philadelphia, PA, USA",
+"to": "Columbus, OH, USA",
+"weight": 0.12259 
+},
+{
+ "from": "Portland, OR, USA",
+"to": "Columbus, OH, USA",
+"weight": 0.095525 
+},
+{
+ "from": "San Francisco, CA, USA",
+"to": "Columbus, OH, USA",
+"weight": 0.1488 
+},
+{
+ "from": "Timperley, UK",
+"to": "Columbus, OH, USA",
+"weight": 0.2033 
+},
+{
+ "from": "Vancouver, Canada",
+"to": "Columbus, OH, USA",
+"weight": 0.13309 
+},
+{
+ "from": "Fort Collins, CO",
+"to": "Detroit, MI, USA",
+"weight": 0.23485 
+},
+{
+ "from": "Grenoble, France",
+"to": "Detroit, MI, USA",
+"weight": 0.11291 
+},
+{
+ "from": "Houston, TX, USA",
+"to": "Detroit, MI, USA",
+"weight": 0.1414 
+},
+{
+ "from": "Knoxville, TN, USA",
+"to": "Detroit, MI, USA",
+"weight": 0.3925 
+},
+{
+ "from": "London, UK",
+"to": "Detroit, MI, USA",
+"weight": 0.82946 
+},
+{
+ "from": "Los Angeles, CA, USA",
+"to": "Detroit, MI, USA",
+"weight": 0.12476 
+},
+{
+ "from": "Louisville, KY, USA",
+"to": "Detroit, MI, USA",
+"weight": 0.32311 
+},
+{
+ "from": "Miami, FL, USA",
+"to": "Detroit, MI, USA",
+"weight": 0.18169 
+},
+{
+ "from": "Montpellier, France",
+"to": "Detroit, MI, USA",
+"weight": 0.11291 
+},
+{
+ "from": "Nashville, TN, USA",
+"to": "Detroit, MI, USA",
+"weight": 0.26694 
+},
+{
+ "from": "New York, NY, USA",
+"to": "Detroit, MI, USA",
+"weight": 0.61951 
+},
+{
+ "from": "Ozark, MO, USA",
+"to": "Detroit, MI, USA",
+"weight": 0.1341 
+},
+{
+ "from": "Paris, France",
+"to": "Detroit, MI, USA",
+"weight": 0.21297 
+},
+{
+ "from": "Philadelphia, PA, USA",
+"to": "Detroit, MI, USA",
+"weight": 0.30997 
+},
+{
+ "from": "Portland, OR, USA",
+"to": "Detroit, MI, USA",
+"weight": 0.30407 
+},
+{
+ "from": "San Francisco, CA, USA",
+"to": "Detroit, MI, USA",
+"weight": 0.76077 
+},
+{
+ "from": "Santa Cruz, CA, USA",
+"to": "Detroit, MI, USA",
+"weight": 0.15671 
+},
+{
+ "from": "Singapore",
+"to": "Detroit, MI, USA",
+"weight": 0.14469 
+},
+{
+ "from": "Timperley, UK",
+"to": "Detroit, MI, USA",
+"weight": 0.10296 
+},
+{
+ "from": "Toronto, Canada",
+"to": "Detroit, MI, USA",
+"weight": 0.11171 
+},
+{
+ "from": "Vancouver, Canada",
+"to": "Detroit, MI, USA",
+"weight": 0.20884 
+},
+{
+ "from": "Fort Collins, CO",
+"to": "Dublin, Ireland",
+"weight": 0.10296 
+},
+{
+ "from": "Greenwich, CT, USA",
+"to": "Dublin, Ireland",
+"weight": 0.16747 
+},
+{
+ "from": "Grenoble, France",
+"to": "Dublin, Ireland",
+"weight": 0.093394 
+},
+{
+ "from": "London, UK",
+"to": "Dublin, Ireland",
+"weight": 0.28821 
+},
+{
+ "from": "Louisville, KY, USA",
+"to": "Dublin, Ireland",
+"weight": 0.29374 
+},
+{
+ "from": "Milan, Italy",
+"to": "Dublin, Ireland",
+"weight": 0.098975 
+},
+{
+ "from": "Montpellier, France",
+"to": "Dublin, Ireland",
+"weight": 0.13804 
+},
+{
+ "from": "New York, NY, USA",
+"to": "Dublin, Ireland",
+"weight": 0.17221 
+},
+{
+ "from": "Paris, France",
+"to": "Dublin, Ireland",
+"weight": 0.096225 
+},
+{
+ "from": "Philadelphia, PA, USA",
+"to": "Dublin, Ireland",
+"weight": 0.21765 
+},
+{
+ "from": "San Francisco, CA, USA",
+"to": "Dublin, Ireland",
+"weight": 0.13259 
+},
+{
+ "from": "Singapore",
+"to": "Dublin, Ireland",
+"weight": 0.18169 
+},
+{
+ "from": "Timperley, UK",
+"to": "Dublin, Ireland",
+"weight": 0.11051 
+},
+{
+ "from": "Vancouver, Canada",
+"to": "Dublin, Ireland",
+"weight": 0.14925 
+},
+{
+ "from": "Greenwich, CT, USA",
+"to": "Fort Collins, CO",
+"weight": 0.15368 
+},
+{
+ "from": "Grenoble, France",
+"to": "Fort Collins, CO",
+"weight": 0.1068 
+},
+{
+ "from": "Houston, TX, USA",
+"to": "Fort Collins, CO",
+"weight": 0.31767 
+},
+{
+ "from": "Knoxville, TN, USA",
+"to": "Fort Collins, CO",
+"weight": 0.11584 
+},
+{
+ "from": "London, UK",
+"to": "Fort Collins, CO",
+"weight": 0.25564 
+},
+{
+ "from": "Louisville, KY, USA",
+"to": "Fort Collins, CO",
+"weight": 0.33912 
+},
+{
+ "from": "Miami, FL, USA",
+"to": "Fort Collins, CO",
+"weight": 0.13707 
+},
+{
+ "from": "Montpellier, France",
+"to": "Fort Collins, CO",
+"weight": 0.1497 
+},
+{
+ "from": "Nashville, TN, USA",
+"to": "Fort Collins, CO",
+"weight": 0.13707 
+},
+{
+ "from": "New York, NY, USA",
+"to": "Fort Collins, CO",
+"weight": 0.27462 
+},
+{
+ "from": "Ozark, MO, USA",
+"to": "Fort Collins, CO",
+"weight": 0.11231 
+},
+{
+ "from": "Philadelphia, PA, USA",
+"to": "Fort Collins, CO",
+"weight": 0.45504 
+},
+{
+ "from": "Portland, OR, USA",
+"to": "Fort Collins, CO",
+"weight": 0.18206 
+},
+{
+ "from": "San Francisco, CA, USA",
+"to": "Fort Collins, CO",
+"weight": 0.44126 
+},
+{
+ "from": "San Luis Obispo, CA, USA",
+"to": "Fort Collins, CO",
+"weight": 0.15104 
+},
+{
+ "from": "Singapore",
+"to": "Fort Collins, CO",
+"weight": 0.32353 
+},
+{
+ "from": "Toronto, Canada",
+"to": "Fort Collins, CO",
+"weight": 0.10805 
+},
+{
+ "from": "Vancouver, Canada",
+"to": "Fort Collins, CO",
+"weight": 0.18021 
+},
+{
+ "from": "London, UK",
+"to": "Greenwich, CT, USA",
+"weight": 0.17871 
+},
+{
+ "from": "Louisville, KY, USA",
+"to": "Greenwich, CT, USA",
+"weight": 0.24655 
+},
+{
+ "from": "Miami, FL, USA",
+"to": "Greenwich, CT, USA",
+"weight": 0.1049 
+},
+{
+ "from": "New York, NY, USA",
+"to": "Greenwich, CT, USA",
+"weight": 0.12743 
+},
+{
+ "from": "Philadelphia, PA, USA",
+"to": "Greenwich, CT, USA",
+"weight": 0.22935 
+},
+{
+ "from": "San Francisco, CA, USA",
+"to": "Greenwich, CT, USA",
+"weight": 0.20031 
+},
+{
+ "from": "Vancouver, Canada",
+"to": "Greenwich, CT, USA",
+"weight": 0.12205 
+},
+{
+ "from": "Houston, TX, USA",
+"to": "Grenoble, France",
+"weight": 0.21044 
+},
+{
+ "from": "London, UK",
+"to": "Grenoble, France",
+"weight": 0.21485 
+},
+{
+ "from": "Los Angeles, CA, USA",
+"to": "Grenoble, France",
+"weight": 0.1099 
+},
+{
+ "from": "Louisville, KY, USA",
+"to": "Grenoble, France",
+"weight": 0.13309 
+},
+{
+ "from": "Madrid, Spain",
+"to": "Grenoble, France",
+"weight": 0.095525 
+},
+{
+ "from": "Milan, Italy",
+"to": "Grenoble, France",
+"weight": 0.13997 
+},
+{
+ "from": "Montpellier, France",
+"to": "Grenoble, France",
+"weight": 0.20884 
+},
+{
+ "from": "Nashville, TN, USA",
+"to": "Grenoble, France",
+"weight": 0.1479 
+},
+{
+ "from": "New York, NY, USA",
+"to": "Grenoble, France",
+"weight": 0.28728 
+},
+{
+ "from": "Padova, Italy",
+"to": "Grenoble, France",
+"weight": 0.10361 
+},
+{
+ "from": "Paris, France",
+"to": "Grenoble, France",
+"weight": 0.10743 
+},
+{
+ "from": "Philadelphia, PA, USA",
+"to": "Grenoble, France",
+"weight": 0.20916 
+},
+{
+ "from": "Portland, OR, USA",
+"to": "Grenoble, France",
+"weight": 0.16464 
+},
+{
+ "from": "Rotterdam, Netherlands",
+"to": "Grenoble, France",
+"weight": 0.11111 
+},
+{
+ "from": "San Francisco, CA, USA",
+"to": "Grenoble, France",
+"weight": 0.18021 
+},
+{
+ "from": "Singapore",
+"to": "Grenoble, France",
+"weight": 0.13608 
+},
+{
+ "from": "Sydney, Australia",
+"to": "Grenoble, France",
+"weight": 0.14422 
+},
+{
+ "from": "Timperley, UK",
+"to": "Grenoble, France",
+"weight": 0.13208 
+},
+{
+ "from": "Zadar, Croatia",
+"to": "Grenoble, France",
+"weight": 0.10032 
+},
+{
+ "from": "Knoxville, TN, USA",
+"to": "Houston, TX, USA",
+"weight": 0.21423 
+},
+{
+ "from": "London, UK",
+"to": "Houston, TX, USA",
+"weight": 0.24818 
+},
+{
+ "from": "Louisville, KY, USA",
+"to": "Houston, TX, USA",
+"weight": 0.27994 
+},
+{
+ "from": "Miami, FL, USA",
+"to": "Houston, TX, USA",
+"weight": 0.17143 
+},
+{
+ "from": "Milan, Italy",
+"to": "Houston, TX, USA",
+"weight": 0.33514 
+},
+{
+ "from": "Montpellier, France",
+"to": "Houston, TX, USA",
+"weight": 0.5624 
+},
+{
+ "from": "Nashville, TN, USA",
+"to": "Houston, TX, USA",
+"weight": 0.39044 
+},
+{
+ "from": "New York, NY, USA",
+"to": "Houston, TX, USA",
+"weight": 0.64902 
+},
+{
+ "from": "Ozark, MO, USA",
+"to": "Houston, TX, USA",
+"weight": 0.15585 
+},
+{
+ "from": "Padova, Italy",
+"to": "Houston, TX, USA",
+"weight": 0.12847 
+},
+{
+ "from": "Paris, France",
+"to": "Houston, TX, USA",
+"weight": 0.18132 
+},
+{
+ "from": "Philadelphia, PA, USA",
+"to": "Houston, TX, USA",
+"weight": 0.4568 
+},
+{
+ "from": "Portland, OR, USA",
+"to": "Houston, TX, USA",
+"weight": 0.28821 
+},
+{
+ "from": "Rotterdam, Netherlands",
+"to": "Houston, TX, USA",
+"weight": 0.13559 
+},
+{
+ "from": "Saint Catharines, Canada",
+"to": "Houston, TX, USA",
+"weight": 0.13853 
+},
+{
+ "from": "San Francisco, CA, USA",
+"to": "Houston, TX, USA",
+"weight": 0.62875 
+},
+{
+ "from": "San Luis Obispo, CA, USA",
+"to": "Houston, TX, USA",
+"weight": 0.17104 
+},
+{
+ "from": "Santa Cruz, CA, USA",
+"to": "Houston, TX, USA",
+"weight": 0.25034 
+},
+{
+ "from": "Singapore",
+"to": "Houston, TX, USA",
+"weight": 0.33912 
+},
+{
+ "from": "Southowram, UK",
+"to": "Houston, TX, USA",
+"weight": 0.15368 
+},
+{
+ "from": "Sydney, Australia",
+"to": "Houston, TX, USA",
+"weight": 0.3632 
+},
+{
+ "from": "Timperley, UK",
+"to": "Houston, TX, USA",
+"weight": 0.3147 
+},
+{
+ "from": "Toronto, Canada",
+"to": "Houston, TX, USA",
+"weight": 0.16464 
+},
+{
+ "from": "Vancouver, Canada",
+"to": "Houston, TX, USA",
+"weight": 0.27802 
+},
+{
+ "from": "Växjo, Sweden",
+"to": "Houston, TX, USA",
+"weight": 0.11171 
+},
+{
+ "from": "Zadar, Croatia",
+"to": "Houston, TX, USA",
+"weight": 0.46279 
+},
+{
+ "from": "Louisville, KY, USA",
+"to": "Irvine, CA, USA",
+"weight": 0.09965 
+},
+{
+ "from": "Philadelphia, PA, USA",
+"to": "Irvine, CA, USA",
+"weight": 0.10805 
+},
+{
+ "from": "San Francisco, CA, USA",
+"to": "Irvine, CA, USA",
+"weight": 0.1049 
+},
+{
+ "from": "London, UK",
+"to": "Knoxville, TN, USA",
+"weight": 0.23226 
+},
+{
+ "from": "Los Angeles, CA, USA",
+"to": "Knoxville, TN, USA",
+"weight": 0.13208 
+},
+{
+ "from": "Louisville, KY, USA",
+"to": "Knoxville, TN, USA",
+"weight": 0.12368 
+},
+{
+ "from": "Miami, FL, USA",
+"to": "Knoxville, TN, USA",
+"weight": 0.11051 
+},
+{
+ "from": "Montpellier, France",
+"to": "Knoxville, TN, USA",
+"weight": 0.26289 
+},
+{
+ "from": "Nashville, TN, USA",
+"to": "Knoxville, TN, USA",
+"weight": 0.2942 
+},
+{
+ "from": "New York, NY, USA",
+"to": "Knoxville, TN, USA",
+"weight": 0.51546 
+},
+{
+ "from": "Ozark, MO, USA",
+"to": "Knoxville, TN, USA",
+"weight": 0.10867 
+},
+{
+ "from": "Paris, France",
+"to": "Knoxville, TN, USA",
+"weight": 0.09411 
+},
+{
+ "from": "Philadelphia, PA, USA",
+"to": "Knoxville, TN, USA",
+"weight": 0.17143 
+},
+{
+ "from": "Portland, OR, USA",
+"to": "Knoxville, TN, USA",
+"weight": 0.27438 
+},
+{
+ "from": "Saint Catharines, Canada",
+"to": "Knoxville, TN, USA",
+"weight": 0.20198 
+},
+{
+ "from": "San Francisco, CA, USA",
+"to": "Knoxville, TN, USA",
+"weight": 0.52013 
+},
+{
+ "from": "Santa Cruz, CA, USA",
+"to": "Knoxville, TN, USA",
+"weight": 0.12847 
+},
+{
+ "from": "Singapore",
+"to": "Knoxville, TN, USA",
+"weight": 0.11409 
+},
+{
+ "from": "Southowram, UK",
+"to": "Knoxville, TN, USA",
+"weight": 0.13608 
+},
+{
+ "from": "Sydney, Australia",
+"to": "Knoxville, TN, USA",
+"weight": 0.18571 
+},
+{
+ "from": "Toronto, Canada",
+"to": "Knoxville, TN, USA",
+"weight": 0.09411 
+},
+{
+ "from": "Vancouver, Canada",
+"to": "Knoxville, TN, USA",
+"weight": 0.16505 
+},
+{
+ "from": "Zadar, Croatia",
+"to": "Knoxville, TN, USA",
+"weight": 0.25929 
+},
+{
+ "from": "Los Angeles, CA, USA",
+"to": "London, UK",
+"weight": 0.14422 
+},
+{
+ "from": "Louisville, KY, USA",
+"to": "London, UK",
+"weight": 0.56762 
+},
+{
+ "from": "Madrid, Spain",
+"to": "London, UK",
+"weight": 0.1049 
+},
+{
+ "from": "Miami, FL, USA",
+"to": "London, UK",
+"weight": 0.26719 
+},
+{
+ "from": "Milan, Italy",
+"to": "London, UK",
+"weight": 0.24655 
+},
+{
+ "from": "Montpellier, France",
+"to": "London, UK",
+"weight": 0.3091 
+},
+{
+ "from": "Nashville, TN, USA",
+"to": "London, UK",
+"weight": 0.3481 
+},
+{
+ "from": "New York, NY, USA",
+"to": "London, UK",
+"weight": 0.64529 
+},
+{
+ "from": "Ozark, MO, USA",
+"to": "London, UK",
+"weight": 0.16135 
+},
+{
+ "from": "Padova, Italy",
+"to": "London, UK",
+"weight": 0.21202 
+},
+{
+ "from": "Paris, France",
+"to": "London, UK",
+"weight": 0.36209 
+},
+{
+ "from": "Philadelphia, PA, USA",
+"to": "London, UK",
+"weight": 0.51272 
+},
+{
+ "from": "Portland, OR, USA",
+"to": "London, UK",
+"weight": 0.19453 
+},
+{
+ "from": "Rotterdam, Netherlands",
+"to": "London, UK",
+"weight": 0.15148 
+},
+{
+ "from": "Saint Catharines, Canada",
+"to": "London, UK",
+"weight": 0.15104 
+},
+{
+ "from": "San Francisco, CA, USA",
+"to": "London, UK",
+"weight": 0.71644 
+},
+{
+ "from": "San Luis Obispo, CA, USA",
+"to": "London, UK",
+"weight": 0.10099 
+},
+{
+ "from": "Santa Cruz, CA, USA",
+"to": "London, UK",
+"weight": 0.16586 
+},
+{
+ "from": "Singapore",
+"to": "London, UK",
+"weight": 0.44293 
+},
+{
+ "from": "Southowram, UK",
+"to": "London, UK",
+"weight": 0.11983 
+},
+{
+ "from": "Timperley, UK",
+"to": "London, UK",
+"weight": 0.1993 
+},
+{
+ "from": "Toronto, Canada",
+"to": "London, UK",
+"weight":  0.129 
+},
+{
+ "from": "Vancouver, Canada",
+"to": "London, UK",
+"weight": 0.28233 
+},
+{
+ "from": "Växjo, Sweden",
+"to": "London, UK",
+"weight": 0.27584 
+},
+{
+ "from": "Zadar, Croatia",
+"to": "London, UK",
+"weight": 0.12476 
+},
+{
+ "from": "Madrid, Spain",
+"to": "Los Angeles, CA, USA",
+"weight": 0.09965 
+},
+{
+ "from": "Montpellier, France",
+"to": "Los Angeles, CA, USA",
+"weight": 0.11526 
+},
+{
+ "from": "Nashville, TN, USA",
+"to": "Los Angeles, CA, USA",
+"weight": 0.20429 
+},
+{
+ "from": "New York, NY, USA",
+"to": "Los Angeles, CA, USA",
+"weight": 0.39027 
+},
+{
+ "from": "Philadelphia, PA, USA",
+"to": "Los Angeles, CA, USA",
+"weight": 0.10099 
+},
+{
+ "from": "Portland, OR, USA",
+"to": "Los Angeles, CA, USA",
+"weight": 0.093394 
+},
+{
+ "from": "San Francisco, CA, USA",
+"to": "Los Angeles, CA, USA",
+"weight": 0.17453 
+},
+{
+ "from": "Vancouver, Canada",
+"to": "Los Angeles, CA, USA",
+"weight": 0.18389 
+},
+{
+ "from": "Miami, FL, USA",
+"to": "Louisville, KY, USA",
+"weight": 0.43033 
+},
+{
+ "from": "Milan, Italy",
+"to": "Louisville, KY, USA",
+"weight": 0.11468 
+},
+{
+ "from": "Montpellier, France",
+"to": "Louisville, KY, USA",
+"weight": 0.14744 
+},
+{
+ "from": "Nashville, TN, USA",
+"to": "Louisville, KY, USA",
+"weight": 0.2538 
+},
+{
+ "from": "New York, NY, USA",
+"to": "Louisville, KY, USA",
+"weight": 0.43729 
+},
+{
+ "from": "Ozark, MO, USA",
+"to": "Louisville, KY, USA",
+"weight": 0.1907 
+},
+{
+ "from": "Padova, Italy",
+"to": "Louisville, KY, USA",
+"weight": 0.16218 
+},
+{
+ "from": "Paris, France",
+"to": "Louisville, KY, USA",
+"weight":  0.129 
+},
+{
+ "from": "Philadelphia, PA, USA",
+"to": "Louisville, KY, USA",
+"weight": 0.98042 
+},
+{
+ "from": "Portland, OR, USA",
+"to": "Louisville, KY, USA",
+"weight": 0.15926 
+},
+{
+ "from": "Saint Catharines, Canada",
+"to": "Louisville, KY, USA",
+"weight": 0.12314 
+},
+{
+ "from": "San Francisco, CA, USA",
+"to": "Louisville, KY, USA",
+"weight": 0.71784 
+},
+{
+ "from": "San Luis Obispo, CA, USA",
+"to": "Louisville, KY, USA",
+"weight": 0.098295 
+},
+{
+ "from": "Santa Cruz, CA, USA",
+"to": "Louisville, KY, USA",
+"weight": 0.13359 
+},
+{
+ "from": "Singapore",
+"to": "Louisville, KY, USA",
+"weight": 0.22252 
+},
+{
+ "from": "Timperley, UK",
+"to": "Louisville, KY, USA",
+"weight": 0.1346 
+},
+{
+ "from": "Toronto, Canada",
+"to": "Louisville, KY, USA",
+"weight": 0.15104 
+},
+{
+ "from": "Vancouver, Canada",
+"to": "Louisville, KY, USA",
+"weight": 0.21485 
+},
+{
+ "from": "Zadar, Croatia",
+"to": "Louisville, KY, USA",
+"weight": 0.10296 
+},
+{
+ "from": "Milan, Italy",
+"to": "Madrid, Spain",
+"weight": 0.10743 
+},
+{
+ "from": "Montpellier, France",
+"to": "Madrid, Spain",
+"weight": 0.16382 
+},
+{
+ "from": "Nashville, TN, USA",
+"to": "Madrid, Spain",
+"weight": 0.09761 
+},
+{
+ "from": "New York, NY, USA",
+"to": "Madrid, Spain",
+"weight": 0.21734 
+},
+{
+ "from": "San Francisco, CA, USA",
+"to": "Madrid, Spain",
+"weight": 0.095525 
+},
+{
+ "from": "Vancouver, Canada",
+"to": "Madrid, Spain",
+"weight": 0.10867 
+},
+{
+ "from": "Nashville, TN, USA",
+"to": "Miami, FL, USA",
+"weight": 0.14188 
+},
+{
+ "from": "New York, NY, USA",
+"to": "Miami, FL, USA",
+"weight": 0.26032 
+},
+{
+ "from": "Ozark, MO, USA",
+"to": "Miami, FL, USA",
+"weight": 0.095525 
+},
+{
+ "from": "Philadelphia, PA, USA",
+"to": "Miami, FL, USA",
+"weight": 0.26969 
+},
+{
+ "from": "Portland, OR, USA",
+"to": "Miami, FL, USA",
+"weight": 0.10617 
+},
+{
+ "from": "Saint Catharines, Canada",
+"to": "Miami, FL, USA",
+"weight": 0.10032 
+},
+{
+ "from": "San Francisco, CA, USA",
+"to": "Miami, FL, USA",
+"weight": 0.36669 
+},
+{
+ "from": "Santa Cruz, CA, USA",
+"to": "Miami, FL, USA",
+"weight": 0.09411 
+},
+{
+ "from": "Singapore",
+"to": "Miami, FL, USA",
+"weight": 0.11927 
+},
+{
+ "from": "Vancouver, Canada",
+"to": "Miami, FL, USA",
+"weight": 0.11291 
+},
+{
+ "from": "Montpellier, France",
+"to": "Milan, Italy",
+"weight": 0.35742 
+},
+{
+ "from": "New York, NY, USA",
+"to": "Milan, Italy",
+"weight": 0.21579 
+},
+{
+ "from": "Padova, Italy",
+"to": "Milan, Italy",
+"weight": 0.096225 
+},
+{
+ "from": "Paris, France",
+"to": "Milan, Italy",
+"weight": 0.096225 
+},
+{
+ "from": "Philadelphia, PA, USA",
+"to": "Milan, Italy",
+"weight": 0.13997 
+},
+{
+ "from": "Singapore",
+"to": "Milan, Italy",
+"weight": 0.15499 
+},
+{
+ "from": "Timperley, UK",
+"to": "Milan, Italy",
+"weight": 0.26135 
+},
+{
+ "from": "Vancouver, Canada",
+"to": "Milan, Italy",
+"weight": 0.13106 
+},
+{
+ "from": "Växjo, Sweden",
+"to": "Milan, Italy",
+"weight": 0.12368 
+},
+{
+ "from": "Zadar, Croatia",
+"to": "Milan, Italy",
+"weight": 0.09761 
+},
+{
+ "from": "Nashville, TN, USA",
+"to": "Montpellier, France",
+"weight": 0.16867 
+},
+{
+ "from": "New York, NY, USA",
+"to": "Montpellier, France",
+"weight": 0.46308 
+},
+{
+ "from": "Ozark, MO, USA",
+"to": "Montpellier, France",
+"weight": 0.10928 
+},
+{
+ "from": "Padova, Italy",
+"to": "Montpellier, France",
+"weight": 0.13259 
+},
+{
+ "from": "Paris, France",
+"to": "Montpellier, France",
+"weight": 0.18279 
+},
+{
+ "from": "Philadelphia, PA, USA",
+"to": "Montpellier, France",
+"weight": 0.22877 
+},
+{
+ "from": "Portland, OR, USA",
+"to": "Montpellier, France",
+"weight": 0.25432 
+},
+{
+ "from": "Saint Catharines, Canada",
+"to": "Montpellier, France",
+"weight": 0.22994 
+},
+{
+ "from": "San Francisco, CA, USA",
+"to": "Montpellier, France",
+"weight": 0.33313 
+},
+{
+ "from": "Santa Cruz, CA, USA",
+"to": "Montpellier, France",
+"weight": 0.16135 
+},
+{
+ "from": "Singapore",
+"to": "Montpellier, France",
+"weight": 0.30473 
+},
+{
+ "from": "Sydney, Australia",
+"to": "Montpellier, France",
+"weight": 0.15841 
+},
+{
+ "from": "Taipei, Taiwan",
+"to": "Montpellier, France",
+"weight": 0.11051 
+},
+{
+ "from": "Timperley, UK",
+"to": "Montpellier, France",
+"weight": 0.23226 
+},
+{
+ "from": "Vancouver, Canada",
+"to": "Montpellier, France",
+"weight": 0.12951 
+},
+{
+ "from": "Växjo, Sweden",
+"to": "Montpellier, France",
+"weight":  0.163 
+},
+{
+ "from": "Zadar, Croatia",
+"to": "Montpellier, France",
+"weight": 0.65284 
+},
+{
+ "from": "New York, NY, USA",
+"to": "Nashville, TN, USA",
+"weight": 0.85996 
+},
+{
+ "from": "Ozark, MO, USA",
+"to": "Nashville, TN, USA",
+"weight": 0.1993 
+},
+{
+ "from": "Padova, Italy",
+"to": "Nashville, TN, USA",
+"weight": 0.14329 
+},
+{
+ "from": "Paris, France",
+"to": "Nashville, TN, USA",
+"weight": 0.24737 
+},
+{
+ "from": "Philadelphia, PA, USA",
+"to": "Nashville, TN, USA",
+"weight": 0.31277 
+},
+{
+ "from": "Portland, OR, USA",
+"to": "Nashville, TN, USA",
+"weight": 0.30975 
+},
+{
+ "from": "Rotterdam, Netherlands",
+"to": "Nashville, TN, USA",
+"weight": 0.14376 
+},
+{
+ "from": "Saint Catharines, Canada",
+"to": "Nashville, TN, USA",
+"weight": 0.15455 
+},
+{
+ "from": "San Francisco, CA, USA",
+"to": "Nashville, TN, USA",
+"weight": 0.46969 
+},
+{
+ "from": "San Luis Obispo, CA, USA",
+"to": "Nashville, TN, USA",
+"weight": 0.17338 
+},
+{
+ "from": "Santa Cruz, CA, USA",
+"to": "Nashville, TN, USA",
+"weight": 0.20164 
+},
+{
+ "from": "Singapore",
+"to": "Nashville, TN, USA",
+"weight": 0.2098 
+},
+{
+ "from": "Southowram, UK",
+"to": "Nashville, TN, USA",
+"weight": 0.22789 
+},
+{
+ "from": "Sydney, Australia",
+"to": "Nashville, TN, USA",
+"weight": 0.1135 
+},
+{
+ "from": "Timperley, UK",
+"to": "Nashville, TN, USA",
+"weight": 0.17025 
+},
+{
+ "from": "Toronto, Canada",
+"to": "Nashville, TN, USA",
+"weight": 0.13755 
+},
+{
+ "from": "Vancouver, Canada",
+"to": "Nashville, TN, USA",
+"weight": 0.30932 
+},
+{
+ "from": "Växjo, Sweden",
+"to": "Nashville, TN, USA",
+"weight": 0.1497 
+},
+{
+ "from": "Zadar, Croatia",
+"to": "Nashville, TN, USA",
+"weight": 0.13707 
+},
+{
+ "from": "Ozark, MO, USA",
+"to": "New York, NY, USA",
+"weight": 0.28634 
+},
+{
+ "from": "Padova, Italy",
+"to": "New York, NY, USA",
+"weight": 0.26543 
+},
+{
+ "from": "Paris, France",
+"to": "New York, NY, USA",
+"weight": 0.46002 
+},
+{
+ "from": "Philadelphia, PA, USA",
+"to": "New York, NY, USA",
+"weight": 0.51036 
+},
+{
+ "from": "Portland, OR, USA",
+"to": "New York, NY, USA",
+"weight": 0.48113 
+},
+{
+ "from": "Rotterdam, Netherlands",
+"to": "New York, NY, USA",
+"weight": 0.22789 
+},
+{
+ "from": "Saint Catharines, Canada",
+"to": "New York, NY, USA",
+"weight": 0.26161 
+},
+{
+ "from": "San Francisco, CA, USA",
+"to": "New York, NY, USA",
+"weight": 0.90948 
+},
+{
+ "from": "San Luis Obispo, CA, USA",
+"to": "New York, NY, USA",
+"weight": 0.23226 
+},
+{
+ "from": "Santa Cruz, CA, USA",
+"to": "New York, NY, USA",
+"weight": 0.62982 
+},
+{
+ "from": "Singapore",
+"to": "New York, NY, USA",
+"weight": 0.41136 
+},
+{
+ "from": "Southowram, UK",
+"to": "New York, NY, USA",
+"weight": 0.24327 
+},
+{
+ "from": "Sydney, Australia",
+"to": "New York, NY, USA",
+"weight": 0.2311 
+},
+{
+ "from": "Taipei, Taiwan",
+"to": "New York, NY, USA",
+"weight": 0.26969 
+},
+{
+ "from": "Timperley, UK",
+"to": "New York, NY, USA",
+"weight": 0.2756 
+},
+{
+ "from": "Toronto, Canada",
+"to": "New York, NY, USA",
+"weight": 0.33374 
+},
+{
+ "from": "Vancouver, Canada",
+"to": "New York, NY, USA",
+"weight": 0.53363 
+},
+{
+ "from": "Växjo, Sweden",
+"to": "New York, NY, USA",
+"weight": 0.36041 
+},
+{
+ "from": "Zadar, Croatia",
+"to": "New York, NY, USA",
+"weight": 0.40907 
+},
+{
+ "from": "Padova, Italy",
+"to": "Ozark, MO, USA",
+"weight": 0.24574 
+},
+{
+ "from": "Paris, France",
+"to": "Ozark, MO, USA",
+"weight": 0.11526 
+},
+{
+ "from": "Philadelphia, PA, USA",
+"to": "Ozark, MO, USA",
+"weight": 0.20916 
+},
+{
+ "from": "Portland, OR, USA",
+"to": "Ozark, MO, USA",
+"weight": 0.09482 
+},
+{
+ "from": "San Francisco, CA, USA",
+"to": "Ozark, MO, USA",
+"weight": 0.46826 
+},
+{
+ "from": "San Luis Obispo, CA, USA",
+"to": "Ozark, MO, USA",
+"weight": 0.10099 
+},
+{
+ "from": "Santa Cruz, CA, USA",
+"to": "Ozark, MO, USA",
+"weight": 0.10099 
+},
+{
+ "from": "Singapore",
+"to": "Ozark, MO, USA",
+"weight": 0.13853 
+},
+{
+ "from": "Timperley, UK",
+"to": "Ozark, MO, USA",
+"weight": 0.12423 
+},
+{
+ "from": "Toronto, Canada",
+"to": "Ozark, MO, USA",
+"weight": 0.23513 
+},
+{
+ "from": "Vancouver, Canada",
+"to": "Ozark, MO, USA",
+"weight": 0.13309 
+},
+{
+ "from": "Paris, France",
+"to": "Padova, Italy",
+"weight": 0.11111 
+},
+{
+ "from": "Philadelphia, PA, USA",
+"to": "Padova, Italy",
+"weight": 0.1497 
+},
+{
+ "from": "San Francisco, CA, USA",
+"to": "Padova, Italy",
+"weight": 0.23909 
+},
+{
+ "from": "Singapore",
+"to": "Padova, Italy",
+"weight": 0.16707 
+},
+{
+ "from": "Taipei, Taiwan",
+"to": "Padova, Italy",
+"weight": 0.10805 
+},
+{
+ "from": "Timperley, UK",
+"to": "Padova, Italy",
+"weight": 0.1187 
+},
+{
+ "from": "Toronto, Canada",
+"to": "Padova, Italy",
+"weight": 0.42342 
+},
+{
+ "from": "Philadelphia, PA, USA",
+"to": "Paris, France",
+"weight": 0.13755 
+},
+{
+ "from": "San Francisco, CA, USA",
+"to": "Paris, France",
+"weight": 0.18786 
+},
+{
+ "from": "Singapore",
+"to": "Paris, France",
+"weight": 0.14045 
+},
+{
+ "from": "Växjo, Sweden",
+"to": "Paris, France",
+"weight": 0.18021 
+},
+{
+ "from": "Portland, OR, USA",
+"to": "Philadelphia, PA, USA",
+"weight": 0.3452 
+},
+{
+ "from": "Saint Catharines, Canada",
+"to": "Philadelphia, PA, USA",
+"weight": 0.15671 
+},
+{
+ "from": "San Francisco, CA, USA",
+"to": "Philadelphia, PA, USA",
+"weight": 0.75741 
+},
+{
+ "from": "San Luis Obispo, CA, USA",
+"to": "Philadelphia, PA, USA",
+"weight": 0.16218 
+},
+{
+ "from": "Santa Cruz, CA, USA",
+"to": "Philadelphia, PA, USA",
+"weight": 0.16667 
+},
+{
+ "from": "Singapore",
+"to": "Philadelphia, PA, USA",
+"weight": 0.43406 
+},
+{
+ "from": "Sydney, Australia",
+"to": "Philadelphia, PA, USA",
+"weight": 0.12423 
+},
+{
+ "from": "Timperley, UK",
+"to": "Philadelphia, PA, USA",
+"weight": 0.14925 
+},
+{
+ "from": "Toronto, Canada",
+"to": "Philadelphia, PA, USA",
+"weight": 0.13309 
+},
+{
+ "from": "Vancouver, Canada",
+"to": "Philadelphia, PA, USA",
+"weight": 0.23993 
+},
+{
+ "from": "Växjo, Sweden",
+"to": "Philadelphia, PA, USA",
+"weight": 0.13055 
+},
+{
+ "from": "Zadar, Croatia",
+"to": "Philadelphia, PA, USA",
+"weight": 0.10426 
+},
+{
+ "from": "Rotterdam, Netherlands",
+"to": "Portland, OR, USA",
+"weight": 0.13707 
+},
+{
+ "from": "Saint Catharines, Canada",
+"to": "Portland, OR, USA",
+"weight": 0.16867 
+},
+{
+ "from": "San Francisco, CA, USA",
+"to": "Portland, OR, USA",
+"weight": 0.46119 
+},
+{
+ "from": "San Luis Obispo, CA, USA",
+"to": "Portland, OR, USA",
+"weight": 0.10928 
+},
+{
+ "from": "Singapore",
+"to": "Portland, OR, USA",
+"weight": 0.2785 
+},
+{
+ "from": "Timperley, UK",
+"to": "Portland, OR, USA",
+"weight": 0.10032 
+},
+{
+ "from": "Vancouver, Canada",
+"to": "Portland, OR, USA",
+"weight": 0.18316 
+},
+{
+ "from": "Southowram, UK",
+"to": "Rotterdam, Netherlands",
+"weight": 0.10617 
+},
+{
+ "from": "Timperley, UK",
+"to": "Rotterdam, Netherlands",
+"weight": 0.11927 
+},
+{
+ "from": "San Francisco, CA, USA",
+"to": "Saint Catharines, Canada",
+"weight": 0.18643 
+},
+{
+ "from": "Singapore",
+"to": "Saint Catharines, Canada",
+"weight": 0.14653 
+},
+{
+ "from": "Sydney, Australia",
+"to": "Saint Catharines, Canada",
+"weight": 0.17946 
+},
+{
+ "from": "Vancouver, Canada",
+"to": "Saint Catharines, Canada",
+"weight": 0.11983 
+},
+{
+ "from": "San Luis Obispo, CA, USA",
+"to": "San Francisco, CA, USA",
+"weight": 0.2471 
+},
+{
+ "from": "Santa Cruz, CA, USA",
+"to": "San Francisco, CA, USA",
+"weight": 0.23023 
+},
+{
+ "from": "Singapore",
+"to": "San Francisco, CA, USA",
+"weight": 0.31935 
+},
+{
+ "from": "Southowram, UK",
+"to": "San Francisco, CA, USA",
+"weight": 0.09761 
+},
+{
+ "from": "Sydney, Australia",
+"to": "San Francisco, CA, USA",
+"weight": 0.2201 
+},
+{
+ "from": "Timperley, UK",
+"to": "San Francisco, CA, USA",
+"weight": 0.15926 
+},
+{
+ "from": "Toronto, Canada",
+"to": "San Francisco, CA, USA",
+"weight": 0.28611 
+},
+{
+ "from": "Vancouver, Canada",
+"to": "San Francisco, CA, USA",
+"weight": 0.37286 
+},
+{
+ "from": "Växjo, Sweden",
+"to": "San Francisco, CA, USA",
+"weight": 0.12094 
+},
+{
+ "from": "Zadar, Croatia",
+"to": "San Francisco, CA, USA",
+"weight": 0.27438 
+},
+{
+ "from": "Singapore",
+"to": "San Luis Obispo, CA, USA",
+"weight":  0.129 
+},
+{
+ "from": "Vancouver, Canada",
+"to": "San Luis Obispo, CA, USA",
+"weight": 0.15148 
+},
+{
+ "from": "Singapore",
+"to": "Santa Cruz, CA, USA",
+"weight": 0.13309 
+},
+{
+ "from": "Sydney, Australia",
+"to": "Santa Cruz, CA, USA",
+"weight": 0.11584 
+},
+{
+ "from": "Taipei, Taiwan",
+"to": "Santa Cruz, CA, USA",
+"weight": 0.23542 
+},
+{
+ "from": "Timperley, UK",
+"to": "Santa Cruz, CA, USA",
+"weight": 0.10805 
+},
+{
+ "from": "Toronto, Canada",
+"to": "Santa Cruz, CA, USA",
+"weight": 0.13157 
+},
+{
+ "from": "Vancouver, Canada",
+"to": "Santa Cruz, CA, USA",
+"weight": 0.17104 
+},
+{
+ "from": "Växjo, Sweden",
+"to": "Santa Cruz, CA, USA",
+"weight": 0.13359 
+},
+{
+ "from": "Sydney, Australia",
+"to": "Singapore",
+"weight": 0.14515 
+},
+{
+ "from": "Timperley, UK",
+"to": "Singapore",
+"weight": 0.15104 
+},
+{
+ "from": "Toronto, Canada",
+"to": "Singapore",
+"weight": 0.093394 
+},
+{
+ "from": "Vancouver, Canada",
+"to": "Singapore",
+"weight": 0.15015 
+},
+{
+ "from": "Växjo, Sweden",
+"to": "Singapore",
+"weight": 0.22313 
+},
+{
+ "from": "Zadar, Croatia",
+"to": "Singapore",
+"weight": 0.14744 
+},
+{
+ "from": "Timperley, UK",
+"to": "Southowram, UK",
+"weight": 0.15368 
+},
+{
+ "from": "Vancouver, Canada",
+"to": "Sydney, Australia",
+"weight": 0.1187 
+},
+{
+ "from": "Vancouver, Canada",
+"to": "Timperley, UK",
+"weight": 0.17143 
+},
+{
+ "from": "Växjo, Sweden",
+"to": "Timperley, UK",
+"weight": 0.10032 
+} 
+]

@@ -1,0 +1,617 @@
+{
+ "type": "FeatureCollection",
+"features": [
+ {
+ "type": "Feature",
+"properties": {
+ "latitude": -25.264,
+"longitude": -57.576,
+"name": "Asuncion, Paraguay" 
+},
+"geometry": {
+ "type": "Point",
+"coordinates": [ -57.576, -25.264 ] 
+} 
+},
+{
+ "type": "Feature",
+"properties": {
+ "latitude": 41.385,
+"longitude": 2.1734,
+"name": "Barcelona, Spain" 
+},
+"geometry": {
+ "type": "Point",
+"coordinates": [ 2.1734, 41.385 ] 
+} 
+},
+{
+ "type": "Feature",
+"properties": {
+ "latitude": 51.376,
+"longitude": -2.3599,
+"name": "Bath, UK" 
+},
+"geometry": {
+ "type": "Point",
+"coordinates": [ -2.3599, 51.376 ] 
+} 
+},
+{
+ "type": "Feature",
+"properties": {
+ "latitude": 39.904,
+"longitude": 116.41,
+"name": "Beijing, China" 
+},
+"geometry": {
+ "type": "Point",
+"coordinates": [ 116.41, 39.904 ] 
+} 
+},
+{
+ "type": "Feature",
+"properties": {
+ "latitude": 48.749,
+"longitude": -122.48,
+"name": "Bellingham, WA, USA" 
+},
+"geometry": {
+ "type": "Point",
+"coordinates": [ -122.48, 48.749 ] 
+} 
+},
+{
+ "type": "Feature",
+"properties": {
+ "latitude": 43.619,
+"longitude": -116.21,
+"name": "Boise, ID, USA" 
+},
+"geometry": {
+ "type": "Point",
+"coordinates": [ -116.21, 43.619 ] 
+} 
+},
+{
+ "type": "Feature",
+"properties": {
+ "latitude":  42.36,
+"longitude": -71.059,
+"name": "Boston, MA, USA" 
+},
+"geometry": {
+ "type": "Point",
+"coordinates": [ -71.059,  42.36 ] 
+} 
+},
+{
+ "type": "Feature",
+"properties": {
+ "latitude": 40.015,
+"longitude": -105.27,
+"name": "Boulder, CO, USA" 
+},
+"geometry": {
+ "type": "Point",
+"coordinates": [ -105.27, 40.015 ] 
+} 
+},
+{
+ "type": "Feature",
+"properties": {
+ "latitude": 50.823,
+"longitude": -0.13716,
+"name": "Brighton, UK" 
+},
+"geometry": {
+ "type": "Point",
+"coordinates": [ -0.13716, 50.823 ] 
+} 
+},
+{
+ "type": "Feature",
+"properties": {
+ "latitude": -27.471,
+"longitude": 153.02,
+"name": "Brisbane, AUS" 
+},
+"geometry": {
+ "type": "Point",
+"coordinates": [ 153.02, -27.471 ] 
+} 
+},
+{
+ "type": "Feature",
+"properties": {
+ "latitude": 52.243,
+"longitude": 0.71049,
+"name": "Bury St Edmunds, UK" 
+},
+"geometry": {
+ "type": "Point",
+"coordinates": [ 0.71049, 52.243 ] 
+} 
+},
+{
+ "type": "Feature",
+"properties": {
+ "latitude": 52.205,
+"longitude": 0.12182,
+"name": "Cambridge, UK" 
+},
+"geometry": {
+ "type": "Point",
+"coordinates": [ 0.12182, 52.205 ] 
+} 
+},
+{
+ "type": "Feature",
+"properties": {
+ "latitude": -33.932,
+"longitude": 18.622,
+"name": "Cape Town, SA" 
+},
+"geometry": {
+ "type": "Point",
+"coordinates": [ 18.622, -33.932 ] 
+} 
+},
+{
+ "type": "Feature",
+"properties": {
+ "latitude": 6.9271,
+"longitude": 79.861,
+"name": "Colombo, Sri Lanka" 
+},
+"geometry": {
+ "type": "Point",
+"coordinates": [ 79.861, 6.9271 ] 
+} 
+},
+{
+ "type": "Feature",
+"properties": {
+ "latitude": 39.961,
+"longitude": -82.999,
+"name": "Columbus, OH, USA" 
+},
+"geometry": {
+ "type": "Point",
+"coordinates": [ -82.999, 39.961 ] 
+} 
+},
+{
+ "type": "Feature",
+"properties": {
+ "latitude": 42.331,
+"longitude": -83.046,
+"name": "Detroit, MI, USA" 
+},
+"geometry": {
+ "type": "Point",
+"coordinates": [ -83.046, 42.331 ] 
+} 
+},
+{
+ "type": "Feature",
+"properties": {
+ "latitude":  53.35,
+"longitude": -6.2603,
+"name": "Dublin, Ireland" 
+},
+"geometry": {
+ "type": "Point",
+"coordinates": [ -6.2603,  53.35 ] 
+} 
+},
+{
+ "type": "Feature",
+"properties": {
+ "latitude": 40.585,
+"longitude": -105.08,
+"name": "Fort Collins, CO" 
+},
+"geometry": {
+ "type": "Point",
+"coordinates": [ -105.08, 40.585 ] 
+} 
+},
+{
+ "type": "Feature",
+"properties": {
+ "latitude": 41.026,
+"longitude": -73.628,
+"name": "Greenwich, CT, USA" 
+},
+"geometry": {
+ "type": "Point",
+"coordinates": [ -73.628, 41.026 ] 
+} 
+},
+{
+ "type": "Feature",
+"properties": {
+ "latitude": 31.699,
+"longitude": -106.3,
+"name": "Grenoble, France" 
+},
+"geometry": {
+ "type": "Point",
+"coordinates": [ -106.3, 31.699 ] 
+} 
+},
+{
+ "type": "Feature",
+"properties": {
+ "latitude":  29.76,
+"longitude": -95.37,
+"name": "Houston, TX, USA" 
+},
+"geometry": {
+ "type": "Point",
+"coordinates": [ -95.37,  29.76 ] 
+} 
+},
+{
+ "type": "Feature",
+"properties": {
+ "latitude": 33.684,
+"longitude": -117.79,
+"name": "Irvine, CA, USA" 
+},
+"geometry": {
+ "type": "Point",
+"coordinates": [ -117.79, 33.684 ] 
+} 
+},
+{
+ "type": "Feature",
+"properties": {
+ "latitude": 35.961,
+"longitude": -83.921,
+"name": "Knoxville, TN, USA" 
+},
+"geometry": {
+ "type": "Point",
+"coordinates": [ -83.921, 35.961 ] 
+} 
+},
+{
+ "type": "Feature",
+"properties": {
+ "latitude": 51.507,
+"longitude": -0.12776,
+"name": "London, UK" 
+},
+"geometry": {
+ "type": "Point",
+"coordinates": [ -0.12776, 51.507 ] 
+} 
+},
+{
+ "type": "Feature",
+"properties": {
+ "latitude": 34.052,
+"longitude": -118.24,
+"name": "Los Angeles, CA, USA" 
+},
+"geometry": {
+ "type": "Point",
+"coordinates": [ -118.24, 34.052 ] 
+} 
+},
+{
+ "type": "Feature",
+"properties": {
+ "latitude": 38.253,
+"longitude": -85.758,
+"name": "Louisville, KY, USA" 
+},
+"geometry": {
+ "type": "Point",
+"coordinates": [ -85.758, 38.253 ] 
+} 
+},
+{
+ "type": "Feature",
+"properties": {
+ "latitude": 40.417,
+"longitude": -3.7038,
+"name": "Madrid, Spain" 
+},
+"geometry": {
+ "type": "Point",
+"coordinates": [ -3.7038, 40.417 ] 
+} 
+},
+{
+ "type": "Feature",
+"properties": {
+ "latitude": 25.762,
+"longitude": -80.192,
+"name": "Miami, FL, USA" 
+},
+"geometry": {
+ "type": "Point",
+"coordinates": [ -80.192, 25.762 ] 
+} 
+},
+{
+ "type": "Feature",
+"properties": {
+ "latitude": 45.465,
+"longitude": 9.1859,
+"name": "Milan, Italy" 
+},
+"geometry": {
+ "type": "Point",
+"coordinates": [ 9.1859, 45.465 ] 
+} 
+},
+{
+ "type": "Feature",
+"properties": {
+ "latitude": 43.611,
+"longitude": 3.8767,
+"name": "Montpellier, France" 
+},
+"geometry": {
+ "type": "Point",
+"coordinates": [ 3.8767, 43.611 ] 
+} 
+},
+{
+ "type": "Feature",
+"properties": {
+ "latitude": 36.163,
+"longitude": -86.782,
+"name": "Nashville, TN, USA" 
+},
+"geometry": {
+ "type": "Point",
+"coordinates": [ -86.782, 36.163 ] 
+} 
+},
+{
+ "type": "Feature",
+"properties": {
+ "latitude": 40.713,
+"longitude": -74.006,
+"name": "New York, NY, USA" 
+},
+"geometry": {
+ "type": "Point",
+"coordinates": [ -74.006, 40.713 ] 
+} 
+},
+{
+ "type": "Feature",
+"properties": {
+ "latitude": 37.021,
+"longitude": -93.206,
+"name": "Ozark, MO, USA" 
+},
+"geometry": {
+ "type": "Point",
+"coordinates": [ -93.206, 37.021 ] 
+} 
+},
+{
+ "type": "Feature",
+"properties": {
+ "latitude": 45.406,
+"longitude": 11.877,
+"name": "Padova, Italy" 
+},
+"geometry": {
+ "type": "Point",
+"coordinates": [ 11.877, 45.406 ] 
+} 
+},
+{
+ "type": "Feature",
+"properties": {
+ "latitude": 48.857,
+"longitude": 2.3522,
+"name": "Paris, France" 
+},
+"geometry": {
+ "type": "Point",
+"coordinates": [ 2.3522, 48.857 ] 
+} 
+},
+{
+ "type": "Feature",
+"properties": {
+ "latitude": 39.953,
+"longitude": -75.165,
+"name": "Philadelphia, PA, USA" 
+},
+"geometry": {
+ "type": "Point",
+"coordinates": [ -75.165, 39.953 ] 
+} 
+},
+{
+ "type": "Feature",
+"properties": {
+ "latitude": 45.523,
+"longitude": -122.68,
+"name": "Portland, OR, USA" 
+},
+"geometry": {
+ "type": "Point",
+"coordinates": [ -122.68, 45.523 ] 
+} 
+},
+{
+ "type": "Feature",
+"properties": {
+ "latitude": 51.924,
+"longitude": 4.4777,
+"name": "Rotterdam, Netherlands" 
+},
+"geometry": {
+ "type": "Point",
+"coordinates": [ 4.4777, 51.924 ] 
+} 
+},
+{
+ "type": "Feature",
+"properties": {
+ "latitude": 43.159,
+"longitude": -79.247,
+"name": "Saint Catharines, Canada" 
+},
+"geometry": {
+ "type": "Point",
+"coordinates": [ -79.247, 43.159 ] 
+} 
+},
+{
+ "type": "Feature",
+"properties": {
+ "latitude": 37.775,
+"longitude": -122.42,
+"name": "San Francisco, CA, USA" 
+},
+"geometry": {
+ "type": "Point",
+"coordinates": [ -122.42, 37.775 ] 
+} 
+},
+{
+ "type": "Feature",
+"properties": {
+ "latitude": 35.283,
+"longitude": -120.66,
+"name": "San Luis Obispo, CA, USA" 
+},
+"geometry": {
+ "type": "Point",
+"coordinates": [ -120.66, 35.283 ] 
+} 
+},
+{
+ "type": "Feature",
+"properties": {
+ "latitude": 36.974,
+"longitude": -122.03,
+"name": "Santa Cruz, CA, USA" 
+},
+"geometry": {
+ "type": "Point",
+"coordinates": [ -122.03, 36.974 ] 
+} 
+},
+{
+ "type": "Feature",
+"properties": {
+ "latitude": 1.3521,
+"longitude": 103.82,
+"name": "Singapore" 
+},
+"geometry": {
+ "type": "Point",
+"coordinates": [ 103.82, 1.3521 ] 
+} 
+},
+{
+ "type": "Feature",
+"properties": {
+ "latitude":  53.71,
+"longitude":  -1.83,
+"name": "Southowram, UK" 
+},
+"geometry": {
+ "type": "Point",
+"coordinates": [  -1.83,  53.71 ] 
+} 
+},
+{
+ "type": "Feature",
+"properties": {
+ "latitude": -33.867,
+"longitude": 151.21,
+"name": "Sydney, Australia" 
+},
+"geometry": {
+ "type": "Point",
+"coordinates": [ 151.21, -33.867 ] 
+} 
+},
+{
+ "type": "Feature",
+"properties": {
+ "latitude": 25.033,
+"longitude": 121.57,
+"name": "Taipei, Taiwan" 
+},
+"geometry": {
+ "type": "Point",
+"coordinates": [ 121.57, 25.033 ] 
+} 
+},
+{
+ "type": "Feature",
+"properties": {
+ "latitude": 53.397,
+"longitude": -2.3193,
+"name": "Timperley, UK" 
+},
+"geometry": {
+ "type": "Point",
+"coordinates": [ -2.3193, 53.397 ] 
+} 
+},
+{
+ "type": "Feature",
+"properties": {
+ "latitude": 43.653,
+"longitude": -79.383,
+"name": "Toronto, Canada" 
+},
+"geometry": {
+ "type": "Point",
+"coordinates": [ -79.383, 43.653 ] 
+} 
+},
+{
+ "type": "Feature",
+"properties": {
+ "latitude": 49.283,
+"longitude": -123.12,
+"name": "Vancouver, Canada" 
+},
+"geometry": {
+ "type": "Point",
+"coordinates": [ -123.12, 49.283 ] 
+} 
+},
+{
+ "type": "Feature",
+"properties": {
+ "latitude": 56.879,
+"longitude": 14.806,
+"name": "Växjo, Sweden" 
+},
+"geometry": {
+ "type": "Point",
+"coordinates": [ 14.806, 56.879 ] 
+} 
+},
+{
+ "type": "Feature",
+"properties": {
+ "latitude": 44.119,
+"longitude": 15.231,
+"name": "Zadar, Croatia" 
+},
+"geometry": {
+ "type": "Point",
+"coordinates": [ 15.231, 44.119 ] 
+} 
+} 
+] 
+}
