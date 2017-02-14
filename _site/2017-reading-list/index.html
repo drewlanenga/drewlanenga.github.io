@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width initial-scale=1">
+
+  <title>2017 Reading List</title>
+  <meta name="description" content="I had a friend ask the other day on Facebook for some recommendations for good, short books to read in 2017.">
+
+  
+  <link rel="stylesheet" href="/css/main.css">
+  
+  
+  <link rel="canonical" href="http://drew.lanen.ga/2017-reading-list/">
+  <link rel="alternate" type="application/atom+xml" title="drew.lanen.ga" href="http://drew.lanen.ga/feed.xml" />
+  <link rel="apple-touch-icon" href="http://drew.lanen.ga/apple-touch-icon.png" />
+  <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png" />
+  <link rel="icon" type="image/x-icon" href="/assets/images/d.ico" />
+
+  <meta property="og:title" content="2017 Reading List">
+  
+  <meta name="description" content="A data-driven approach to my 2017 reading list.">
+  <meta property="og:description" content="A data-driven approach to my 2017 reading list.">
+  
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="http://drew.lanen.ga/2017-reading-list/">
+  <meta property="og:site_name" content="drew.lanen.ga">
+  
+</head>
+
+  <body>
+    
+<div class="header-container" id="header-container">
+
+  <nav class="site-nav">
+    <div class="trigger">
+      
+        
+        <a class="page-link hide-palm" href="/about/">ABOUT</a>
+        
+      
+        
+      
+        
+      
+        
+      
+      <a class="rss page-link hide-palm" href="/feed.xml"><span class="icon-rss"></span></a>
+      <a class="twitter page-link" href="https://twitter.com/drewlanenga"><span class="icon-twitter"></span></a>
+      <a class="linkedin page-link" href="https://www.linkedin.com/in/drewlanenga"><span class="icon-linkedin"></span></a>
+      <a class="github page-link" href="https://www.github.com/drewlanenga"><span class="icon-github"></span></a>
+    </div>
+  </nav>
+
+  <header class="site-header">
+    <a class="site-title" href="/">drew.lanen.ga</a>
+  </header>
+
+</div>
+
+    <div class="wrapper">
+      <div class="page-content">
+        <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">2017 Reading List</h1>
+    <p class="post-meta">February 13, 2017</p>
+  </header>
+
+  <article class="post-content">
+    <p>I had a friend ask the other day on Facebook for some recommendations for good, short books to read in 2017.</p>
+
+<p>I thought about books that I could suggest, but very quickly realized that the books that I read aren’t short, and, after I reflected a little, realized that this creates some problems for me — either I lose momentum and don’t finish, or I end up finishing after a seemingly Sisyphean effort that doesn’t feel satisfying.</p>
+
+<p>So I decided to search for the best, shortest books I could read in 2017.  I started by pulling data from Goodreads.</p>
+
+<h2 id="goodreads">Goodreads</h2>
+
+<p>Goodreads is a service that lets users rate books and network with other readers.  Each book is rated on a 5-point scale.  Books can be compiled into reading lists and shared with other users.</p>
+
+<p>There are <em>a lot</em> of books on Goodlist, so in an effort to pull from only the best books, I included only books included on 30 of the most popular “Best Of” lists on the site<sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup>.  That gave me about 34,000 books to choose from.</p>
+
+<h2 id="ratings-and-rankings">Ratings and Rankings</h2>
+
+<p>Next, I had to rank the books.  I wanted to avoid one of my biggest annoyances when using rating data — ignoring the trade-off between rating and sample size.  If I’m looking for pizza on Yelp, why would a restaurant with a single review of 5-stars rank higher than a restaurant with a 4.9 rating based on 1,000 reviews?</p>
+
+<p>My method for overcoming this was to assume a Dirichlet prior over a Multinomial likelihood<sup id="fnref:2"><a href="#fn:2" class="footnote">2</a></sup>.  The posterior rating would then give us an estimate on the rating that help penalize obscure books until they demonstrated enough evidence of their acclaim.</p>
+
+<p>The prior I used was based on the aggregate rating of a typical book — one-half of the median of each possible rating, which resulted in <em>Dirichlet(13.5, 42.5, 180.5, 293, 264)</em><sup id="fnref:3"><a href="#fn:3" class="footnote">3</a></sup>.  You can think of it as saying that we’ll assume a book will get 13.5 one-star reviews, 42.5 two-star reviews, 180.5 three-star reviews, 293 four-star reviews, and 264 five-star reviews.  Then, each rating observed in the data builds upon the prior assumptions, so each book has to prove its rating, relative to all the other books.</p>
+
+<h2 id="the-final-list">The Final List</h2>
+
+<p>So, once I had 34,000 books, their length and their rating, I could finally generate my reading list.</p>
+
+<p>I only had one constraint on the books in my list — they had to be less than 200 pages.  So I generated my reading list, and was surprised to see that more than half of the list comprised of <em>Calvin and Hobbes</em> collections.  (For whatever reason, Goodreads users really love <em>Calvin and Hobbes</em> — reviews were both numerous (hundreds of thousands of users) and <em>very</em> high.)</p>
+
+<p>So after excluding “Sequential Art” as a genre (and subsequently few more genres I definitely wasn’t interested in<sup id="fnref:4"><a href="#fn:4" class="footnote">4</a></sup>), I got the <a href="https://www.goodreads.com/review/list/63807962-drew-lanenga?order=d&amp;shelf=2017-under-200-pages&amp;sort=date_added">list</a> below.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Author</th>
+      <th style="text-align: center">Year</th>
+      <th style="text-align: right">Pages</th>
+      <th style="text-align: right">Rating</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="https://www.goodreads.com/book/show/4808763-the-last-question">The Last Question</a></td>
+      <td>Isaac Asimov</td>
+      <td style="text-align: center">1956</td>
+      <td style="text-align: right">9</td>
+      <td style="text-align: right">4.54</td>
+    </tr>
+    <tr>
+      <td><a href="https://www.goodreads.com/book/show/22738563-we-should-all-be-feminists">We Should All Be Feminists</a></td>
+      <td>Chimamanda Ngozi Adichie</td>
+      <td style="text-align: center">2012</td>
+      <td style="text-align: right">52</td>
+      <td style="text-align: right">4.46</td>
+    </tr>
+    <tr>
+      <td><a href="https://www.goodreads.com/book/show/1423.The_Compleat_Works_of_Wllm_Shkspr">The Compleat Works of Wllm Shkspr</a></td>
+      <td>Reduced Shakespeare Company</td>
+      <td style="text-align: center">1994</td>
+      <td style="text-align: right">137</td>
+      <td style="text-align: right">4.42</td>
+    </tr>
+    <tr>
+      <td><a href="https://www.goodreads.com/book/show/32951.Sister_Outsider">Sister Outsider</a></td>
+      <td>Audre Lorde</td>
+      <td style="text-align: center">1984</td>
+      <td style="text-align: right">190</td>
+      <td style="text-align: right">4.41</td>
+    </tr>
+    <tr>
+      <td><a href="https://www.goodreads.com/book/show/25489625-between-the-world-and-me">Between the World and Me</a></td>
+      <td>Ta Nehisi Coates</td>
+      <td style="text-align: center">2015</td>
+      <td style="text-align: right">152</td>
+      <td style="text-align: right">4.39</td>
+    </tr>
+    <tr>
+      <td><a href="https://www.goodreads.com/book/show/464260.The_Fire_Next_Time">The Fire Next Time</a></td>
+      <td>James Baldwin</td>
+      <td style="text-align: center">1963</td>
+      <td style="text-align: right">141</td>
+      <td style="text-align: right">4.38</td>
+    </tr>
+    <tr>
+      <td><a href="https://www.goodreads.com/book/show/5931.The_Essential_Neruda">The Essential Neruda</a></td>
+      <td>Pablo Neruda</td>
+      <td style="text-align: center">1979</td>
+      <td style="text-align: right">200</td>
+      <td style="text-align: right">4.38</td>
+    </tr>
+    <tr>
+      <td><a href="https://www.goodreads.com/book/show/565149.Illuminations">Illuminations</a></td>
+      <td>Arthur Rimbaud</td>
+      <td style="text-align: center">1875</td>
+      <td style="text-align: right">182</td>
+      <td style="text-align: right">4.35</td>
+    </tr>
+    <tr>
+      <td><a href="https://www.goodreads.com/book/show/80410.Four_Quartets">Four Quartets</a></td>
+      <td>T. S. Eliot</td>
+      <td style="text-align: center">1943</td>
+      <td style="text-align: right">48</td>
+      <td style="text-align: right">4.34</td>
+    </tr>
+    <tr>
+      <td><a href="https://www.goodreads.com/book/show/133974.The_Pillowman">The Pillowman</a></td>
+      <td>Martin McDonagh</td>
+      <td style="text-align: center">2003</td>
+      <td style="text-align: right">104</td>
+      <td style="text-align: right">4.34</td>
+    </tr>
+    <tr>
+      <td><a href="https://www.goodreads.com/book/show/46199.Letters_to_a_Young_Poet">Letters to a Young Poet</a></td>
+      <td>Rainer Maria Rilke</td>
+      <td style="text-align: center">1929</td>
+      <td style="text-align: right">80</td>
+      <td style="text-align: right">4.33</td>
+    </tr>
+    <tr>
+      <td><a href="https://www.goodreads.com/book/show/4069.Man_s_Search_for_Meaning">Man’s Search for Meaning</a></td>
+      <td>Victor Frankl</td>
+      <td style="text-align: center">1946</td>
+      <td style="text-align: right">184</td>
+      <td style="text-align: right">4.32</td>
+    </tr>
+    <tr>
+      <td><a href="https://www.goodreads.com/book/show/76889.100_Selected_Poems">100 Selected Poems</a></td>
+      <td>E. E. Cummings</td>
+      <td style="text-align: center">1954</td>
+      <td style="text-align: right">128</td>
+      <td style="text-align: right">4.31</td>
+    </tr>
+    <tr>
+      <td><a href="https://www.goodreads.com/book/show/67896.Tao_Te_Ching">Tao Te Ching</a></td>
+      <td>Lao Tzu</td>
+      <td style="text-align: center">1989</td>
+      <td style="text-align: right">184</td>
+      <td style="text-align: right">4.31</td>
+    </tr>
+    <tr>
+      <td><a href="https://www.goodreads.com/book/show/128461.A_Season_in_Hell_The_Drunken_Boat">A Season in Hell/The Drunken Boat</a></td>
+      <td>Arthur Rimbaud</td>
+      <td style="text-align: center">1837</td>
+      <td style="text-align: right">104</td>
+      <td style="text-align: right">4.3</td>
+    </tr>
+    <tr>
+      <td><a href="https://www.goodreads.com/book/show/118389.The_Love_Song_of_J_Alfred_Prufrock_and_Other_Poems">The Love Song of J. Alfred Prufrock and Other Poems</a></td>
+      <td>T. S. Eliot</td>
+      <td style="text-align: center">1915</td>
+      <td style="text-align: right">44</td>
+      <td style="text-align: right">4.3</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="conclusions">Conclusions</h2>
+
+<p>I was definitely surprised with the list that this approach came up with — it’s definitely a list of books that I wouldn’t have read otherwise.  I’m not sure if I’ll read them in order of ranking, but I’m excited to see what comes out of my reading this year.</p>
+
+<h2 id="future-work">Future Work</h2>
+
+<p>I’d like to make this data available interactively in a subsequent post so people can generate their own booklist with their own constraints.  That’ll take more time than I have available tonight, but I hope to post it soon.</p>
+
+<h3 id="footnotes">Footnotes</h3>
+
+<div class="footnotes">
+  <ol>
+    <li id="fn:1">
+      <p>The lists that I pulled from were <a href="https://www.goodreads.com/list/show/21995">Best Books Under 200 Pages</a>, <a href="https://www.goodreads.com/list/show/19081">Great Short Short Books</a>, <a href="https://www.goodreads.com/list/show/4093">Best Books of the 2010’s</a>, <a href="https://www.goodreads.com/list/show/5">Best Books of the 2000’s</a>, <a href="https://www.goodreads.com/list/show/17">Best Books of the 1990’s</a>, <a href="https://www.goodreads.com/list/show/9">Best Books of the 1980’s</a>, <a href="https://www.goodreads.com/list/show/21">Best Books of the 1970’s</a>, <a href="https://www.goodreads.com/list/show/18">Best Books of the 1960’s</a>, <a href="https://www.goodreads.com/list/show/22">Best Books of the 1950’s</a>, <a href="https://www.goodreads.com/list/show/23">Best Books of the 1940’s</a>, <a href="https://www.goodreads.com/list/show/85">Best Books of the 1930’s</a>, <a href="https://www.goodreads.com/list/show/39">Best Books of the 1920’s</a>, <a href="https://www.goodreads.com/list/show/93">Best Books of the 1910’s</a>, <a href="https://www.goodreads.com/list/show/38">Best Books of the 1900’s</a>, <a href="https://www.goodreads.com/list/show/1386">Best Books of the 1890’s</a>, <a href="https://www.goodreads.com/list/show/2457">Best Books of the 1880’s</a>, <a href="https://www.goodreads.com/list/show/2594">Best Books of the 1870’s</a>, <a href="https://www.goodreads.com/list/show/2458">Best Books of the 1860’s</a>, <a href="https://www.goodreads.com/list/show/2592">Best Books of the 1850’s</a>, <a href="https://www.goodreads.com/list/show/2588">Best Books of the 1840’s</a>, <a href="https://www.goodreads.com/list/show/2591">Best Books of the 1830’s</a>, <a href="https://www.goodreads.com/list/show/2593">Best Books of the 1820’s</a>, <a href="https://www.goodreads.com/list/show/25498">Best Books of the 1810’s</a>, <a href="https://www.goodreads.com/list/show/4375">Best Books of the 1800’s</a>, <a href="https://www.goodreads.com/list/show/264">Books That Everyone Should Read At Least Once</a>,<a href="https://www.goodreads.com/list/show/429">The BOOK was BETTER than the MOVIE</a>, <a href="https://www.goodreads.com/list/show/8166">Books You Wish More People Knew About</a>, <a href="https://www.goodreads.com/list/show/1236">World’s Greatest Novellas</a>, <a href="https://www.goodreads.com/list/show/21995">Best 21st Century Non-Fiction</a>, and <a href="https://www.goodreads.com/list/show/1">Best Books Ever</a>. <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:2">
+      <p>This is a common approach in <a href="https://en.wikipedia.org/wiki/Bayesian_statistics">Bayesian statistics</a>. In Bayesian statistics we allow some prior information to inform our approach, then let data update our prior assumptions, where stronger signals in the data help us make stronger departures in our conclusions. <a href="#fnref:2" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:3">
+      <p>That’s actually a pretty high prior, right?  I was surprised to see books being so highly rated overall.  I mean, should it be the assumption that a book is really 4-stars? <a href="#fnref:3" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:4">
+      <p>The full list of exclusions were: Childrens, Young Adult, Religion, Romance, Art, Music, Reference, Law, Fantasy, Sequential Art, Audiobook, Horror, Vampires, and Dystopia. <a href="#fnref:4" class="reversefootnote">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+
+  </article>
+
+  <hr>
+
+  <!--div class="related">
+    <h2>Related</h2>
+    
+      
+    
+      
+    
+      
+      <li><a href="/network-science/" title="Network Science">Network Science
+       &nbsp; <span class="post-meta">February 20, 2016</span></a>
+      
+    
+      
+      <li><a href="/hillary-emails/" title="Hillary's Damn Emails">Hillary's Damn Emails
+       &nbsp; <span class="post-meta">February 17, 2016</span></a>
+      
+    
+  </div-->
+
+</div>
+
+      </div>
+      <footer class="site-footer">
+<p class="small">drew lanenga &copy; 2017</p>
+</footer>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-72365655-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+<script src="//cdn.jsdelivr.net/headroomjs/0.5.0/headroom.min.js"></script>
+<script type="text/javascript">
+  var el = document.querySelector(".header-container");
+  var headroom  = new Headroom(el, {
+    "offset": 205,
+    "tolerance": {
+      down: 10,
+      up: 20
+    }
+  });
+
+  headroom.init();
+</script>
+
+    </div>
+  </body>
+</html>

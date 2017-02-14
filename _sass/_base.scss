@@ -304,3 +304,22 @@ pre {
         display: none !important;
     }
 }
+
+/**
+ * Tables
+ */
+
+ table td, table th {
+   padding: .75rem;
+   vertical-align: top;
+   border-top: 1px solid #eceeef;
+ }
+
+table thead th {
+  vertical-align: bottom;
+  /*border-bottom: 2px solid #eceeef;*/
+  border-top: none;
+  color: $from;
+  font-weight: bold;
+    /*background-color: #292b2c;*/
+}

@@ -5,9 +5,205 @@
     <description></description>
     <link>http://drew.lanen.ga/</link>
     <atom:link href="http://drew.lanen.ga/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 20 Apr 2016 23:45:37 -0700</pubDate>
-    <lastBuildDate>Wed, 20 Apr 2016 23:45:37 -0700</lastBuildDate>
+    <pubDate>Mon, 13 Feb 2017 23:40:59 -0500</pubDate>
+    <lastBuildDate>Mon, 13 Feb 2017 23:40:59 -0500</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>2017 Reading List</title>
+        <description>&lt;p&gt;I had a friend ask the other day on Facebook for some recommendations for good, short books to read in 2017.&lt;/p&gt;
+
+&lt;p&gt;I thought about books that I could suggest, but very quickly realized that the books that I read aren’t short, and, after I reflected a little, realized that this creates some problems for me — either I lose momentum and don’t finish, or I end up finishing after a seemingly Sisyphean effort that doesn’t feel satisfying.&lt;/p&gt;
+
+&lt;p&gt;So I decided to search for the best, shortest books I could read in 2017.  I started by pulling data from Goodreads.&lt;/p&gt;
+
+&lt;h2 id=&quot;goodreads&quot;&gt;Goodreads&lt;/h2&gt;
+
+&lt;p&gt;Goodreads is a service that lets users rate books and network with other readers.  Each book is rated on a 5-point scale.  Books can be compiled into reading lists and shared with other users.&lt;/p&gt;
+
+&lt;p&gt;There are &lt;em&gt;a lot&lt;/em&gt; of books on Goodlist, so in an effort to pull from only the best books, I included only books included on 30 of the most popular “Best Of” lists on the site&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;.  That gave me about 34,000 books to choose from.&lt;/p&gt;
+
+&lt;h2 id=&quot;ratings-and-rankings&quot;&gt;Ratings and Rankings&lt;/h2&gt;
+
+&lt;p&gt;Next, I had to rank the books.  I wanted to avoid one of my biggest annoyances when using rating data — ignoring the trade-off between rating and sample size.  If I’m looking for pizza on Yelp, why would a restaurant with a single review of 5-stars rank higher than a restaurant with a 4.9 rating based on 1,000 reviews?&lt;/p&gt;
+
+&lt;p&gt;My method for overcoming this was to assume a Dirichlet prior over a Multinomial likelihood&lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;.  The posterior rating would then give us an estimate on the rating that help penalize obscure books until they demonstrated enough evidence of their acclaim.&lt;/p&gt;
+
+&lt;p&gt;The prior I used was based on the aggregate rating of a typical book — one-half of the median of each possible rating, which resulted in &lt;em&gt;Dirichlet(13.5, 42.5, 180.5, 293, 264)&lt;/em&gt;&lt;sup id=&quot;fnref:3&quot;&gt;&lt;a href=&quot;#fn:3&quot; class=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;.  You can think of it as saying that we’ll assume a book will get 13.5 one-star reviews, 42.5 two-star reviews, 180.5 three-star reviews, 293 four-star reviews, and 264 five-star reviews.  Then, each rating observed in the data builds upon the prior assumptions, so each book has to prove its rating, relative to all the other books.&lt;/p&gt;
+
+&lt;h2 id=&quot;the-final-list&quot;&gt;The Final List&lt;/h2&gt;
+
+&lt;p&gt;So, once I had 34,000 books, their length and their rating, I could finally generate my reading list.&lt;/p&gt;
+
+&lt;p&gt;I only had one constraint on the books in my list — they had to be less than 200 pages.  So I generated my reading list, and was surprised to see that more than half of the list comprised of &lt;em&gt;Calvin and Hobbes&lt;/em&gt; collections.  (For whatever reason, Goodreads users really love &lt;em&gt;Calvin and Hobbes&lt;/em&gt; — reviews were both numerous (hundreds of thousands of users) and &lt;em&gt;very&lt;/em&gt; high.)&lt;/p&gt;
+
+&lt;p&gt;So after excluding “Sequential Art” as a genre (and subsequently few more genres I definitely wasn’t interested in&lt;sup id=&quot;fnref:4&quot;&gt;&lt;a href=&quot;#fn:4&quot; class=&quot;footnote&quot;&gt;4&lt;/a&gt;&lt;/sup&gt;), I got the &lt;a href=&quot;https://www.goodreads.com/review/list/63807962-drew-lanenga?order=d&amp;amp;shelf=2017-under-200-pages&amp;amp;sort=date_added&quot;&gt;list&lt;/a&gt; below.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Title&lt;/th&gt;
+      &lt;th&gt;Author&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Year&lt;/th&gt;
+      &lt;th style=&quot;text-align: right&quot;&gt;Pages&lt;/th&gt;
+      &lt;th style=&quot;text-align: right&quot;&gt;Rating&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;a href=&quot;https://www.goodreads.com/book/show/4808763-the-last-question&quot;&gt;The Last Question&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;Isaac Asimov&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1956&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;9&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;4.54&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;a href=&quot;https://www.goodreads.com/book/show/22738563-we-should-all-be-feminists&quot;&gt;We Should All Be Feminists&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;Chimamanda Ngozi Adichie&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;2012&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;52&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;4.46&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;a href=&quot;https://www.goodreads.com/book/show/1423.The_Compleat_Works_of_Wllm_Shkspr&quot;&gt;The Compleat Works of Wllm Shkspr&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;Reduced Shakespeare Company&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1994&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;137&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;4.42&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;a href=&quot;https://www.goodreads.com/book/show/32951.Sister_Outsider&quot;&gt;Sister Outsider&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;Audre Lorde&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1984&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;190&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;4.41&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;a href=&quot;https://www.goodreads.com/book/show/25489625-between-the-world-and-me&quot;&gt;Between the World and Me&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;Ta Nehisi Coates&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;2015&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;152&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;4.39&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;a href=&quot;https://www.goodreads.com/book/show/464260.The_Fire_Next_Time&quot;&gt;The Fire Next Time&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;James Baldwin&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1963&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;141&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;4.38&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;a href=&quot;https://www.goodreads.com/book/show/5931.The_Essential_Neruda&quot;&gt;The Essential Neruda&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;Pablo Neruda&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1979&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;200&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;4.38&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;a href=&quot;https://www.goodreads.com/book/show/565149.Illuminations&quot;&gt;Illuminations&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;Arthur Rimbaud&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1875&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;182&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;4.35&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;a href=&quot;https://www.goodreads.com/book/show/80410.Four_Quartets&quot;&gt;Four Quartets&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;T. S. Eliot&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1943&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;48&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;4.34&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;a href=&quot;https://www.goodreads.com/book/show/133974.The_Pillowman&quot;&gt;The Pillowman&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;Martin McDonagh&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;2003&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;104&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;4.34&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;a href=&quot;https://www.goodreads.com/book/show/46199.Letters_to_a_Young_Poet&quot;&gt;Letters to a Young Poet&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;Rainer Maria Rilke&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1929&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;80&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;4.33&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;a href=&quot;https://www.goodreads.com/book/show/4069.Man_s_Search_for_Meaning&quot;&gt;Man’s Search for Meaning&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;Victor Frankl&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1946&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;184&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;4.32&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;a href=&quot;https://www.goodreads.com/book/show/76889.100_Selected_Poems&quot;&gt;100 Selected Poems&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;E. E. Cummings&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1954&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;128&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;4.31&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;a href=&quot;https://www.goodreads.com/book/show/67896.Tao_Te_Ching&quot;&gt;Tao Te Ching&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;Lao Tzu&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1989&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;184&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;4.31&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;a href=&quot;https://www.goodreads.com/book/show/128461.A_Season_in_Hell_The_Drunken_Boat&quot;&gt;A Season in Hell/The Drunken Boat&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;Arthur Rimbaud&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1837&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;104&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;4.3&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;a href=&quot;https://www.goodreads.com/book/show/118389.The_Love_Song_of_J_Alfred_Prufrock_and_Other_Poems&quot;&gt;The Love Song of J. Alfred Prufrock and Other Poems&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;T. S. Eliot&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1915&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;44&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;4.3&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&quot;conclusions&quot;&gt;Conclusions&lt;/h2&gt;
+
+&lt;p&gt;I was definitely surprised with the list that this approach came up with — it’s definitely a list of books that I wouldn’t have read otherwise.  I’m not sure if I’ll read them in order of ranking, but I’m excited to see what comes out of my reading this year.&lt;/p&gt;
+
+&lt;h2 id=&quot;future-work&quot;&gt;Future Work&lt;/h2&gt;
+
+&lt;p&gt;I’d like to make this data available interactively in a subsequent post so people can generate their own booklist with their own constraints.  That’ll take more time than I have available tonight, but I hope to post it soon.&lt;/p&gt;
+
+&lt;h3 id=&quot;footnotes&quot;&gt;Footnotes&lt;/h3&gt;
+
+&lt;div class=&quot;footnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:1&quot;&gt;
+      &lt;p&gt;The lists that I pulled from were &lt;a href=&quot;https://www.goodreads.com/list/show/21995&quot;&gt;Best Books Under 200 Pages&lt;/a&gt;, &lt;a href=&quot;https://www.goodreads.com/list/show/19081&quot;&gt;Great Short Short Books&lt;/a&gt;, &lt;a href=&quot;https://www.goodreads.com/list/show/4093&quot;&gt;Best Books of the 2010’s&lt;/a&gt;, &lt;a href=&quot;https://www.goodreads.com/list/show/5&quot;&gt;Best Books of the 2000’s&lt;/a&gt;, &lt;a href=&quot;https://www.goodreads.com/list/show/17&quot;&gt;Best Books of the 1990’s&lt;/a&gt;, &lt;a href=&quot;https://www.goodreads.com/list/show/9&quot;&gt;Best Books of the 1980’s&lt;/a&gt;, &lt;a href=&quot;https://www.goodreads.com/list/show/21&quot;&gt;Best Books of the 1970’s&lt;/a&gt;, &lt;a href=&quot;https://www.goodreads.com/list/show/18&quot;&gt;Best Books of the 1960’s&lt;/a&gt;, &lt;a href=&quot;https://www.goodreads.com/list/show/22&quot;&gt;Best Books of the 1950’s&lt;/a&gt;, &lt;a href=&quot;https://www.goodreads.com/list/show/23&quot;&gt;Best Books of the 1940’s&lt;/a&gt;, &lt;a href=&quot;https://www.goodreads.com/list/show/85&quot;&gt;Best Books of the 1930’s&lt;/a&gt;, &lt;a href=&quot;https://www.goodreads.com/list/show/39&quot;&gt;Best Books of the 1920’s&lt;/a&gt;, &lt;a href=&quot;https://www.goodreads.com/list/show/93&quot;&gt;Best Books of the 1910’s&lt;/a&gt;, &lt;a href=&quot;https://www.goodreads.com/list/show/38&quot;&gt;Best Books of the 1900’s&lt;/a&gt;, &lt;a href=&quot;https://www.goodreads.com/list/show/1386&quot;&gt;Best Books of the 1890’s&lt;/a&gt;, &lt;a href=&quot;https://www.goodreads.com/list/show/2457&quot;&gt;Best Books of the 1880’s&lt;/a&gt;, &lt;a href=&quot;https://www.goodreads.com/list/show/2594&quot;&gt;Best Books of the 1870’s&lt;/a&gt;, &lt;a href=&quot;https://www.goodreads.com/list/show/2458&quot;&gt;Best Books of the 1860’s&lt;/a&gt;, &lt;a href=&quot;https://www.goodreads.com/list/show/2592&quot;&gt;Best Books of the 1850’s&lt;/a&gt;, &lt;a href=&quot;https://www.goodreads.com/list/show/2588&quot;&gt;Best Books of the 1840’s&lt;/a&gt;, &lt;a href=&quot;https://www.goodreads.com/list/show/2591&quot;&gt;Best Books of the 1830’s&lt;/a&gt;, &lt;a href=&quot;https://www.goodreads.com/list/show/2593&quot;&gt;Best Books of the 1820’s&lt;/a&gt;, &lt;a href=&quot;https://www.goodreads.com/list/show/25498&quot;&gt;Best Books of the 1810’s&lt;/a&gt;, &lt;a href=&quot;https://www.goodreads.com/list/show/4375&quot;&gt;Best Books of the 1800’s&lt;/a&gt;, &lt;a href=&quot;https://www.goodreads.com/list/show/264&quot;&gt;Books That Everyone Should Read At Least Once&lt;/a&gt;,&lt;a href=&quot;https://www.goodreads.com/list/show/429&quot;&gt;The BOOK was BETTER than the MOVIE&lt;/a&gt;, &lt;a href=&quot;https://www.goodreads.com/list/show/8166&quot;&gt;Books You Wish More People Knew About&lt;/a&gt;, &lt;a href=&quot;https://www.goodreads.com/list/show/1236&quot;&gt;World’s Greatest Novellas&lt;/a&gt;, &lt;a href=&quot;https://www.goodreads.com/list/show/21995&quot;&gt;Best 21st Century Non-Fiction&lt;/a&gt;, and &lt;a href=&quot;https://www.goodreads.com/list/show/1&quot;&gt;Best Books Ever&lt;/a&gt;. &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:2&quot;&gt;
+      &lt;p&gt;This is a common approach in &lt;a href=&quot;https://en.wikipedia.org/wiki/Bayesian_statistics&quot;&gt;Bayesian statistics&lt;/a&gt;. In Bayesian statistics we allow some prior information to inform our approach, then let data update our prior assumptions, where stronger signals in the data help us make stronger departures in our conclusions. &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:3&quot;&gt;
+      &lt;p&gt;That’s actually a pretty high prior, right?  I was surprised to see books being so highly rated overall.  I mean, should it be the assumption that a book is really 4-stars? &lt;a href=&quot;#fnref:3&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:4&quot;&gt;
+      &lt;p&gt;The full list of exclusions were: Childrens, Young Adult, Religion, Romance, Art, Music, Reference, Law, Fantasy, Sequential Art, Audiobook, Horror, Vampires, and Dystopia. &lt;a href=&quot;#fnref:4&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+</description>
+        <pubDate>Mon, 13 Feb 2017 00:00:00 -0500</pubDate>
+        <link>http://drew.lanen.ga/2017-reading-list/</link>
+        <guid isPermaLink="true">http://drew.lanen.ga/2017-reading-list/</guid>
+        
+        
+        <category>general,</category>
+        
+        <category>books,</category>
+        
+        <category>personal</category>
+        
+      </item>
     
       <item>
         <title>Sanders Would Win Electoral College</title>
@@ -415,7 +611,7 @@ election.legend({
 &lt;/script&gt;
 
 </description>
-        <pubDate>Tue, 08 Mar 2016 00:00:00 -0800</pubDate>
+        <pubDate>Tue, 08 Mar 2016 00:00:00 -0500</pubDate>
         <link>http://drew.lanen.ga/electoral-primary/</link>
         <guid isPermaLink="true">http://drew.lanen.ga/electoral-primary/</guid>
         
@@ -576,7 +772,7 @@ election.legend({
 
 &lt;p&gt;&lt;strong&gt;What are your thoughts?  What would your organizational network reveal about your organization?  Do the modes and patterns of your team’s communication enable or hinder your success?&lt;/strong&gt;&lt;/p&gt;
 </description>
-        <pubDate>Tue, 08 Mar 2016 00:00:00 -0800</pubDate>
+        <pubDate>Tue, 08 Mar 2016 00:00:00 -0500</pubDate>
         <link>http://drew.lanen.ga/buffer-network/</link>
         <guid isPermaLink="true">http://drew.lanen.ga/buffer-network/</guid>
         
@@ -729,7 +925,7 @@ table tbody tr td:first-child {
 &lt;/style&gt;
 
 </description>
-        <pubDate>Sat, 20 Feb 2016 00:00:00 -0800</pubDate>
+        <pubDate>Sat, 20 Feb 2016 00:00:00 -0500</pubDate>
         <link>http://drew.lanen.ga/network-science/</link>
         <guid isPermaLink="true">http://drew.lanen.ga/network-science/</guid>
         
@@ -822,7 +1018,7 @@ table tbody tr td:first-child {
   &lt;/ol&gt;
 &lt;/div&gt;
 </description>
-        <pubDate>Wed, 17 Feb 2016 00:00:00 -0800</pubDate>
+        <pubDate>Wed, 17 Feb 2016 00:00:00 -0500</pubDate>
         <link>http://drew.lanen.ga/hillary-emails/</link>
         <guid isPermaLink="true">http://drew.lanen.ga/hillary-emails/</guid>
         
@@ -850,7 +1046,7 @@ table tbody tr td:first-child {
 &lt;p&gt;It’d be nice if it would load other nice &lt;code&gt;bash&lt;/code&gt;-y things, like functions, aliases, etc., and somehow made them available in the current session, but that might also be unnecessary.  (That is, I haven’t yet found it necessary…)&lt;/p&gt;
 
 </description>
-        <pubDate>Mon, 01 Feb 2016 00:00:00 -0800</pubDate>
+        <pubDate>Mon, 01 Feb 2016 00:00:00 -0500</pubDate>
         <link>http://drew.lanen.ga/bash-in-R/</link>
         <guid isPermaLink="true">http://drew.lanen.ga/bash-in-R/</guid>
         
